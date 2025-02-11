@@ -22,5 +22,5 @@ while(True):    # mantém o programa em loop indefinidamente
     else: # aqui é caso a resposta esteja errada
         print(f'It\'s wrong. {word} is "{result}"') # imprime a mensagem de erro na tela
         print(f'Points {points}') # mostra a pontuação final
-        input('Press enter to quit') # aguarda o usuário apertar enter
+        input('Press enter to quit\n') # aguarda o usuário apertar enter
         break # para o loop e o programa fecha
