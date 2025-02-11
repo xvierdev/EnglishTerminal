@@ -13,13 +13,14 @@ Caso errado, para o loop, mostra seus pontos e fecha
 
 points = 0      # a pontuação inicial do jogador é zero
 while(True):    # mantém o programa em loop indefinidamente
-    word = strings() # variável word se torna o return da string
-    answer = input(f'Whats is {word}?') # aqui a variável answer vai receber a resposta digitada do teclado
-    if answer == 'livro': # essa linha vai testar se a pessoa acertou a resposta
-        print('Thats right!') # aqui é o congratulations do acerto
+    text = strings()
+    word, result = text.split(' ') # variável word se torna o return da string
+    answer = input(f'Whats is {word}? ') # aqui a variável answer vai receber a resposta digitada do teclado
+    if answer == result: # essa linha vai testar se a pessoa acertou a resposta
         points += 1 # nesta linha aumenta a pontuação em +1
+        print(f'That\'s right! You earn {points}') # aqui é o congratulations do acerto
     else: # aqui é caso a resposta esteja errada
-        print('It\'s wrong.') # imprime a mensagem de erro na tela
+        print(f'It\'s wrong. {word} is "{result}"') # imprime a mensagem de erro na tela
         print(f'Points {points}') # mostra a pontuação final
         input('Press enter to quit') # aguarda o usuário apertar enter
         break # para o loop e o programa fecha
