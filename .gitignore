@@ -1,4 +1,10 @@
+# folders to ignore
 __pycache__/
+venv/
+build/
+
+# files to ignore
 log.txt
 logs.txt
 error_log.txt
+main.spec
