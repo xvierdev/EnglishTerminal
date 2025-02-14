@@ -23,4 +23,4 @@ def strings():
             print("Nenhuma string válida encontrada no arquivo.")
             
     except FileNotFoundError:
-        print(f"Arquivo não encontrado: {file_path}")
+        error_log(f"Arquivo não encontrado: {file_path}")
