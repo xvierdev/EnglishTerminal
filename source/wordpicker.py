@@ -1,5 +1,6 @@
 from os import path # Import para caminho
 from random import choice # Import para escolher a string
+from logs import error_log
 
 def strings():
     # Define o caminho completo para o arquivo usando o diretório atual do script

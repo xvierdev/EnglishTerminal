@@ -1,1 +1,4 @@
-__pycache__
+__pycache__/
+log.txt
+logs.txt
+error_log.txt

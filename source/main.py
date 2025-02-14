@@ -1,6 +1,17 @@
 from wordpicker import strings # Import da função de consultar wordlist
+from logs import add, report_bug
+
+# Códigos de cores
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
+MAGENTA = "\033[35m"
+CYAN = "\033[36m"
+RESET = "\033[0m"
+
 """
-O script faz o algoritmo seguinte:
+O script faz o seguinte:
 
 Procura palavras no arquivo wordlist.txt
 Transformas todas as palavras em um array
@@ -9,18 +20,30 @@ Pede a resposta da palavra em português de forma literal
 Caso acerte, incrementa um ponto
 Caso errado, para o loop, mostra seus pontos e fecha
 """
-# TODO: respostas de acordo com a string escolhida
 
 points = 0      # a pontuação inicial do jogador é zero
-while(True):    # mantém o programa em loop indefinidamente
+lifes = 5       # vidas do jogador
+
+while(lifes > 0):
     text = strings()
-    word, result = text.split(' ') # variável word se torna o return da string
-    answer = input(f'Whats is {word}? ') # aqui a variável answer vai receber a resposta digitada do teclado
-    if answer == result: # essa linha vai testar se a pessoa acertou a resposta
-        points += 1 # nesta linha aumenta a pontuação em +1
-        print(f'That\'s right! You earn {points}') # aqui é o congratulations do acerto
-    else: # aqui é caso a resposta esteja errada
-        print(f'It\'s wrong. {word} is "{result}"') # imprime a mensagem de erro na tela
-        print(f'Points {points}') # mostra a pontuação final
-        input('Press enter to quit\n') # aguarda o usuário apertar enter
-        break # para o loop e o programa fecha
+    try:
+        word, result = text.split(' ')
+        answer = input(f'Whats is the translate of {YELLOW}"{word}"{RESET}? ')
+        if answer.lower() == result:
+            points += 1
+            print(f'That\'s right! You have {CYAN}{points} point(s)!{RESET}')
+        else:
+            lifes -= 1
+            print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{result}"{RESET}.')
+            if lifes > 0 :
+                print(f'{GREEN}{lifes} lives{RESET} remaining.')
+            else:
+                print(f'{RED}GAME OVER!{RESET}');
+            add(f'Player error! word:{word} | translate:{result} | player:{answer}')
+
+        add(f'Player {points} points.')
+    except ValueError as error:
+        report_bug(str(error))
+        input('Press "Enter" to quit.')
+        break
+
