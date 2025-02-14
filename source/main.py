@@ -23,6 +23,8 @@ Caso errado, para o loop, mostra seus pontos e fecha
 
 points = 0      # a pontuação inicial do jogador é zero
 lifes = 5       # vidas do jogador
+player_name = input("Enter your name: ")
+print(f"Welcome {player_name}!")
 
 while(lifes > 0):
     text = strings()
@@ -39,7 +41,7 @@ while(lifes > 0):
                 print(f'{GREEN}{lifes} lives{RESET} remaining.')
             else:
                 print(f'{RED}GAME OVER!{RESET}');
-            add(f'Player error! word:{word} | translate:{result} | player:{answer}')
+            add(f'Player {player_name} error! word:{word} | translate:{result} | player:{answer}')
 
         add(f'Player {points} points.')
     except ValueError as error:
