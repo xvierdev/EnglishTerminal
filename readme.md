@@ -5,7 +5,7 @@
 As primeiras fases do desenvolvimento envolvem problemas simples para conhecer os verbetes mais comuns da lingua inglesa.
 
 > [!TIP]
-> Recomendado usar **fontes monoespaçadas com ligaturas** para melhor experiência
+> Recomendado usar [**fontes monoespaçadas com ligaturas**](https://www.jetbrains.com/lp/mono/) para melhor experiência
 
 
 ## Principais Contribuidores
