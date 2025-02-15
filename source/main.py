@@ -21,31 +21,33 @@ Caso acerte, incrementa um ponto
 Caso errado, para o loop, mostra seus pontos e fecha
 """
 
-points = 0      # a pontuação inicial do jogador é zero
-lifes = 5       # vidas do jogador
-player_name = input("Enter your name: ")
-print(f"Welcome {player_name}!")
+def game():
 
-while(lifes > 0):
-    text = strings()
-    try:
-        word, result = text.split(' ')
-        answer = input(f'Whats is the translate of {YELLOW}"{word}"{RESET}? ')
-        if answer.lower() == result:
-            points += 1
-            print(f'That\'s right! You have {CYAN}{points} point(s)!{RESET}')
-        else:
-            lifes -= 1
-            print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{result}"{RESET}.')
-            if lifes > 0 :
-                print(f'{GREEN}{lifes} lives{RESET} remaining.')
+    points = 0      # a pontuação inicial do jogador é zero
+    lifes = 5       # vidas do jogador
+    player_name = input("Enter your name: ")
+    print(f"Welcome {player_name}!")
+
+    while(lifes > 0):
+        text = strings()
+        try:
+            word, result = text.split(' ')
+            answer = input(f'Whats is the translate of {YELLOW}"{word}"{RESET}? ')
+            if answer.lower() == result:
+                points += 1
+                print(f'That\'s right! You have {CYAN}{points} point(s)!{RESET}')
             else:
-                print(f'{RED}GAME OVER!{RESET}');
-            add(f'Player {player_name} error! word:{word} | translate:{result} | player:{answer}')
+                lifes -= 1
+                print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{result}"{RESET}.')
+                if lifes > 0 :
+                    print(f'{GREEN}{lifes} lives{RESET} remaining.')
+                else:
+                    print(f'{RED}GAME OVER!{RESET}');
+                add(f'Player {player_name} error! word:{word} | translate:{result} | player:{answer}')
 
-        add(f'Player {points} points.')
-    except ValueError as error:
-        report_bug(str(error))
-        input('Press "Enter" to quit.')
-        break
+            add(f'Player {points} points.')
+        except ValueError as error:
+            report_bug(str(error))
+            input('Press "Enter" to quit.')
+            break
 
