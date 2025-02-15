@@ -26,6 +26,7 @@ Ao ficar sem vida, para o loop e pergunta se quer jogar de novo
 
 def game():
     while True:  # Loop principal do jogo
+        print(RESET) # Bug fix provisório
         cls()
         points = 0  # Pontuação inicial
         life = 5  # Vidas do jogador
