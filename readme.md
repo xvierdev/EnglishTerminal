@@ -1,22 +1,31 @@
-# English Terminal
+<h1 align="center">English Terminal</h1>
 
-English terminal é um projeto inicial de desenvolvimento para aprendizagem de ingles.
+**English Terminal** é um projeto inicial de desenvolvimento para aprendizagem de inglês.
 
 As primeiras fases do desenvolvimento envolvem problemas simples para conhecer os verbetes mais comuns da lingua inglesa.
 
-## Colaboradores
+> [!TIP]
+> Recomendado usar **fontes monoespaçadas com ligaturas** para melhor experiência
 
-1. Wesley
-1. Iago
-1. Davi
 
-## Comandos
+## Principais Contribuidores
 
-log: serve para ver tudo que o usuário já fez;
-game: inicia o jogo;
-exit: saí do programa
+<a href="https://github.com/xvierdev/EnglishTerminal/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=xvierdev/EnglishTerminal" />
+</a>
 
-## Requisitos
+## Comandos do Terminal
 
-Para rodar o programa é necessário instalar o Python que pode ser obtido pelo link
-[Python Download](https://www.python.org/)
+```logs```: serve para ver tudo que o usuário já fez;
+
+```game```: inicia o jogo;
+
+```exit```: saí do programa
+
+## Requisitos Mínimos
+
+- [**Python 3**](https://www.python.org/)
+
+## Requisitos Recomendados
+
+- **Windows 10+**
