@@ -1,14 +1,8 @@
 from wordpicker import strings # Import da função de consultar wordlist
 from logs import add, report_bug
+from colors import RED, RESET, CYAN, YELLOW, GREEN # texto formatado com cores
 
-# Códigos de cores
-RED = "\033[31m"
-GREEN = "\033[32m"
-YELLOW = "\033[33m"
-BLUE = "\033[34m"
-MAGENTA = "\033[35m"
-CYAN = "\033[36m"
-RESET = "\033[0m"
+import util
 
 """
 O script faz o seguinte:
@@ -40,7 +34,9 @@ while(lifes > 0):
             if lifes > 0 :
                 print(f'{GREEN}{lifes} lives{RESET} remaining.')
             else:
+                util.limpar_terminal()
                 print(f'{RED}GAME OVER!{RESET}');
+                print(f'Your earn {YELLOW}{points}{RESET} points!')
             add(f'Player {player_name} error! word:{word} | translate:{result} | player:{answer}')
 
         add(f'Player {points} points.')
