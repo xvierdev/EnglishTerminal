@@ -7,5 +7,6 @@ dist/
 # files to ignore
 log.txt
 logs.txt
+records.txt
 error_log.txt
 main.spec
