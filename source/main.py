@@ -24,9 +24,7 @@ print(f"{RED}Welcome {YELLOW}{player_name}!{RESET}")
 print()
 
 for record in records_manager.load_records():
-    if record == 0:
-        os.rename('records.txt','corrupt_records.txt')
-    elif record == '':
+    if record == '':
         print('No records found!')
     else:
         print(record, end='')

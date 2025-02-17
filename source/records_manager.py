@@ -1,3 +1,4 @@
+import os
 from util import now, calcular_hash, criptografar_hash, descriptografar_hash
 
 RECORDS = 'records.txt'
@@ -28,7 +29,11 @@ def load_records():
                 with open(RECORDS, 'r') as records:
                     return sorted(records, key=lambda x: int(x.split()[-1]), reverse=True)[:3]
             else:
-                print ('records file has been corrupted!n')
+                print ('records file has been corrupted!\n')
+                os.remove('records.txt')
+                os.remove('hash.txt')
                 return 0
     except FileNotFoundError:
+        return ''
+    except PermissionError:
         return ''
