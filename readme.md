@@ -18,9 +18,13 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
 
 ```logs```: serve para ver tudo que o usuário já fez;
 
+```logs -r```: aviso: apaga todo o seu progresso(ele excluí tudo do arquivo log)
+
 ```game```: inicia o jogo;
 
 ```exit```: saí do programa
+
+```neofetch```: parecido com o neofetch do Linux
 
 ## Requisitos Mínimos
 
