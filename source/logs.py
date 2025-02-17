@@ -1,5 +1,6 @@
-from datetime import datetime
+from util import now
 default_log_file = 'log.txt'
+default_error_log_file = 'error_log.txt'
 
 def read():
     with open(default_log_file, 'r') as file:
@@ -8,14 +9,12 @@ def read():
 
 def add(data=''):
     with open(default_log_file, 'a') as file:
-        now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-        file.write(f'{now} {data}\n')
+        file.write(f'{now()} {data}\n')
 
 def report_bug(error_msg=''):
-    with open('error_log.txt', 'a') as file:
-        now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-        file.write(f'{now} {error_msg}\n')
-        print('An error occurred, see log_error.txt for more details.')
+    with open(default_error_log_file, 'a') as file:
+        file.write(f'{now()} {error_msg}\n')
+        print('An error occurred, see \'log_error.txt\' for more details.')
     
 
 # por enquanto não é necessário limpar o log
