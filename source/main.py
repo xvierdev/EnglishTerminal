@@ -2,7 +2,7 @@ from wordpicker import strings # Import da função de consultar wordlist
 from logs import add, report_bug
 from colors import RED, RESET, CYAN, YELLOW, GREEN # texto formatado com cores
 
-import util, records_manager
+import util, records_manager, os
 
 """
 O script faz o seguinte:
@@ -24,7 +24,9 @@ print(f"{RED}Welcome {YELLOW}{player_name}!{RESET}")
 print()
 
 for record in records_manager.load_records():
-    if record == '':
+    if record == 0:
+        os.rename('records.txt','corrupt_records.txt')
+    elif record == '':
         print('No records found!')
     else:
         print(record, end='')
