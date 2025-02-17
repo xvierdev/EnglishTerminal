@@ -2,7 +2,7 @@ from wordpicker import strings # Import da função de consultar wordlist
 from logs import add, report_bug
 from colors import RED, RESET, CYAN, YELLOW, GREEN # texto formatado com cores
 
-import util
+import util, records_manager
 
 """
 O script faz o seguinte:
@@ -17,8 +17,17 @@ Caso errado, para o loop, mostra seus pontos e fecha
 
 points = 0      # a pontuação inicial do jogador é zero
 lifes = 5       # vidas do jogador
+
+util.clear_console
 player_name = input("Enter your name: ")
-print(f"Welcome {player_name}!")
+print(f"{RED}Welcome {YELLOW}{player_name}!{RESET}")
+print()
+
+for record in records_manager.load_records():
+    if record == '':
+        print('No records found!')
+    else:
+        print(record, end='')
 
 while(lifes > 0):
     text = strings()
@@ -34,9 +43,15 @@ while(lifes > 0):
             if lifes > 0 :
                 print(f'{GREEN}{lifes} lives{RESET} remaining.')
             else:
-                util.limpar_terminal()
+                util.clear_console()
                 print(f'{RED}GAME OVER!{RESET}');
-                print(f'Your earn {YELLOW}{points}{RESET} points!')
+                if points > 1:
+                    print(f'Your earn {YELLOW}{points}{RESET} points!')
+                elif points == 1:
+                    print(f'Your earn {YELLOW}{points}{RESET} point!')
+                else:
+                    print('You didn\'t earn any points.')
+                records_manager.write_records(player_name, points)
             add(f'Player {player_name} error! word:{word} | translate:{result} | player:{answer}')
 
         add(f'Player {points} points.')
@@ -44,4 +59,3 @@ while(lifes > 0):
         report_bug(str(error))
         input('Press "Enter" to quit.')
         break
-
