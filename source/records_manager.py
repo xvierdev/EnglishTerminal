@@ -27,7 +27,11 @@ def load_records():
             # Verificar se o hash foi adulterado
             if hash_descriptografado == hash_records_novo:
                 with open(RECORDS, 'r') as records:
-                    return sorted(records, key=lambda x: int(x.split()[-1]), reverse=True)[:3]
+                    records = sorted(records, key=lambda x: int(x.split()[-1]), reverse=True)[:3]
+                    if records != '':
+                        return records
+                    else:
+                        return 'no records found!'
             else:
                 print ('records file has been corrupted!\n')
                 os.remove('records.txt')

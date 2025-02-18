@@ -1,6 +1,6 @@
 from logs import read, add, add_undate, format, read_records
 from main import game
-import colors
+import colors, util, records_manager
 
 username = 'bash'
 
@@ -12,6 +12,7 @@ print("neofetch: ...")
 print("logs: serves to see all your progress")
 print("logs -r: warning⚠ erases all your progress")
 print("game: start the game")
+print("help: show command list")
 
 while True:
     
@@ -27,11 +28,20 @@ while True:
     elif command == 'logs -f':
         format()
 
-    elif command == 'logs -r':
-        read_records()
+    elif command == 'records':
+        for record in records_manager.load_records():
+            print(record, end='')
 
     elif command == 'exit':
+        print(f'{colors.YELLOW}bye!{colors.RESET}')
         break  # Sai do terminal corretamente
+
+    elif command == 'clear' or command == 'cls':
+        util.clear_console()
+
+    elif command == 'help':
+        print('a ser implementado.')
+        pass
 
     elif command == 'neofetch':
         print(f"{colors.RESET}|||||||||||||||||||||")
@@ -74,4 +84,4 @@ while True:
         print("a única coisa que dar para fazer a respeito do user -r é sentar e esperar, mas não se preocupe todo dia tem atualizações👍")
 
     else:
-        print(f"{colors.RED}command not found")
+        print(f"{colors.RED}command not found{colors.RESET}")
