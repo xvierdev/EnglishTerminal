@@ -7,9 +7,18 @@ def read():
         conteudo = file.read()
     return conteudo
 
+def read_records():
+    with open('records.txt', 'r') as file:
+        conteudo = file.read()
+    return conteudo
+
 def add(data=''):
     with open(default_log_file, 'a') as file:
         file.write(f'{now()} {data}\n')
+
+def add_undate(data=''):
+    with open('users.txt', 'a') as file:
+        file.write( data + '\n')
 
 def report_bug(error_msg=''):
     with open(default_error_log_file, 'a') as file:
@@ -17,7 +26,6 @@ def report_bug(error_msg=''):
         print('An error occurred, see \'log_error.txt\' for more details.')
     
 
-# por enquanto não é necessário limpar o log
-# def remove(default_log_file):
-#     with open(default_log_file, 'w'):
-#         pass
+def format(default_log_file):
+    with open(default_log_file, 'w'):
+        pass
