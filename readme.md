@@ -20,7 +20,7 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
 
 ```logs -f```: aviso: apaga todo o seu progresso(ele excluí tudo do arquivo log)
 
-```logs -r: mostra os records do arquivo records.txt
+```logs -r```: mostra os records do arquivo records.txt
 
 ```game```: inicia o jogo;
 
