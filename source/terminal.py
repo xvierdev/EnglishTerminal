@@ -13,7 +13,6 @@ print("Commands are in the readme.")  # Deixe claro onde encontrar os comandos
 print("Simple Commands:")
 print("neofetch: ...")
 print("logs: see your progress")  # Descrição mais concisa
-print("logs -r: WARNING! Erases all your progress")  # Destaque o aviso
 print("game: start the game")
 print("help: show command list")
 
@@ -25,10 +24,7 @@ while True:
         main.game()  # Chame a função game() do módulo main
 
     elif command == 'logs':
-        print(logs.read())  # Chame a função read() do módulo logs
-
-    elif command == 'logs -f':
-        logs.format()  # Chame a função format() do módulo logs
+        print(logs.read_log())  # Chame a função read() do módulo logs
 
     elif command == 'records':
         for record in records_manager.load_records():
@@ -68,11 +64,11 @@ while True:
         print(f"{colors.YELLOW}new user")
         username = input(f"{colors.RESET}user name:{colors.BLUE} ")
         userpassword = input(f"{colors.RESET}user password:{colors.GREEN} ")
-        logs.add_undate(f'user name: {username} and user password: {userpassword}') # Corrigido o erro de digitação
+        logs.add_user(f'user name: {username} and user password: {userpassword}') # Corrigido o erro de digitação
 
     elif command == 'user -e':
         # Corrigido o erro de digitação na comparação e lógica mais clara
-        if logs.read(): # Verifica se o arquivo não está vazio
+        if logs.read_users(): # Verifica se o arquivo não está vazio
             print(f"{colors.YELLOW}There are local users. See the log file for details.")
             username2 = input(f"{colors.RESET}Username:{colors.BLUE} ")
             userpassword = input(f"{colors.RESET}User password:{colors.GREEN} ")
@@ -81,12 +77,12 @@ while True:
             # Armazenar senhas em texto plano é extremamente inseguro.
             # Considere usar hashing de senha (bcrypt, scrypt, etc.).
             # Este exemplo é apenas ilustrativo e INSEGURO:
-            stored_credentials = logs.read() # Supondo que logs.read() retorna as credenciais armazenadas
+            stored_credentials = logs.read_users() # Supondo que logs.read() retorna as credenciais armazenadas
             if f'user name: {username2} and user password: {userpassword}' in stored_credentials:
-                print("Access allowed")
+                print(f"{colors.GREEN}Access allowed")
                 username = username2
             else:
-                print("Access not allowed")
+                print(f"{colors.RED}Access not allowed")
         else:
             print(f"{colors.YELLOW}No users found.")
 

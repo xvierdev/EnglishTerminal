@@ -1,5 +1,5 @@
 from wordpicker import strings # Import da função de consultar wordlist
-from logs import add, report_bug
+from logs import add_log, report_bug
 from colors import RED, RESET, CYAN, YELLOW, GREEN # texto formatado com cores
 
 import util, records_manager, os
@@ -13,7 +13,7 @@ Aplica uma palavra do array aleatóriamente na var "word"
 Pede a resposta da palavra em português de forma literal
 Caso acerte, incrementa um ponto
 Caso errado, para o loop, mostra seus pontos e fecha
-"""
+""" 
 def game():
 
     points = 0      # a pontuação inicial do jogador é zero
@@ -53,9 +53,9 @@ def game():
                     else:
                         print('You didn\'t earn any points.')
                     records_manager.write_records(player_name, points)
-                add(f'Player {player_name} error! word:{word} | translate:{result} | player:{answer}')
+                add_log(f'Player {player_name} error! word:{word} | translate:{result} | player:{answer}')
 
-            add(f'Player {points} points.')
+            add_log(f'Player {points} points.')
         except ValueError as error:
             report_bug(str(error))
             input('Press "Enter" to quit.')

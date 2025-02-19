@@ -26,6 +26,16 @@ def read_records(records_file=DEFAULT_RECORDS_FILE):
     except Exception as e:
         return f"Erro ao ler arquivo de registros: {e}"
 
+def read_users(users_file=DEFAULT_USERS_FILE):
+    """Lê o conteúdo do arquivo de usuários."""
+    try:
+        with open(records_file, 'r') as file:
+            return file.read()
+    except FileNotFoundError:
+        return f"Arquivo de usuários '{users_file}' não encontrado."
+    except Exception as e:
+        return f"Erro ao ler arquivo de usuários: {e}"
+
 def add_log(message, level="INFO", log_file=DEFAULT_LOG_FILE):
     """Adiciona uma mensagem ao arquivo de log."""
     try:
