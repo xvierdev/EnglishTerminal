@@ -43,22 +43,19 @@ while True:
         # TODO: Implementar a funcionalidade help
 
     elif command == 'neofetch':
-        # Simplifique o neofetch usando um loop ou string formatada
-        lines = ["|||||||||||||||||||||",
-                 "|||{}//////////////{}{}".format(colors.MAGENTA, colors.BLACK, colors.RESET),
-                 "||{}/{}//{}///////////{}{}".format(colors.MAGENTA, colors.BLACK, colors.MAGENTA, colors.RESET),
-                 "||{}/{}//{}/{}//{}{}".format(colors.MAGENTA, colors.BLACK, colors.MAGENTA, colors.RESET),
-                 "||{}/{}//{}/{}//{}{}".format(colors.MAGENTA, colors.BLACK, colors.MAGENTA, colors.RESET),
-                 "||{}//////////////{}{}".format(colors.MAGENTA, colors.BLACK, colors.RESET),
-                 "||{}/{}//{}///////////{}{}".format(colors.MAGENTA, colors.BLACK, colors.MAGENTA, colors.RESET),
-                 "||{}/{}//{}/{}//{}{}".format(colors.MAGENTA, colors.BLACK, colors.MAGENTA, colors.RESET),
-                 "||{}/{}//{}/{}//{}{}".format(colors.MAGENTA, colors.BLACK, colors.MAGENTA, colors.RESET),
-                 "||{}//////////////{}{}".format(colors.MAGENTA, colors.BLACK, colors.RESET),
-                 "||{}//////////////{}{}".format(colors.MAGENTA, colors.RESET),
-                 "|||||||||||||||||||||"]
-
-        for line in lines:
-            print(line)
+        #tivemos que voltar :(
+        print(f"{colors.RESET}|||||||||||||||||||||")
+        print(f"{colors.RESET}|||{colors.MAGENTA}/{colors.BLACK}/////////////{colors.RESET}||||")
+        print(f"{colors.RESET}||{colors.MAGENTA}//{colors.BLACK}//{colors.MAGENTA}//////////{colors.RESET}|||||")
+        print(f"{colors.RESET}||{colors.MAGENTA}||{colors.BLACK}//{colors.MAGENTA}/{colors.RESET}||||||||||||||")
+        print(f"{colors.RESET}||{colors.MAGENTA}||{colors.BLACK}//{colors.MAGENTA}/{colors.RESET}||||||||||||||")
+        print(f"{colors.RESET}||{colors.MAGENTA}||{colors.BLACK}/////////////{colors.RESET}||||")
+        print(f"{colors.RESET}||{colors.MAGENTA}||{colors.BLACK}//{colors.MAGENTA}//////////{colors.RESET}|||||")
+        print(f"{colors.RESET}||{colors.MAGENTA}||{colors.BLACK}//{colors.MAGENTA}/{colors.RESET}||||||||||||||")
+        print(f"{colors.RESET}||{colors.MAGENTA}||{colors.BLACK}//{colors.MAGENTA}/{colors.RESET}||||||||||||||")
+        print(f"{colors.RESET}||{colors.MAGENTA}||{colors.BLACK}/////////////{colors.RESET}||||")
+        print(f"{colors.RESET}||{colors.MAGENTA}//////////////{colors.RESET}|||||")
+        print(f"{colors.RESET}|||||||||||||||||||||")
 
     elif command == 'user -a':
         print(f"{colors.YELLOW}new user")
