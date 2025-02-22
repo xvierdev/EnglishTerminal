@@ -39,8 +39,15 @@ while True:
         util.clear_console()  # Chame a função clear_console() do módulo util
 
     elif command == 'help':
-        print('To be implemented.')  # Mensagem mais profissional
-        # TODO: Implementar a funcionalidade help
+        print("comandos:")
+        print("neofetch: like linux's neofetch")
+        print("exit: i left the terminal correctly")
+        print("logs -f: deletes everything from the logs file")
+        print("logs: shows everything in the logs file")
+        print("user -e: Log in to the user")
+        print("user -a: adding a user automatically sign in to them")
+        print("game: start the game")
+        
 
     elif command == 'neofetch':
         #tivemos que voltar :(

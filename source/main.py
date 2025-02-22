@@ -20,7 +20,7 @@ def game():
     lifes = 5       # vidas do jogador
 
     util.clear_console
-    player_name = input("Enter your name: ")
+    player_name = input("Enter your name user: ")
     print(f"{RED}Welcome {YELLOW}{player_name}!{RESET}")
     print()
 

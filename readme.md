@@ -30,7 +30,9 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
 
 ```user -a```: adiciona um usuário
 
-```user -e```: entrar 
+```user -e```: entrar no usuário
+
+```help```: lista todos os comandos e suas funções
 
 ## Requisitos Mínimos
 
