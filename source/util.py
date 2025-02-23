@@ -1,3 +1,13 @@
+# Códigos de cores utilizados na formatação do terminal.
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
+MAGENTA = "\033[35m"
+BLACK = "\033[30m"
+CYAN = "\033[36m"
+RESET = "\033[0m"
+
 # biblioteca de utilidades utilizdas na aplicação.
 
 import hashlib

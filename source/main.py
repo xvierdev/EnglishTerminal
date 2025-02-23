@@ -1,6 +1,6 @@
 from wordpicker import strings # Import da função de consultar wordlist
 from logs import add_log, report_bug
-from colors import RED, RESET, CYAN, YELLOW, GREEN # texto formatado com cores
+from util import RED, RESET, CYAN, YELLOW, GREEN # texto formatado com cores
 
 import util, records_manager, os
 
@@ -20,8 +20,8 @@ def game():
     lifes = 5       # vidas do jogador
 
     util.clear_console
-    player_name = input("Enter your name user: ")
-    print(f"{RED}Welcome {YELLOW}{player_name}!{RESET}")
+    player_name = input(f"Enter your name user:{RESET} ")
+    print(f"{RED}Welcome {RESET}{player_name}!")
     print()
 
     for record in records_manager.load_records():
