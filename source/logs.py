@@ -1,73 +1,49 @@
-import os
+#Este script é responsável pela gravação e recuperação dos logs de informação e de erro durante a execução do programa.
+
 from util import now
 
+# definição dos nomes padrão dos arquivos de log.
 DEFAULT_LOG_FILE = 'log.txt'
 DEFAULT_ERROR_LOG_FILE = 'error_log.txt'
-DEFAULT_RECORDS_FILE = 'records.txt'
-DEFAULT_USERS_FILE = 'users.txt'
 
-def read_log(log_file=DEFAULT_LOG_FILE):
+# Operadores de log
+
+def read_log():
     """Lê o conteúdo do arquivo de log."""
     try:
-        with open(log_file, 'r') as file:
-            return file.read()
+        with open(DEFAULT_LOG_FILE, 'r', encoding="utf-8") as file:
+            return file.readlines()
     except FileNotFoundError:
-        return f"Arquivo de log '{log_file}' não encontrado."
+        with open(DEFAULT_LOG_FILE, 'w', encoding="utf-8") as log_file:
+            pass
     except Exception as e:
+        report_bug(e)
         return f"Erro ao ler arquivo de log: {e}"
 
-def read_records(records_file=DEFAULT_RECORDS_FILE):
-    """Lê o conteúdo do arquivo de registros."""
-    try:
-        with open(records_file, 'r') as file:
-            return file.read()
-    except FileNotFoundError:
-        return f"Arquivo de registros '{records_file}' não encontrado."
-    except Exception as e:
-        return f"Erro ao ler arquivo de registros: {e}"
-
-def read_users(users_file=DEFAULT_USERS_FILE):
-    """Lê o conteúdo do arquivo de usuários."""
-    try:
-        with open(records_file, 'r') as file:
-            return file.read()
-    except FileNotFoundError:
-        return f"Arquivo de usuários '{users_file}' não encontrado."
-    except Exception as e:
-        return f"Erro ao ler arquivo de usuários: {e}"
-
-def add_log(message, level="INFO", log_file=DEFAULT_LOG_FILE):
+def add_log_info(message):
     """Adiciona uma mensagem ao arquivo de log."""
     try:
-        with open(log_file, 'a') as file:
-            timestamp = now()
-            log_entry = f"{timestamp} [{level}] {message}\n"
-            file.write(log_entry)
+        with open(DEFAULT_LOG_FILE, 'a', encoding="utf-8") as file:
+            file.write(f'{now()} {message}\n')
     except Exception as e:
+        report_bug(e)
         print(f"Erro ao adicionar log: {e}")
 
-
-def add_user(user_data, users_file=DEFAULT_USERS_FILE):
-    """Adiciona dados de usuário ao arquivo de usuários."""
-    try:
-        with open(users_file, 'a') as file:
-            file.write(user_data + '\n')
-    except Exception as e:
-        print(f"Erro ao adicionar usuário: {e}")
-
-def report_bug(error_msg, error_log_file=DEFAULT_ERROR_LOG_FILE):
-    """Registra uma mensagem de erro no arquivo de log de erros e informa o usuário."""
-    try:
-        with open(error_log_file, 'a') as file:
-            file.write(f'{now()} {error_msg}\n')
-        print(f'Ocorreu um erro. Mais detalhes em \'{error_log_file}\'.')
-    except Exception as e:
-        print(f"Erro ao reportar bug: {e}")
-
-def clear_log(log_file=DEFAULT_LOG_FILE):
+def clear_log():
     """Limpa o conteúdo do arquivo de log."""
     try:
-        with open(log_file, 'w'):
-            pass  # Abre o arquivo em modo de escrita (sobrescreve)
+        with open(DEFAULT_LOG_FILE, 'w', encoding="utf-8"):
+            pass
     except Exception as e:
-        print(f"Erro ao limpar log: {e}")
+        report_bug(e)
+
+# Log específico para reportar bugs
+
+def report_bug(error_msg):
+    """Registra uma mensagem de erro no arquivo de log de erros e informa o usuário."""
+    try:
+        with open(DEFAULT_ERROR_LOG_FILE, 'a', encoding="utf-8") as file:
+            file.write(f'{now()} {error_msg}\n')
+            print(f'Error: {error_msg}')
+    except Exception as e:
+        print(f"Erro ao reportar bug: {e}")
