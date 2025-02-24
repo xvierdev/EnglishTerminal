@@ -20,15 +20,17 @@ def game():
     lifes = 5       # vidas do jogador
 
     util.clear_console
-    player_name = input(f"Enter your name user:{RESET} ")
+    player_name = input(f"{RESET}Enter your name user: ")
     print(f"{RED}Welcome {RESET}{player_name}!")
     print()
 
-    for record in records.load_records():
-        if record == '':
+    record_list = records.load_records()
+    if record_list == '': 
             print('No records found!')
-        else:
-            print(record, end='')
+    else:
+        print('Records: ')
+        for i in range(len(record_list)):
+            print(f'{i+1}. {record_list[i]}', end='')
 
     while(lifes > 0):
         text = strings()

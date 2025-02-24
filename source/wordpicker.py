@@ -20,7 +20,9 @@ def strings():
         if strings:
             return choice(strings)
         else:
-            print("Nenhuma string válida encontrada no arquivo.")
+            msg = "Nenhuma string válida encontrada no arquivo."
+            report_bug(msg)
+            print(msg)
             
     except FileNotFoundError:
         report_bug(f"Arquivo não encontrado: {file_path}")
