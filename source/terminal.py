@@ -1,7 +1,7 @@
 import logs  # Manipulação de logs do programa.
 import main  # Módulo principal do game.
 import util  # Utilidades de tempo e criptografia
-import records_manager  # Modulo de gerenciamento de records.
+import source.recordS as recordS  # Modulo de gerenciamento de records.
 
 print("Welcome to EnglishTerminal!")
 print("This is only for advanced users, who want to learn in a different way.")  # Simplifique a mensagem
@@ -24,7 +24,7 @@ while True:
         print(logs.read_log())  # Chame a função read() do módulo logs
 
     elif command == 'records':
-        for record in records_manager.load_records():
+        for record in recordS.load_records():
             print(record, end='')
         print() # Adiciona uma nova linha após imprimir os records
 
