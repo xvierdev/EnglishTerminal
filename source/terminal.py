@@ -1,13 +1,14 @@
-import logs  # Manipulação de logs do programa.
-import main  # Módulo principal do game.
-import util  # Utilidades de tempo e criptografia
-import records # Modulo de gerenciamento de records.
+import logs     # Manipulação de logs do programa.
+import main     # Módulo principal do game.
+import util     # Utilidades de tempo e criptografia
+import records  # Modulo de gerenciamento de records.
 
-print("Welcome to EnglishTerminal!")
+util.clear_console()
+util.print_multicolor("Welcome to EnglishTerminal!")
 print("This is only for advanced users, who want to learn in a different way.")  # Simplifique a mensagem
 print("Commands are in the readme.")  # Deixe claro onde encontrar os comandos
 
-print("Simple Commands:")
+print(f"{util.YELLOW}Simple Commands:{util.RESET}")
 print("neofetch: ...")
 print("logs: see your progress")  # Descrição mais concisa
 print("game: start the game")

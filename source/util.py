@@ -3,6 +3,7 @@
 import hashlib
 import base64
 import datetime
+import random
 
 #==============COLORS==============#
 
@@ -25,6 +26,14 @@ def now():
 def clear_console():
   print('\033[2J', end='')
   print('\033[H', end='')
+
+def print_multicolor(text):
+  colors = ["\033[34m", "\033[36m", "\033[32m", "\033[35m", "\033[31m", "\033[33m"]
+  print(RESET, end='')
+  for i in range(len(text)):
+    print(f'{random.choice(colors)}{text[i]}', end='')
+  print(RESET)
+  
 
 # Report de bugs
 
