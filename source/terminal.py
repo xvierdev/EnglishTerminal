@@ -17,7 +17,7 @@ print("game: start the game")
 print("help: show command list")
 
 while True:
-    command = input(f"{util.RESET}englishterminal ~>{util.CYAN} ")
+    command = input(f"{util.RESET}englishterminal ~>{util.CYAN} ").lower()
 
     if command == 'game':
         print(f"{util.YELLOW}GAME!!")

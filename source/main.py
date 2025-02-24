@@ -24,6 +24,7 @@ def game():
     print(f"{RED}Welcome {RESET}{player_name}!")
     print()
 
+    # Mostrar records na tela no início do jogo.
     record_list = records.load_records()
     if record_list == '': 
             print('No records found!')
@@ -35,18 +36,21 @@ def game():
     while(lifes > 0):
         text = strings()
         try:
-            word, result = text.split(' ')
+            words = text.split(' ')
+            word = words [0]
+            result = words[1:]
             answer = input(f'Whats is the translate of {YELLOW}"{word}"{RESET}? ')
-            if answer.lower() == result:
+            if answer.lower() in result:
                 points += 1
                 print(f'That\'s right! You have {CYAN}{points} point(s)!{RESET}')
             else:
                 lifes -= 1
-                print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{result}"{RESET}.')
+                print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{', '.join(result)}"{RESET}.')
                 if lifes > 0 :
                     print(f'{GREEN}{lifes} lives{RESET} remaining.')
                 else:
                     util.clear_console()
+                    print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{', '.join(result)}"{RESET}.')
                     print(f'{RED}GAME OVER!{RESET}');
                     if points > 1:
                         print(f'Your earn {YELLOW}{points}{RESET} points!')
