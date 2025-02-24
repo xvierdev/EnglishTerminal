@@ -12,4 +12,4 @@ records.txt
 error_log.txt
 main.spec
 hash.txt
-source/colors.py
+colors.py
