@@ -28,10 +28,6 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
 
 ```neofetch```: parecido com o neofetch do Linux
 
-```user -a```: adiciona um usuário
-
-```user -e```: entrar no usuário
-
 ```help```: lista todos os comandos e suas funções
 
 ## Requisitos Mínimos
