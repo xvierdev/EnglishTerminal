@@ -1,8 +1,9 @@
-#Este script é responsável pela gravação e recuperação dos logs de informação e de erro durante a execução do programa.
+# Este script é responsável pela gravação e recuperação dos logs de informação e de erro durante a execução do programa.
 
 from util import now
 
 # definição dos nomes padrão dos arquivos de log.
+
 DEFAULT_LOG_FILE = 'log.txt'
 DEFAULT_ERROR_LOG_FILE = 'error_log.txt'
 
