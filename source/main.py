@@ -2,7 +2,7 @@ from wordpicker import strings # Import da função de consultar wordlist
 from logs import add_log_info, report_bug
 from util import RED, RESET, CYAN, YELLOW, GREEN # texto formatado com cores
 
-import util, source.recordS as recordS, os
+import util, records, os
 
 """
 O script faz o seguinte:
@@ -24,7 +24,7 @@ def game():
     print(f"{RED}Welcome {RESET}{player_name}!")
     print()
 
-    for record in recordS.load_records():
+    for record in records.load_records():
         if record == '':
             print('No records found!')
         else:
@@ -52,7 +52,7 @@ def game():
                         print(f'Your earn {YELLOW}{points}{RESET} point!')
                     else:
                         print('You didn\'t earn any points.')
-                    recordS.write_records(player_name, points)
+                    records.write_records(player_name, points)
                 add_log_info(f'Player {player_name} error! word:{word} | translate:{result} | player:{answer}')
 
             add_log_info(f'Player {points} points.')
