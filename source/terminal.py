@@ -2,7 +2,7 @@ import logs     # Manipulação de logs do programa.
 import main     # Módulo principal do game.
 import util     # Utilidades de tempo e criptografia
 import records  # Modulo de gerenciamento de records.
-import about
+import about    # Sobre os desenvolvedores do projeto.
 
 util.clear_console()
 util.print_multicolor("Welcome to EnglishTerminal!")
@@ -24,7 +24,8 @@ while True:
         main.game()  # Chame a função game() do módulo main
 
     elif command == 'logs':
-        print(logs.read_log())  # Chame a função read() do módulo logs
+        for log_line in logs.read_log():
+            print(log_line, end='')
 
     elif command == 'records':
         for record in records.load_records():
