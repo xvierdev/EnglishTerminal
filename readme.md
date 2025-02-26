@@ -36,4 +36,9 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
 
 ## Requisitos Recomendados
 
-- **Windows 10+**
+- **Windows 10+ mas tem como para usar no Linux também, álias o melhoramento do suporte para Linux já vai chegar**
+
+## Sobre o novo Automatizador
+
+- Foi adiciondo um script para instalar tudo que precisa e ainda já executa o programa, mas só serve por enquanto no Linux de qualquer distribuição é só entrar na pasta pelo terminal  digitar "sudo ./instalA.sh" sem as aspas, ah antes permita que o script seja executado como um progama digitando: "chmod +x instalA.sh" sem as aspas e só executar
+
