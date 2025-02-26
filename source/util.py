@@ -78,3 +78,8 @@ def descriptografar_hash(criptografado, senha):
       return hash_bytes.decode()
     except Exception as e:
       report_bug(e)
+
+# Calcula o Hash de uma string
+def hash_text(text):
+    """Hashes a text using SHA-256."""
+    return hashlib.sha256(text.encode()).hexdigest()
