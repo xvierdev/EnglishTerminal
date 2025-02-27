@@ -1,5 +1,5 @@
 import logs     # Manipulação de logs do programa.
-import main     # Módulo principal do game.
+import modules.words as words     # Módulo principal do game.
 import util     # Utilidades de tempo e criptografia
 import records  # Modulo de gerenciamento de records.
 import about    # Sobre os desenvolvedores do projeto.
@@ -23,7 +23,7 @@ while True:
 
     if command == 'game':
         print(f"{util.YELLOW}GAME!!")
-        main.game()  # Chame a função game() do módulo main
+        words.game()  # Chame a função game() do módulo main
 
     elif command == 'numbers':
         numbers.jogo_traducao_numeros()
