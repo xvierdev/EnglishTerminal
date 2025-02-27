@@ -45,12 +45,12 @@ def game():
                 print(f'That\'s right! You have {CYAN}{points} point(s)!{RESET}')
             else:
                 lifes -= 1
-                print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{', '.join(result)}"{RESET}.')
+                print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{", ".join(result)}"{RESET}.')
                 if lifes > 0 :
                     print(f'{GREEN}{lifes} lives{RESET} remaining.')
                 else:
                     util.clear_console()
-                    print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{', '.join(result)}"{RESET}.')
+                    print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{", ".join(result)}"{RESET}.')
                     print(f'{RED}GAME OVER!{RESET}');
                     if points > 1:
                         print(f'Your earn {YELLOW}{points}{RESET} points!')
