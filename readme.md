@@ -30,6 +30,10 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
 
 ```help```: lista todos os comandos e suas funções
 
+```numbers```: similar com o game mas em números
+
+```weekdays```: também similar com o game mas com dias da semana
+
 ## Requisitos Mínimos
 
 - [**Python 3**](https://www.python.org/)
