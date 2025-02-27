@@ -3,3 +3,7 @@ body{
     background-color: black;
     font-family: 'Courier New', Courier, monospace;
 }
+a{
+    color: yellow;
+    text-decoration: none;
+}
