@@ -48,14 +48,16 @@ while True:
         util.clear_console()  # Chame a função clear_console() do módulo util
 
     elif command == 'help':
-        print("comandos:")
+        print("comands:")
         print("game: start the game")
         print("records: see current records.")
         print("logs: shows everything in the logs file")
         print("neofetch: like linux's neofetch")
         print("logs -f: deletes everything from the logs file")
         print("exit: i left the terminal correctly")
-        
+        print("clear or cls: clean the terminal")
+        print("numbers: like the game but with numbers")
+        print("weekdays: similar to the game but with the days of the week")
 
     elif command == 'neofetch':
         about.neofetch()
