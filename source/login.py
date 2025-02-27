@@ -1,4 +1,4 @@
-import db
+import source.db.db as db
 import util
 
 login = input('login: ')

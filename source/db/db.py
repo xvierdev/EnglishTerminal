@@ -65,12 +65,3 @@ def delete_user(name):
 
     except sqlite3.Error as erro:
         print(f"Erro ao deletar dados: {erro}")
-
-# Exemplos de uso:
-# insert_user("Alice", "senha123")
-# insert_user("Bob", "senha456")
-# read_user("Alice")
-# update_user("Alice", "nova_senha")
-# read_user("Alice")
-# delete_user("Bob")
-# read_user("Bob")
