@@ -7,6 +7,12 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
 > [!TIP]
 > Recomendado usar [**fontes monoespaçadas com ligaturas**](https://www.jetbrains.com/lp/mono/) para melhor experiência
 
+## Como utilizar o programa
+### Linux
+1. Faça o downloads dos arquivos para um pasta local
+1. Defina o atributo do script InstalA.sh para +x: "cdmod +x instalA.sh"
+1. Execute o script InstalA.sh: source InstalA.sh
+
 
 ## Principais Contribuidores
 
@@ -24,21 +30,12 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
 
 ```game```: inicia o jogo;
 
-```exit```: saí do programa
+```exit```: sair do programa
 
 ```neofetch```: parecido com o neofetch do Linux
 
 ```help```: lista todos os comandos e suas funções
 
-## Requisitos Mínimos
+## Requisitos
 
 - [**Python 3**](https://www.python.org/)
-
-## Requisitos Recomendados
-
-- **Windows 10+ mas tem como para usar no Linux também, álias o melhoramento do suporte para Linux já vai chegar**
-
-## Sobre o novo Automatizador
-
-- Foi adiciondo um script para instalar tudo que precisa e ainda já executa o programa, mas só serve por enquanto no Linux de qualquer distribuição é só entrar na pasta pelo terminal  digitar "sudo ./instalA.sh" sem as aspas, ah antes permita que o script seja executado como um progama digitando: "chmod +x instalA.sh" sem as aspas e só executar
-
