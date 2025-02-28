@@ -62,5 +62,9 @@ while True:
     elif command == 'neofetch':
         about.neofetch()
 
+    elif command == 'logs -clear':
+        with open('log.txt', 'w'):
+            pass
+
     else:
         print(f"{util.RED}Command not found{util.RESET}")
