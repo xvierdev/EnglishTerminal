@@ -1,6 +1,6 @@
 # Script de transformação do arquivo txt em database de palavras
 import sqlite3
-from os import path # Import para caminho
+from os import path
 
 def insert_words():
     try:
@@ -16,7 +16,6 @@ def insert_words():
             ''')
 
             with open(file_path, 'r', encoding='utf-8') as wordlist:
-                strings = []
                 for linha in wordlist:
                     linha_limpa = linha.strip()  # Remove espaços e quebras de linha
                     if not linha_limpa or linha_limpa.startswith('#'):
