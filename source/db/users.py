@@ -1,6 +1,8 @@
-import sqlite3
-import util
+# CRUD de usuários do sistema.
 
+import sqlite3
+
+# Insere novos usuários no banco de dados.
 def insert_user(name, password):
     try:
         with sqlite3.connect('users.db') as conexao:
@@ -12,46 +14,47 @@ def insert_user(name, password):
                 )
             ''')
 
-            hashed_password = util.hash_text(password)
-            cursor.execute("INSERT OR IGNORE INTO users (nome, password) VALUES (?, ?)", (name, hashed_password))
+            cursor.execute("INSERT INTO users (nome, password) VALUES (?, ?)", (name, password))
             conexao.commit()
             print("Dados inseridos com sucesso!")
 
     except sqlite3.Error as erro:
-        print(f"Erro ao inserir dados: {erro}")
+        return(f"Erro ao inserir dados: {erro}")
 
-def read_user(name):
+# Verifica a existência e a senha do usuário.
+def read_user(name, password):
     try:
         with sqlite3.connect('users.db') as conexao:
             cursor = conexao.cursor()
-            cursor.execute("SELECT * FROM users WHERE nome = ?", (name,))
+            cursor.execute("SELECT * FROM users WHERE nome = ? AND password = ?", (name,password))
             user = cursor.fetchone()
             if user:
                 print(f"Usuário encontrado: {user}")
                 return user
             else:
-                print("Usuário não encontrado.")
+                print("Usuário não encontrado ou senha inválida.")
                 return None
 
     except sqlite3.Error as erro:
         print(f"Erro ao ler dados: {erro}")
         return None
 
+# Atualiza a senha do usuário válido.
 def update_user(name, new_password):
     try:
         with sqlite3.connect('users.db') as conexao:
             cursor = conexao.cursor()
-            hashed_password = util.hash_text(new_password)
-            cursor.execute("UPDATE users SET password = ? WHERE nome = ?", (hashed_password, name))
+            cursor.execute("UPDATE users SET password = ? WHERE nome = ?", (new_password, name))
             conexao.commit()
             if cursor.rowcount > 0:
-                print("Senha atualizada com sucesso!")
+                return("Senha atualizada com sucesso!")
             else:
-                print("Usuário não encontrado ou senha não alterada.")
+                return("Usuário não encontrado ou senha não alterada.")
 
     except sqlite3.Error as erro:
-        print(f"Erro ao atualizar dados: {erro}")
+        return(f"Erro ao atualizar dados: {erro}")
 
+# Remove um usuário do banco de dados.
 def delete_user(name):
     try:
         with sqlite3.connect('users.db') as conexao:
@@ -59,18 +62,9 @@ def delete_user(name):
             cursor.execute("DELETE FROM users WHERE nome = ?", (name,))
             conexao.commit()
             if cursor.rowcount > 0:
-                print("Usuário deletado com sucesso!")
+                return("Usuário deletado com sucesso!")
             else:
-                print("Usuário não encontrado.")
+                return("Usuário não encontrado.")
 
     except sqlite3.Error as erro:
         print(f"Erro ao deletar dados: {erro}")
-
-# Exemplos de uso:
-# insert_user("Alice", "senha123")
-# insert_user("Bob", "senha456")
-# read_user("Alice")
-# update_user("Alice", "nova_senha")
-# read_user("Alice")
-# delete_user("Bob")
-# read_user("Bob")

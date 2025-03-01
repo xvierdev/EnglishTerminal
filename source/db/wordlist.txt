@@ -1,0 +1,1892 @@
+############################
+#   Debug Strings
+#############################
+
+action ação
+actor ator
+advantage vantagem
+advertisement anúncio
+afternoon tarde
+agenda agenda pauta
+agent agente
+agreement acordo concordância
+air ar
+alarm alarme
+album álbum
+alias pseudônimo
+alien estrangeiro alienígena
+alley beco
+alliance aliança
+alternative alternativa
+amateur amador
+ambition ambição
+amendment emenda
+analyst analista
+anarchy anarquia
+anniversary aniversário
+answer resposta
+ant formiga
+antique antiguidade
+anxiety ansiedade
+apology desculpa
+appetite apetite
+area área região
+arena arena
+arm braço arma
+arrangement arranjo acordo
+arrow flecha
+art arte
+artist artista
+ash cinza
+athlete atleta
+attack ataque
+auction leilão
+audit auditoria
+author autor
+automobile automóvel
+autumn outono
+avenue avenida
+axe machado
+
+bacteria bactéria
+badge distintivo
+bagage bagagem
+bail fiança
+bakery padaria
+balcony sacada varanda
+band banda
+bandage atadura
+banner bandeira faixa
+bargain barganha
+barrier barreira
+bartender barman
+baseball beisebol
+basement porão
+basin bacia pia
+basis base
+battery bateria pilha
+bay baía
+beam feixe viga
+bean feijão
+beat batida ritmo
+beast besta
+beet beterraba
+beggar mendigo
+being ser
+bench banco
+bend curva
+berry baga
+beverage bebida
+bible bíblia
+bid lance oferta
+binder fichário
+bingo bingo
+biography biografia
+biology biologia
+blank espaço em branco
+blast explosão
+blessing bênção
+blink piscar
+blister bolha
+blizzard nevasca
+blob mancha
+blog blog
+blossom florada
+blur borrão
+boar javali
+bombing bombardeio
+bond laço ligação
+bonus bônus
+boom expansão estrondo
+boost impulso reforço
+booth cabine estande
+bore tédio
+borrow empréstimo
+boss chefe
+bow arco laço
+bowl tigela
+bowling boliche
+bracket parêntese suporte
+brand marca
+brass latão
+bravery bravura
+brawl briga
+brew cerveja infusão
+bride noiva
+bridesmaid madrinha
+broadcast transmissão
+brochure folheto
+bronze bronze
+brook riacho
+broom vassoura
+brown marrom castanho
+browser navegador
+bubble bolha
+bucket balde
+buffalo búfalo
+bug inseto erro
+bulb lâmpada bulbo
+bulk volume massa
+bull touro
+bulldozerBulldozer
+bumper para-choque
+bump colisão inchaço
+bungalow bangalô
+buoy bóia
+burn queimar
+burst explosão
+bury enterrar
+butcher açougueiro
+buzz zumbido
+cabin cabana
+cable cabo
+cactus cacto
+cage gaiola
+cake bolo
+calamity calamidade
+calendar calendário
+call chamada
+calm calmaria
+camel camelo
+camera câmera
+camp acampamento
+campaign campanha
+campus campus
+can lata poder
+canal canal
+cancer câncer
+candle vela
+candy doce
+cane cana bengala
+cannon canhão
+canoe canoa
+canvas tela lona
+cap boné tampa
+capability capacidade
+capacity capacidade
+capital capital
+captain capitão
+capture captura
+car carro
+carbon carbono
+card cartão
+care cuidado
+career carreira
+cargo carga
+carnival carnaval
+carpet carpete tapete
+carriage carruagem
+carrot cenoura
+cart carrinho
+cartoon desenho animado
+case caso estojo
+cash dinheiro
+casino cassino
+cast elenco molde
+castle castelo
+casualty vítima
+cat gato
+catalog catálogo
+catch captura pegadinha
+category categoria
+cattle gado
+cause causa
+caution cautela
+cave caverna
+ceiling teto
+celebration celebração
+cell célula cela
+cement cimento
+cemetery cemitério
+center centro
+century século
+ceremony cerimônia
+chain corrente
+chair cadeira
+challenge desafio
+chamber câmara
+chance chance oportunidade
+change mudança troco
+channel canal
+chaos caos
+chapter capítulo
+character personagem
+charge carga acusação
+charm charme encanto
+chart gráfico
+check cheque verificação
+cheek bochecha
+cheer alegria torcida
+cheese queijo
+chef chefe
+chest peito baú
+chicken galinha frango
+chief chefe
+child criança
+chill frio calafrio
+chin queixo
+chip lasca batata frita
+chocolate chocolate
+choice escolha
+choir coral
+chop corte
+chord acorde
+chorus refrão
+Christian cristão
+Christmas Natal
+chrome cromo
+church igreja
+cigarette cigarro
+cinema cinema
+circle círculo
+circuit circuito
+circumstance circunstância
+citizen cidadão
+city cidade
+civilian civil
+claim reivindicação alegação
+class aula classe
+clause cláusula
+claw garra
+clay argila barro
+cleaner faxineiro limpador
+clerk balconista
+click clique
+client cliente
+cliff penhasco
+climate clima
+climb escalada
+clinic clínica
+clip clipe prendedor
+clock relógio
+clone clone
+cloth pano tecido
+clothing vestuário
+cloud nuvem
+club clube taco
+clue pista
+clutch embreagem
+coach treinador
+coal carvão
+coast costa litoral
+coat casaco
+cobalt cobalto
+cobra cobra
+code código
+coffee café
+coin moeda
+cold frio resfriado
+collapse colapso
+collar gola coleira
+colleague colega
+collection coleção
+collector colecionador
+collision colisão
+colony colônia
+color cor
+column coluna
+combination combinação
+comedy comédia
+comfort conforto
+command comando
+comment comentário
+commerce comércio
+commission comissão
+commitment compromisso
+committee comitê
+commodity mercadoria
+common comum
+communication comunicação
+community comunidade
+company empresa companhia
+comparison comparação
+compass bússola
+competition competição
+competitor concorrente
+complaint reclamação
+complex complexo
+component componente
+composer compositor
+compound composto
+compromise acordo
+computer computador
+concept conceito
+concern preocupação
+concert concerto
+conclusion conclusão
+concrete concreto
+condition condição
+conference conferência
+confidence confiança
+conflict conflito
+confusion confusão
+congress congresso
+connection conexão
+consequence consequência
+conservation conservação
+consideration consideração
+conspiracy conspiração
+constant constante
+constituency eleitorado
+constitution constituição
+constraint restrição
+construction construção
+consultant consultor
+consumer consumidor
+contact contato
+container recipiente
+content conteúdo
+context contexto
+continent continente
+contract contrato
+contribution contribuição
+control controle
+controller controlador
+controversy controvérsia
+convenience conveniência
+convention convenção
+conversation conversa
+conversion conversão
+conviction convicção
+cook cozinheiro
+cookie biscoito
+cooking culinária
+copy cópia
+cord corda fio
+core núcleo
+corn milho
+corner canto esquina
+corporation corporação
+correction correção
+correlation correlação
+correspondent correspondente
+corridor corredor
+cost custo
+cottage chalé
+cotton algodão
+cough tosse
+council conselho
+counselor conselheiro
+count conde contagem
+counter balcão contador
+country país campo
+county condado
+couple casal par
+courage coragem
+course curso prato
+court tribunal quadra
+cousin primo prima
+cover capa cobertura
+cow vaca
+crab caranguejo
+crack rachadura
+craft artesanato
+crane guindaste
+crash colisão quebra
+crate engradado
+crawl rastejar
+crayon giz de cera
+cream creme nata
+creation criação
+creator criador
+creature criatura
+credit crédito
+crew tripulação
+crime crime
+crisis crise
+critic crítico
+criticism crítica
+crop colheita safra
+cross cruz cruzar
+crow corvo
+crowd multidão
+crown coroa
+cruise cruzeiro
+crush paixão esmagar
+cry choro grito
+crystal cristal
+cube cubo
+cucumber pepino
+cult culto
+culture cultura
+cup xícara copo
+cure cura
+curiosity curiosidade
+currency moeda
+current corrente atual
+curriculum currículo
+curtain cortina
+curve curva
+customer cliente
+cycle ciclo
+
+damage dano prejuízo
+dance dança
+danger perigo
+dare desafio ousadia
+dark escuridão
+data dados
+database banco de dados
+dawn amanhecer
+day dia
+deal acordo negócio
+dealer revendedor
+death morte
+debate debate
+debt dívida
+decade década
+decision decisão
+deck convés plataforma
+declaration declaração
+decline declínio
+decoration decoração
+decrease diminuição
+dedication dedicação
+deed ação escritura
+default padrão inadimplência
+defeat derrota
+defence defesa
+definition definição
+degree grau nível
+delay atraso
+delegate delegado
+deletion exclusão
+delivery entrega
+demand demanda exigência
+democracy democracia
+demonstração demonstration
+denial negação
+density densidade
+dentist dentista
+department departamento
+departure partida
+dependence dependência
+deposit depósito
+depth profundidade
+description descrição
+desert deserto
+design design projeto
+desire desejo
+desk escrivaninha
+despair desespero
+dessert sobremesa
+destination destino
+destruction destruição
+detail detalhe
+detection detecção
+detective detetive
+determination determinação
+device dispositivo
+diagram diagrama
+dial mostrador
+diamond diamante
+diary diário
+dictionary dicionário
+diet dieta
+difference diferença
+difficulty dificuldade
+dig cavar
+digital digital
+dignity dignidade
+dilemma dilema
+dimension dimensão
+dining jantar
+dinner jantar
+diplomacy diplomacia
+director diretor
+dirt sujeira terra
+disability deficiência
+disadvantage desvantagem
+disagreement desacordo
+disaster desastre
+discipline disciplina
+disclosure revelação
+discount desconto
+discovery descoberta
+discrimination discriminação
+disease doença
+dish prato
+disk disco
+display exibição
+disposal descarte
+dispute disputa
+distance distância
+distinction distinção
+distribution distribuição
+district distrito
+diversity diversidade
+dividend dividendo
+division divisão
+divorce divórcio
+dock doca
+doctor médico doutor
+document documento
+dog cachorro
+dollar dólar
+domain domínio
+donation doação
+donor doador
+door porta
+dose dose
+dot ponto
+double dobro duplo
+doubt dúvida
+download download baixar
+downtown centro da cidade
+dozen dúzia
+draft rascunho projeto
+drama drama
+draw desenho empate
+drawer gaveta
+dream sonho
+dress vestido
+drink bebida beber
+drive dirigir passeio
+driver motorista
+drop gota deixar cair
+drug droga medicamento
+drum tambor
+duck pato
+due devido
+dump lixão despejar
+duo dupla
+dust poeira
+duty dever obrigação
+dynasty dinastia
+e-mail e-mail correio eletrônico
+eagle águia
+ear orelha
+earth terra chão
+earthquake terremoto
+ease facilidade
+east leste
+echo eco
+eclipse eclipse
+ecology ecologia
+economics economia
+economy economia
+edge borda margem
+edition edição
+editor editor
+education educação
+effect efeito
+efficiency eficiência
+effort esforço
+egg ovo
+ego ego
+election eleição
+electricity eletricidade
+element elemento
+elephant elefante
+elite elite
+email e-mail
+embarrassment constrangimento
+emergency emergência
+emission emissão
+emotion emoção
+emphasis ênfase
+empire império
+employee empregado
+employer empregador
+employment emprego
+empty vazio
+enclosure cercado
+encounter encontro
+encouragement incentivo
+end fim final
+endeavor esforço
+enemy inimigo
+energy energia
+engine motor
+engineer engenheiro
+engineering engenharia
+enquiry inquérito
+enterprise empresa
+entertainment entretenimento
+enthusiasm entusiasmo
+entrance entrada
+entry entrada inscrição
+environment ambiente
+episode episódio
+equal igual
+equality igualdade
+equation equação
+equipment equipamento
+era era época
+error erro
+escape fuga
+essay ensaio
+essence essência
+establishment estabelecimento
+estate propriedade
+estimate estimativa
+ethics ética
+evidence evidência
+exam exame
+example exemplo
+exchange troca câmbio
+excitement excitação
+excuse desculpa
+executive executivo
+exercise exercício
+exhibit exposição
+exhibition exibição
+exile exílio
+existence existência
+exit saída
+expansion expansão
+expectations expectativa
+expense despesa
+experience experiência
+experiment experimento
+expert especialista
+explanation explicação
+exploration exploração
+explosion explosão
+export exportação
+exposure exposição
+expression expressão
+extension extensão
+extent extensão
+external externo
+extreme extremo
+eye olho
+
+fabric tecido
+face rosto face
+facility facilidade instalação
+fact fato
+factor fator
+factory fábrica
+failure falha
+fair feira justo
+faith fé
+fall queda outono
+fame fama
+family família
+fan fã ventilador
+farm fazenda
+farmer fazendeiro
+fashion moda
+fat gordura
+fate destino
+father pai
+fault defeito culpa
+favor favor
+fear medo
+feature característica
+federation federação
+fee taxa honorário
+feed ração alimentar
+feedback feedback resposta
+feeling sentimento
+fellow companheiro
+female fêmea
+fence cerca
+ferry balsa
+festival festival
+fiber fibra
+fiction ficção
+field campo área
+fighter lutador
+figure figura número
+file arquivo fichário
+film filme película
+filter filtro
+finance finanças
+finding descoberta
+finger dedo
+finish fim acabamento
+fire fogo demitir
+firm empresa firme
+fish peixe pescar
+fishing pesca
+fit ajuste forma
+fix consertar solução
+flag bandeira
+flame chama
+flash flash clarão
+flavor sabor
+fleece velo lã
+fleet frota
+flesh carne
+flexibility flexibilidade
+flight voo fuga
+float flutuar boia
+flood inundação
+floor chão andar
+flour farinha
+flower flor
+flu gripe
+fluid fluido
+fly mosca voar
+focus foco centralizar
+fog neblina
+fold dobra
+folk povo popular
+follow seguir
+food comida
+foot pé
+football futebol
+force força obrigar
+forecast previsão
+forest floresta
+form forma formulário
+formal formal
+format formato
+formation formação
+formula fórmula
+fortune fortuna sorte
+forum fórum
+foundation fundação
+fountain fonte
+fox raposa
+fraction fração
+frame moldura estrutura
+framework estrutura
+fraud fraude
+freedom liberdade
+freezer congelador
+frequency frequência
+friend amigo
+friendship amizade
+frog sapo
+front frente
+fruit fruta
+fuel combustível
+function função
+fund fundo financiamento
+funeral funeral
+furniture móveis
+fur pelagem
+future futuro
+
+gain ganho lucro
+galaxy galáxia
+gallery galeria
+gallon galão
+gambling jogo
+game jogo caça
+gang gangue
+gap lacuna vão
+garage garagem
+garden jardim
+garlic alho
+gas gás
+gate portão
+gathering reunião
+gauge medidor
+gay gay
+gear engrenagem equipamento
+gene gene
+general geral general
+generation geração
+genius gênio
+genre gênero
+geography geografia
+gesture gesto
+ghost fantasma
+giant gigante
+gift presente dom
+ginger gengibre
+girl menina garota
+glacier geleira
+glass vidro copo
+glimpse vislumbre
+glitter brilho
+globe globo
+glory glória
+goal gol objetivo
+goat bode cabra
+gold ouro
+golf golfe
+good bem bom
+goose ganso
+government governo
+governor governador
+grab agarrar
+grade nota grau
+graduate graduado
+grain grão
+grammar gramática
+grandchild neto neta
+grandfather avô
+grandmother avó
+grant concessão bolsa
+grape uva
+graph gráfico
+grass grama capim
+gratitude gratidão
+gravity gravidade
+gravy molho
+gray cinza
+grease graxa
+great ótimo grande
+green verde
+grief tristeza luto
+grill grelha
+grocery mercearia
+ground chão terra
+group grupo
+growth crescimento
+guarantee garantia
+guard guarda proteger
+guess palpite
+guest convidado
+guidance orientação
+guide guia
+guitar guitarra
+gum chiclete gengiva
+gun arma
+
+habit hábito
+hair cabelo
+hairdresser cabeleireiro
+half metade
+hall salão
+hallway corredor
+ham presunto
+hammer martelo
+hand mão
+handle maçaneta lidar
+handshake aperto de mão
+harbor porto
+hard duro difícil
+hardware ferragens
+harm dano prejuízo
+harmony harmonia
+harvest colheita
+haste pressa
+hatred ódio
+hawk falcão
+hazard perigo risco
+head cabeça
+headache dor de cabeça
+headline manchete
+health saúde
+hearing audição audiência
+heart coração
+heat calor
+heaven céu paraíso
+hedge cerca viva
+height altura
+helicopter helicóptero
+hell inferno
+helmet capacete
+help ajuda
+hemisfério hemisphere
+herb erva
+heritage herança
+hero herói
+hierarchy hierarquia
+high alto elevado
+highlight destaque
+highway rodovia
+hill colina morro
+hint dica pista
+hip quadril
+hire contratar
+historian historiador
+history história
+hit batida sucesso
+hobby passatempo
+hockey hóquei
+hold segurar posse
+hole buraco furo
+holiday feriado férias
+holly azevinho
+home casa lar
+homework lição de casa
+honesty honestidade
+honor honra
+hope esperança
+horizon horizonte
+horn buzina chifre
+horror horror
+horse cavalo
+hospital hospital
+host anfitrião hospedeiro
+hostage refém
+hostel albergue
+hour hora
+house casa
+housing moradia
+human humano
+humidity umidade
+humor humor
+hunger fome
+hunt caça
+hunter caçador
+hurricane furacão
+hurt dor ferir
+husband marido
+hydrogen hidrogênio
+hypothesis hipótese
+
+ice gelo
+idea ideia
+ideal ideal
+identity identidade
+ideology ideologia
+idiom idioma
+ignorance ignorância
+illness doença
+image imagem
+imagination imaginação
+impact impacto
+implementation implementação
+import importação
+importance importância
+impression impressão
+improvement melhoria
+incentive incentivo
+incident incidente
+inclusion inclusão
+income renda
+increase aumento
+index índice
+indication indicação
+indicator indicador
+indústria industry
+infant bebê
+infection infecção
+inflation inflação
+influence influência
+information informação
+ingredient ingrediente
+inhabitant habitante
+initial inicial
+initiative iniciativa
+injury lesão
+ink tinta
+inner interior
+innocence inocência
+input entrada
+inquiry inquérito
+insect inseto
+inside interior
+insight percepção
+inspection inspeção
+inspiration inspiração
+installation instalação
+instance instância
+instinct instinto
+institute instituto
+institution instituição
+instruction instrução
+instrument instrumento
+insurance seguro
+integrity integridade
+intellect intelecto
+intelligence inteligência
+intention intenção
+interaction interação
+interest interesse juros
+interface interface
+interference interferência
+interior interior
+interpretation interpretação
+interval intervalo
+intervention intervenção
+interview entrevista
+introduction introdução
+invention invenção
+investment investimento
+invitation convite
+iron ferro
+irony ironia
+island ilha
+issue questão problema
+
+jail prisão
+jam geleia congestionamento
+jar pote jarro
+jasmine jasmim
+jazz jazz
+jeans jeans
+jelly geleia
+jet jato
+jewel joia
+job trabalho emprego
+jog corrida leve
+join juntar-se
+joint articulação junção
+joke piada
+journal diário revista
+journalist jornalista
+journey jornada viagem
+joy alegria
+judge juiz julgar
+judgment julgamento
+juice suco
+jump salto
+jungle selva
+junior júnior
+jury júri
+justice justiça
+
+kayak caiaque
+key chave
+keyboard teclado
+kick chute pontapé
+kid criança bode
+kidney rim
+kill matar assassinar
+kilogram quilograma
+kilometer quilômetro
+kind tipo gentil
+king rei
+kingdom reino
+kiss beijo
+kit kit conjunto
+kitchen cozinha
+kite pipa papagaio
+knee joelho
+knife faca
+knight cavaleiro
+knitting tricô
+knot nó
+knowledge conhecimento
+
+label rótulo
+labor trabalho parto
+laboratory laboratório
+lace renda cadarço
+lack falta
+ladder escada
+lake lago
+lamb cordeiro
+lamp lâmpada
+land terra terreno
+landlord proprietário
+landscape paisagem
+language língua idioma
+lap colo volta
+laptop laptop
+laser laser
+last último durar
+latch trinco
+late tarde atrasado
+laugh risada
+laundry lavanderia roupa
+law lei direito
+lawn gramado
+lawyer advogado
+layer camada
+layout layout
+lead liderança liderar
+leader líder
+leadership liderança
+leaf folha
+leaflet folheto
+league liga
+leak vazamento
+leap salto
+learning aprendizado
+leather couro
+lecture palestra
+left esquerda
+leg perna
+legacy legado
+legal legal
+legend lenda
+legislation legislação
+lemon limão
+length comprimento
+lens lente
+lesson lição aula
+letter carta letra
+level nível
+liability responsabilidade
+liberal liberal
+liberation libertação
+library biblioteca
+license licença
+lid tampa
+lie mentira deitar
+life vida
+lifestyle estilo de vida
+lifetime tempo de vida
+lift elevador levantar
+light luz leve
+lighting iluminação
+lightning relâmpago
+like gostar como
+likelihood probabilidade
+limit limite
+line linha fila
+link ligação elo
+lion leão
+lip lábio
+liquid líquido
+list lista
+listener ouvinte
+literature literatura
+litter lixo ninhada
+liver fígado
+living vida moradia
+load carga carregar
+loan empréstimo
+lobby saguão
+location localização
+lock fechadura trancar
+log tronco diário
+logic lógica
+logo logotipo
+loneliness solidão
+long longo
+look olhar aparência
+loop laço ciclo
+loss perda
+lot lote sorte
+lotion loção
+loud alto barulhento
+love amor amar
+lover amante
+low baixo
+loyalty lealdade
+luck sorte
+luggage bagagem
+lunch almoço
+lung pulmão
+luxury luxo
+lymph linfa
+
+machine máquina
+mad louco bravo
+magazine revista
+magic mágica
+magnet ímã
+maid empregada
+mail correio
+main principal
+maintenance manutenção
+majority maioria
+make fazer marca
+maker fabricante
+male macho masculino
+mall shopping
+man homem
+management gestão
+manager gerente
+mandate mandato
+manner maneira
+manufacturer fabricante
+map mapa
+marble mármore
+march marcha março
+margin margem
+mark marca nota
+market mercado
+marketing marketing
+marriage casamento
+mask máscara
+mass massa missa
+master mestre
+match fósforo partida
+material material
+math matemática
+matter assunto matéria
+maximum máximo
+meal refeição
+mean média significar
+meaning significado
+means meios
+measure medida
+meat carne
+mechanism mecanismo
+medal medalha
+media mídia meios
+medicine medicina remédio
+meeting reunião encontro
+member membro
+membership adesão
+memory memória
+mention menção
+menu cardápio
+merchant comerciante
+mercy misericórdia
+merge fundir
+message mensagem
+metal metal
+method método
+meter medidor metro
+microscope microscópio
+microwave microondas
+midday meio-dia
+middle meio
+midnight meia-noite
+migration migração
+mile milha
+military militar
+milk leite
+mill moinho fábrica
+mind mente
+mineral mineral
+minimum mínimo
+minister ministro
+ministry ministério
+minor minoria
+minority minoria
+minute minuto
+mirror espelho
+misery miséria
+mission missão
+mist névoa
+mistake erro engano
+mix mistura misturar
+mixture mistura
+mobile móvel celular
+mode modo
+model modelo
+modern moderno
+momentum impulso
+moment momento
+money dinheiro
+monitor monitor
+month mês
+monument monumento
+mood humor estado de espírito
+moon lua
+moral moral
+morning manhã
+mortgage hipoteca
+mosquito mosquito
+mother mãe
+motion movimento moção
+motivation motivação
+motive motivo
+motor motor
+motorcycle motocicleta
+mountain montanha
+mouse rato mouse
+mouth boca
+move movimento mudar
+movie filme
+mud lama barro
+murder assassinato
+music música
+musician músico
+mystery mistério
+
+nail unha prego
+name nome
+nap soneca
+narrative narrativa
+nation nação
+nationality nacionalidade
+native nativo
+nature natureza
+navy marinha
+near perto
+necessity necessidade
+needle agulha
+negative negativo
+negotiation negociação
+neighbor vizinho
+neighborhood vizinhança
+nerve nervo
+nest ninho
+net rede líquido
+network rede
+news notícias
+newspaper jornal
+nickel níquel
+night noite
+nightmare pesadelo
+noise ruído barulho
+nomination nomeação
+nonsense bobagem
+norm norma
+north norte
+nose nariz
+note nota bilhete
+notebook caderno
+notice aviso notificação
+novel romance
+number número
+nurse enfermeira
+nursery berçário
+nut noz
+
+object objeto
+objective objetivo
+observation observação
+observer observador
+obsession obsessão
+obstacle obstáculo
+occasion ocasião
+occupation ocupação
+occurrence ocorrência
+ocean oceano
+octagon octógono
+odd estranho ímpar
+odor odor
+offense ofensa
+offer oferta oferecer
+office escritório
+officer oficial
+oil óleo
+old velho antigo
+olive azeitona
+omission omissão
+onion cebola
+opening abertura
+opera ópera
+operation operação
+operator operador
+opinion opinião
+opponent oponente
+opportunity oportunidade
+opposition oposição
+option opção
+oral oral
+orange laranja
+order ordem pedido
+organ órgão
+organization organização
+origin origem
+ornament ornamento
+outbreak surto
+outcome resultado
+outdoor ao ar livre
+outfit roupa conjunto
+outlet tomada saída
+outline esboço contorno
+output saída produção
+outside exterior
+oven forno
+overall geral macacão
+overcoat sobretudo
+owner proprietário
+ownership propriedade
+oxygen oxigênio
+
+pack embalar pacote
+package pacote encomenda
+pad almofada bloco
+page página
+pain dor
+paint tinta pintar
+painting pintura quadro
+pair par
+palace palácio
+palm palma palmeira
+pan panela frigideira
+panel painel
+panic pânico
+panorama panorama
+paper papel
+parachute paraquedas
+paradise paraíso
+paragraph parágrafo
+parallel paralelo
+parameter parâmetro
+parent pai mãe
+park parque estacionar
+parking estacionamento
+parliament parlamento
+part parte papel
+participant participante
+particle partícula
+partner parceiro
+party festa partido
+passage passagem trecho
+passenger passageiro
+passion paixão
+passport passaporte
+past passado
+pasta massa
+pastime passatempo
+path caminho trilha
+patience paciência
+patient paciente
+pattern padrão
+pause pausa
+pavement calçada
+pay pagamento salário
+payment pagamento
+peace paz
+peak pico cume
+peanut amendoim
+penalty penalidade
+pencil lápis
+people pessoas
+percentage porcentagem
+perception percepção
+performance desempenho
+perfume perfume
+period período ponto
+permission permissão
+permit permissão
+person pessoa
+personal pessoal
+personality personalidade
+perspective perspectiva
+pet animal de estimação
+petrol gasolina
+phase fase
+phenomenon fenômeno
+philosophy filosofia
+phone telefone
+photo foto
+photograph fotografia
+photographer fotógrafo
+photography fotografia
+phrase frase
+physical físico
+physics física
+pianist pianista
+piano piano
+pick palheta escolha
+picture imagem fotografia
+pie torta
+piece pedaço peça
+pig porco
+pile pilha monte
+pillar pilar coluna
+pilot piloto
+pin alfinete pino
+pinch pitada beliscão
+pine pinheiro
+pink rosa
+pint pinta caneca
+pipe tubo cachimbo
+pirate pirata
+pistol pistola
+pitch tom arremesso
+pizza pizza
+place lugar colocar
+plan plano planta
+plane avião
+planet planeta
+planning planejamento
+plant planta fábrica
+plastic plástico
+plate prato chapa
+platform plataforma
+play peça brincar
+player jogador tocador
+playground playground
+pleasure prazer
+pledge promessa penhor
+plot enredo trama
+plug plugue tomada
+poem poema
+poet poeta
+poetry poesia
+point ponto questão
+poison veneno
+pole poste polo
+police polícia
+policy política apólice
+polish polonês lustrar
+politician político
+politics política
+poll pesquisa urna
+pollution poluição
+pool piscina bilhar
+pop música pop
+population população
+portion porção
+portrait retrato
+position posição cargo
+possibility possibilidade
+post correio poste
+poster cartaz
+pot pote panela
+potato batata
+potential potencial
+pound libra bater
+powder pó
+power poder energia
+practice prática consultório
+praise louvor elogio
+prayer oração
+precaution precaução
+precedent precedente
+precision precisão
+prediction previsão
+preference preferência
+pregnancy gravidez
+prejudice preconceito
+preparation preparação
+presence presença
+present presente atual
+presentation apresentação
+president presidente
+press imprensa
+pressure pressão
+prestige prestígio
+price preço
+pride orgulho
+priest sacerdote
+primary primário principal
+prince príncipe
+princess princesa
+principle princípio
+print impressão
+printer impressora
+priority prioridade
+prison prisão
+privacy privacidade
+prize prêmio
+problem problema
+procedure procedimento
+process processo
+producer produtor
+product produto
+production produção
+profession profissão
+professor professor
+profile perfil
+profit lucro proveito
+program programa
+progress progresso
+project projeto
+promise promessa
+promotion promoção
+proof prova
+propaganda propaganda
+property propriedade
+proposal proposta
+prospect perspectiva
+protection proteção
+protest protesto
+protocol protocolo
+provider provedor
+province província
+provision provisão
+psychologist psicólogo
+psychology psicologia
+publication publicação
+public público
+publicity publicidade
+publisher editor
+pull puxar
+pulse pulso
+pump bomba
+punishment punição
+purchase compra
+purpose propósito
+puzzle quebra-cabeça enigma
+
+qualification qualificação
+quality qualidade
+quantity quantidade
+quarter quarto trimestre
+queen rainha
+query consulta pergunta
+quest busca procura
+question pergunta questão
+queue fila
+quilt colcha
+quit desistir demitir-se
+quote citação
+
+radar radar
+radiation radiação
+radio rádio
+rail trilho grade
+railroad ferrovia
+rain chuva
+rainbow arco-íris
+range alcance variedade
+rank patente classificação
+rap rap
+rate taxa índice
+ratio proporção
+raw bruto cru
+ray raio
+reaction reação
+reader leitor
+reading leitura
+reality realidade
+reason razão motivo
+receipt recibo
+receiver receptor
+reception recepção
+recipe receita
+recognition reconhecimento
+recommendation recomendação
+record registro disco
+recorder gravador
+recovery recuperação
+recruit recruta
+rectangle retângulo
+red vermelho
+reduction redução
+reference referência
+referendum referendo
+reflection reflexão
+reform reforma
+refuge refúgio
+refusal recusa
+region região
+register registrar
+regret arrependimento
+regulation regulamento
+regulator regulador
+rehabilitation reabilitação
+reinforcement reforço
+relation relação
+relationship relacionamento
+relative parente relativo
+release liberação lançamento
+relevance relevância
+relief alívio
+religion religião
+relish prazer
+reluctance relutância
+remainder restante
+remark observação
+remedy remédio solução
+reminder lembrete
+remote remoto
+removal remoção
+rental aluguel
+repair reparo conserto
+repetition repetição
+replacement substituição
+report relatório
+reporter repórter
+representation representação
+reputation reputação
+request pedido solicitação
+requirement requisito
+rescue resgate
+research pesquisa
+reservation reserva
+resident residente
+residence residência
+resolution resolução
+resort estância recurso
+resource recurso
+respect respeito
+response resposta
+responsibility responsabilidade
+rest descanso restante
+restaurant restaurante
+restriction restrição
+result resultado
+retail varejo
+retirement aposentadoria
+retreat retiro
+return retorno
+revelation revelação
+revenge vingança
+revenue receita
+review revisão crítica
+revolution revolução
+reward recompensa
+rhetoric retórica
+rhyme rima
+rhythm ritmo
+rice arroz
+rich rico
+ride passeio cavalgada
+ridge cume crista
+rifle rifle
+right direita direito
+ring anel toque
+riot tumulto motim
+rip rasgar
+rise ascensão aumento
+risk risco
+ritual ritual
+river rio
+road estrada caminho
+robot robô
+rock rocha pedra
+rocket foguete
+role papel função
+roll rolo rolar
+roof telhado teto
+room quarto espaço
+root raiz
+rope corda
+rose rosa
+rotation rotação
+route rota caminho
+routine rotina
+row fileira briga
+royal real
+rub esfregação
+rubber borracha
+rubbish lixo
+rule regra régua
+ruler governante régua
+rumor boato
+run corrida funcionamento
+runner corredor
+rupture ruptura
+rush pressa correria
+rust ferrugem
+
+sacrifice sacrifício
+sad triste
+saddle sela
+safe seguro cofre
+safety segurança
+sail vela
+sailor marinheiro
+salad salada
+salary salário
+sale venda liquidação
+salt sal
+sample amostra
+sand areia
+sandwich sanduíche
+satellite satélite
+satisfaction satisfação
+sauce molho
+sausage salsicha
+saving economia poupança
+scale escala balança
+scan digitalizar examinar
+scandal escândalo
+scar cicatriz
+scenario cenário
+scene cena
+scent perfume aroma
+schedule programação
+scheme esquema plano
+school escola
+science ciência
+scientist cientista
+scope escopo alcance
+score pontuação partitura
+scratch arranhão
+screen tela
+script roteiro script
+sea mar
+seal selo foca
+search busca procura
+season estação temperar
+seat assento lugar
+second segundo
+secret segredo
+section seção
+sector setor
+security segurança
+seed semente
+segment segmento
+selection seleção
+self eu próprio
+seller vendedor
+seminar seminário
+senate senado
+sender remetente
+senior sênior
+sensation sensação
+sense sentido sensatez
+sentence frase sentença
+sequence sequência
+series série
+servant servo empregado
+service serviço
+session sessão
+set conjunto cenário
+setting configuração
+shade sombra
+shadow sombra
+shaft eixo haste
+shake tremor apertão
+shame vergonha
+shape forma moldar
+share compartilhar parte
+shark tubarão
+shed galpão
+sheep ovelha
+sheet lençol folha
+shelf prateleira
+shell concha casco
+shelter abrigo
+shift turno mudança
+shine brilho lustrar
+ship navio
+shirt camisa
+shock choque abalo
+shoe sapato
+shoot tiro broto
+shop loja comprar
+shore costa margem
+short curto
+shot tiro dose
+shoulder ombro
+shout grito
+show show mostrar
+shower chuveiro banho
+shrimp camarão
+side lado face
+sight visão vista
+sign sinal placa
+signal sinal
+signature assinatura
+significance significado
+silence silêncio
+silk seda
+silver prata
+similarity similaridade
+simple simples
+simplicity simplicidade
+simulation simulação
+sin pecado
+singer cantor
+single solteiro único
+sink pia afundar
+sir senhor
+sister irmã
+site local sítio
+situation situação
+size tamanho
+skill habilidade
+skin pele
+sky céu
+slab laje
+slam batida estrondo
+slave escravo
+sleep sono dormir
+sleeve manga
+slice fatia
+slide lâmina escorregar
+slight leve ligeiro
+slip escorregão deslize
+slope inclinação ladeira
+slot fenda vaga
+smell cheiro cheirar
+smile sorriso sorrir
+smoke fumaça fumar
+smooth suave liso
+snake cobra
+snap estalo quebrar
+snow neve nevar
+soap sabão
+soccer futebol
+society sociedade
+sock meia
+sodium sódio
+sofa sofá
+soil solo terra
+soldier soldado
+solid sólido
+solution solução
+some algum
+somebody alguém
+someone alguém
+something alguma coisa
+somewhere algum lugar
+son filho
+song música canção
+sound som soar
+soup sopa
+source fonte origem
+south sul
+sovereignty soberania
+soy soja
+speaker orador alto-falante
+special especial
+specialist especialista
+species espécie
+specimen espécime
+speech discurso fala

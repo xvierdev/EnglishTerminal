@@ -34,11 +34,10 @@ def game():
             print(f'{i+1}. {record_list[i]}', end='')
 
     while(lifes > 0):
-        text = strings()
+        words = strings()
         try:
-            words = text.split(' ')
             word = words [0]
-            result = words[1:]
+            result = words[1:][0].split(' ')
             answer = input(f'Whats is the translate of {YELLOW}"{word}"{RESET}? ')
             if answer.lower() in result:
                 points += 1
