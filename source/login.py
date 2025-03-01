@@ -1,11 +1,11 @@
-import source.db.db as db
+import source.db.users as users
 import util
 
 login = input('login: ')
 password = input('password: ')
 
-db.insert_user(login, password)
-user = db.read_user(login)
+users.insert_user(login, password)
+user = users.read_user(login)
 if user[1] == util.hash_text('abc'):
     print('success')
 else:

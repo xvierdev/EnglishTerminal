@@ -1,5 +1,5 @@
 # Testador do CRUD by xvierdev
-import db
+import source.db.users as users
 import hashlib
 
 # Calcula o Hash de uma string
@@ -9,9 +9,9 @@ def hash_text(text):
 
 # Rotinas de teste do CRUD
 
-db.insert_user('Wesley', hash_text('Serveless'))
-print(db.read_user('Wesley', hash_text('fubaka')))
-print(db.update_user('Wesley', hash_text('fubaka')))
-print(db.read_user('Wesley', hash_text('fubaka')))
-print(db.delete_user('Wesley'))
-print(db.read_user('Wesley', hash_text('fubaka')))
+users.insert_user('Wesley', hash_text('Serveless'))
+print(users.read_user('Wesley', hash_text('fubaka')))
+print(users.update_user('Wesley', hash_text('fubaka')))
+print(users.read_user('Wesley', hash_text('fubaka')))
+print(users.delete_user('Wesley'))
+print(users.read_user('Wesley', hash_text('fubaka')))
