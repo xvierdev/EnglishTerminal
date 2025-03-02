@@ -1,50 +1,46 @@
-# Gerenciador de Recordes do jogador.
+import util
+import logs
 
-import os, util, logs
-
-#=============CONSTANTES============#
-
-RECORDS = 'records.txt'
-HASH = 'hash.txt'
-PASSWORD = 'Xjd4=r#$%_&+-*/'
-
-#==========RECORD_MANAGER==========#
+# Constantes
+HASH_FILE = 'records_hash.txt'
 
 def write_records(name, points):
+    """Escreve um novo recorde e atualiza o hash."""
     try:
-        with open(RECORDS, 'a') as records:
-            records.writelines(f'{util.now()} {name} {points}\n')
+        records = util.get_records_from_db()
+        records.append((util.now(), name, points))
+        records.sort(key=lambda x: x[2], reverse=True)
+        records = records[:5]  # Mantém apenas os 5 melhores
 
-        hash_records = util.calcular_hash("records.txt")
-        criptografado = util.criptografar_hash(hash_records, PASSWORD)
-        with open(HASH, "w") as f:
-            f.write(criptografado)
-    except Exception as e:
-        logs.report_bug(e)
+        util.save_records_to_db(records)
+
+        hash_records = util.calcular_hash(records)
+        with open(HASH_FILE, "w") as f:
+            f.write(hash_records)
+
+    except IOError as e:
+        logs.report_bug(f"Erro ao escrever recordes: {e}")
         print(f'Error: {e}')
 
 def load_records():
+    """Carrega e verifica os recordes, retornando os 5 melhores."""
+    records = util.get_records_from_db()
+    if not records:
+        return []
+
     try:
-        with open(HASH, "r") as f:
-            criptografado = f.read()
-            hash_descriptografado = util.descriptografar_hash(criptografado, PASSWORD)
-            hash_records_novo = util.calcular_hash(RECORDS)
-            
-            if hash_descriptografado == hash_records_novo:
-                with open(RECORDS, 'r') as records:
-                    records = sorted(records, key=lambda x: int(x.split()[-1]), reverse=True)[:3]
-                    if records != '':
-                        return records
-                    else:
-                        return 'No records found!'
-            else:
-                print ('Records file has been corrupted!\n')
-                os.remove(RECORDS)
-                os.remove(HASH)
-                return 0
-    except FileNotFoundError as e:
-        logs.report_bug(e)
-        return ''
-    except PermissionError as e:
-        logs.report_bug(e)
-        return ''
+        with open(HASH_FILE, "r") as f:
+            hash_armazenado = f.read()
+        hash_records_novo = util.calcular_hash(records)
+
+        if hash_armazenado == hash_records_novo:
+            return records
+        else:
+            print('Arquivo de hash corrompido!\n')
+            util.save_records_to_db([])  # Limpa os recordes
+            #os.remove(HASH_FILE) #Remover essa linha, pois o arquivo hash não precisa ser deletado.
+            return []
+
+    except (FileNotFoundError, IOError, ValueError) as e:
+        logs.report_bug(f"Erro ao carregar recordes: {e}")
+        return []

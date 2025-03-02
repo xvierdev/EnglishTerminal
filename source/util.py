@@ -1,85 +1,38 @@
-# Script de utilidades, obtenção do tempo a atual, criptografia e calculo de hash.
-
 import hashlib
-import base64
-import datetime
-import random
+import sqlite3
 
-#==============COLORS==============#
+# Constantes
+DB_FILE = 'records.db'
 
-BLACK = "\033[30m"
-BLUE = "\033[34m"
-CYAN = "\033[36m"
-GREEN = "\033[32m"
-MAGENTA = "\033[35m"
-RED = "\033[31m"
-YELLOW = "\033[33m"
-RESET = "\033[0m"
+def calcular_hash(records):
+    """Calcula o hash SHA-256 dos recordes."""
+    records_str = ''.join([f"{r[0]} {r[1]} {r[2]}\n" for r in records])
+    return hashlib.sha256(records_str.encode()).hexdigest()
 
-#===============UTIL===============#
-
-# Retorna a data e hora formatadas.
-def now():
-  return datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-
-# Limpa a tela do console.
-def clear_console():
-  print('\033[2J', end='')
-  print('\033[H', end='')
-
-def print_multicolor(text):
-  colors = ["\033[34m", "\033[36m", "\033[32m", "\033[35m", "\033[31m", "\033[33m"]
-  print(RESET, end='')
-  for i in range(len(text)):
-    print(f'{random.choice(colors)}{text[i]}', end='')
-  print(RESET)
-  
-
-# Report de bugs
-
-def report_bug(error_msg):
+def get_records_from_db():
+    """Obtém os recordes do banco de dados."""
     try:
-        with open('error_log.txt', 'a', encoding="utf-8") as file:
-            file.write(f'{now()} {error_msg}\n')
-            print(f'Error: {error_msg}')
-    except Exception as e:
-        print(f"Erro ao reportar bug: {e}")
+        with sqlite3.connect(DB_FILE) as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT timestamp, name, points FROM records ORDER BY points DESC LIMIT 5")
+            return cursor.fetchall()
+    except sqlite3.Error:
+        return []
 
-
-#===========CRIPTOGRAFIA===========#
-
-# Calcula o hash do arquivo informado.
-def calcular_hash(arquivo):
+def save_records_to_db(records):
+    """Salva os recordes no banco de dados."""
     try:
-      with open(arquivo, 'rb') as f:
-          hash = hashlib.sha256()
-          while chunk := f.read(4096):
-              hash.update(chunk)
-      return hash.hexdigest()
-    except Exception as e:
-       report_bug(e)
-
-# Salva o hash criptografado no arquivo hash.txt
-def criptografar_hash(hash, senha):
-    try:
-      senha_bytes = senha.encode()
-      hash_bytes = hash.encode()
-      criptografado = base64.b64encode(hash_bytes + senha_bytes)
-      return criptografado.decode()
-    except Exception as e:
-      report_bug(e)
-
-# Descriptografa o hash do arquivo de hash.
-def descriptografar_hash(criptografado, senha):
-    try:
-      criptografado_bytes = criptografado.encode()
-      senha_bytes = senha.encode()
-      hash_bytes = base64.b64decode(criptografado_bytes)[:-len(senha_bytes)]
-      return hash_bytes.decode()
-    except Exception as e:
-      report_bug(e)
-
-# Calcula o Hash de uma string
-def hash_text(text):
-    """Hashes a text using SHA-256."""
-    return hashlib.sha256(text.encode()).hexdigest()
+        with sqlite3.connect(DB_FILE) as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS records (
+                    timestamp TEXT,
+                    name TEXT,
+                    points INTEGER
+                )
+            ''')
+            cursor.execute("DELETE FROM records")  # Limpa os recordes antigos
+            cursor.executemany("INSERT INTO records VALUES (?, ?, ?)", records)
+            conn.commit()
+    except sqlite3.Error:
+        pass  # Lidar com erros aqui

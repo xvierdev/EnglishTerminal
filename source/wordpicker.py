@@ -1,18 +1,28 @@
 import sqlite3
-from os import path # Import para caminho
-from random import randint # Import para escolher a string
+from os import path
+from random import randint
 from logs import report_bug
 
 def strings():
+    """
+    Retorna uma palavra aleatória do banco de dados 'words.db'.
+
+    Retorna:
+        tuple: Uma tupla contendo a palavra e sua tradução, ou None em caso de erro.
+    """
     file_path = path.join(path.dirname(__file__), 'words.db')
     try:
         with sqlite3.connect(file_path) as conexao:
             cursor = conexao.cursor()
-            cursor.execute(f'SELECT * FROM header')
-            n_words = cursor.fetchone()[0]
-            cursor.execute(f'SELECT * FROM words WHERE ID = {randint(1, n_words)}')
+            # Obtém uma palavra aleatória diretamente da tabela 'words'
+            cursor.execute('SELECT word, translation FROM words ORDER BY RANDOM() LIMIT 1')
             word = cursor.fetchone()
-            return word[1:]
+            if word:
+                return word
+            else:
+                return None #Retorna none caso não encontre nenhuma palavra.
+
     except sqlite3.Error as e:
         print(f'Error: {e}')
         report_bug(e)
+        return None # Retorna None em caso de erro.
