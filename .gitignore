@@ -4,6 +4,7 @@ venv/
 build/
 dist/
 .vscode/
+terminal.spec
 
 # files to ignore
 log.txt
