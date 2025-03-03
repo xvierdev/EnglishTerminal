@@ -1,46 +1,47 @@
-import util
-import logs
+import sqlite3, util
+from pathlib import Path
 
-# Constantes
-HASH_FILE = 'records_hash.txt'
+DB_FILE = Path(__file__).parent / "db" / "main.db"
 
-def write_records(name, points):
-    """Escreve um novo recorde e atualiza o hash."""
+def insert_record(username, record):
     try:
-        records = util.get_records_from_db()
-        records.append((util.now(), name, points))
-        records.sort(key=lambda x: x[2], reverse=True)
-        records = records[:5]  # Mantém apenas os 5 melhores
-
-        util.save_records_to_db(records)
-
-        hash_records = util.calcular_hash(records)
-        with open(HASH_FILE, "w") as f:
-            f.write(hash_records)
-
-    except IOError as e:
-        logs.report_bug(f"Erro ao escrever recordes: {e}")
-        print(f'Error: {e}')
-
-def load_records():
-    """Carrega e verifica os recordes, retornando os 5 melhores."""
-    records = util.get_records_from_db()
-    if not records:
-        return []
-
+        with sqlite3.connect(DB_FILE) as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT id FROM users WHERE user = ?", (username,))
+            userid=cursor.fetchone()[0]        
+            cursor.execute('INSERT INTO records (user_id, date_time, record) VALUES (?, ?, ?)', (userid, util.now(), record))
+            conn.commit()
+    except Exception as e:
+        print(e)
+        
+def show_records():
     try:
-        with open(HASH_FILE, "r") as f:
-            hash_armazenado = f.read()
-        hash_records_novo = util.calcular_hash(records)
-
-        if hash_armazenado == hash_records_novo:
-            return records
-        else:
-            print('Arquivo de hash corrompido!\n')
-            util.save_records_to_db([])  # Limpa os recordes
-            #os.remove(HASH_FILE) #Remover essa linha, pois o arquivo hash não precisa ser deletado.
-            return []
-
-    except (FileNotFoundError, IOError, ValueError) as e:
-        logs.report_bug(f"Erro ao carregar recordes: {e}")
-        return []
+        with sqlite3.connect(DB_FILE) as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM records ORDER BY record DESC LIMIT 5")
+            records = cursor.fetchall()
+            print("Records:")
+            for i, record in enumerate(records, start=1):
+                cursor.execute("SELECT user FROM users WHERE id = ?", (record[1],))
+                username = cursor.fetchone()[0]
+                print(f"| {i} - {username} | Points: {record[3]} | Date: {record[2].split(' ')[0]} | Time: {record[2].split(' ')[1]} |")
+            print()
+    except Exception as e:
+        print(e)
+            
+def clear_records():
+    try:
+        with sqlite3.connect(DB_FILE) as conn:
+            cursor = conn.cursor()
+            cursor.execute("DELETE FROM records")
+            conn.commit()
+    except Exception as e:
+        print(e)
+        
+if __name__ == "__main__":
+    clear_records()
+    insert_record("admin", 100)
+    insert_record("admin", 200)
+    insert_record("admin", 300)
+    insert_record("admin", 400)
+    show_records()
