@@ -19,5 +19,6 @@ CREATE TABLE IF NOT EXISTS Records (
 CREATE TABLE IF NOT EXISTS Words (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     english TEXT UNIQUE NOT NULL,
-    portuguese TEXT NOT NULL
+    portuguese TEXT NOT NULL,
+    category TEXT -- Adicionado o campo 'category'
 );

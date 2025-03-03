@@ -2,6 +2,18 @@ import util
 import about, records, users
 import getpass
 
+def login():
+    trytimes = 3
+    while trytimes > 0:
+        username = input('Username: ')
+        password = getpass.getpass('Password: ')
+        if users.read_user(username, util.hash(password)):
+            return username
+        trytimes -= 1
+        print(f'Invalid username or password. {trytimes} attempts remaining.')
+    print('Too many failed attempts. Try again later.')
+    return None
+
 def main():
     print('Welcome to English Terminal, input help to obtain help!')
     current_username = None
@@ -35,16 +47,19 @@ def main():
             print(util.hash(' '.join(args)))
             
         elif command.lower() in ['addusr', 'add']:
-            username = input('Username: ')
-            password = getpass.getpass('Password: ')
-            users.create_user(username, util.hash(password))
+            while(True):
+                username = input('Username: ')
+                if ' ' in username:
+                    print('Username cannot contain spaces.')
+                    continue
+                password = getpass.getpass('Password: ')
+                if users.create_user(username, util.hash(password)):
+                    break
             
         elif command.lower() in ['auth', 'authenticate', 'login', 'enter']:
-            username = input('Username: ')
-            password = getpass.getpass('Password: ')
-            if users.read_user(username, util.hash(password)):
-                current_username = username
-                print(f'Welcome, {current_username}!')
+            current_username = login()
+            if current_username:
+                print(f'Logged in as {current_username}.')
                 
         elif command.lower() in ['updusr', 'update']:
             if not current_username:

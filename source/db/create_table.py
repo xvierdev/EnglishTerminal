@@ -36,6 +36,7 @@ def create_table_words(cursor):
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 english TEXT UNIQUE NOT NULL,
                 portuguese TEXT NOT NULL
+                category TEXT NOT NULL
             );
         ''')
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_words_english ON Words (english);")

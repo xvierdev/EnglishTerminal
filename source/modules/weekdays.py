@@ -1,11 +1,12 @@
 import random
+import unicodedata
 
-def jogo_traducao_dias():
+def weekday_translation_game():
     """
-    Um jogo simples onde o jogador traduz os dias da semana em inglês para português.
+    A simple game where the player translates the days of the week from English to Portuguese.
     """
 
-    dias_da_semana = {
+    weekdays = {
         "Monday": "Segunda-feira",
         "Tuesday": "Terça-feira",
         "Wednesday": "Quarta-feira",
@@ -15,21 +16,34 @@ def jogo_traducao_dias():
         "Sunday": "Domingo"
     }
 
-    dias_ingleses = list(dias_da_semana.keys())
-    pontuacao = 0
+    english_weekdays = list(weekdays.keys())
+    score = 0
+    lives = 5
 
-    print("Bem-vindo ao Jogo de Tradução dos Dias da Semana!")
+    print("Welcome to the Weekday Translation Game!")
+    print("You have 5 lives. Good luck!")
 
-    for i in range(5):  # Jogaremos 5 rodadas
-        dia_ingles = random.choice(dias_ingleses)
-        traducao_correta = dias_da_semana[dia_ingles]
+    while lives > 0:
+        english_day = random.choice(english_weekdays)
+        correct_translation = weekdays[english_day]
 
-        resposta = input(f"\nTraduza '{dia_ingles}' para português: ")
+        answer = input(f"\nTranslate '{english_day}' to Portuguese: ")
 
-        if resposta.lower() == traducao_correta.lower():
-            print("Correto!")
-            pontuacao += 1
+        # Remove acentos e converte para minúsculas para comparação
+        answer_normalized = ''.join(c for c in unicodedata.normalize('NFD', answer) if unicodedata.category(c) != 'Mn').lower()
+        correct_normalized = ''.join(c for c in unicodedata.normalize('NFD', correct_translation) if unicodedata.category(c) != 'Mn').lower()
+
+        if answer_normalized == correct_normalized:
+            print("Correct!")
+            score += 1
         else:
-            print(f"Incorreto. A tradução correta é '{traducao_correta}'.")
+            print(f"Incorrect. The correct translation is '{correct_translation}'.")
+            lives -= 1
+            print(f"Lives remaining: {lives}")
 
-    print(f"\nFim do jogo! Sua pontuação: {pontuacao} de 5.")
+    print(f"\nGame over! Your score: {score}.")
+    if lives == 0:
+        print("You lost all your lives!")
+
+if __name__ == "__main__":
+    weekday_translation_game()
