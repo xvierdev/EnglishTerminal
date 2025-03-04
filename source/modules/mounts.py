@@ -69,6 +69,7 @@ def month_translation_game():
     print(f"\nFim do jogo! Sua pontuação: {score}.")
     if lives == 0:
         print("Você perdeu todas as suas vidas!")
+    return score
 
 if __name__ == "__main__":
     month_translation_game()

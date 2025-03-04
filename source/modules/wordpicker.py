@@ -116,6 +116,7 @@ def game():
             print("GAME OVER!")
             print('Better luck next time!')
             break
+    return points
 
 if __name__ == '__main__':
     game()

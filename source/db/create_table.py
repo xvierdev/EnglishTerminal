@@ -16,7 +16,8 @@ def create_tables(cursor):
             CREATE TABLE IF NOT EXISTS Users (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 user TEXT UNIQUE NOT NULL,
-                password TEXT NOT NULL
+                password TEXT NOT NULL,
+                points INTEGER
             );
         ''')
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_users_user ON Users (user);")
@@ -81,27 +82,31 @@ def populate_words(cursor):
 
 def main():
     """Connects to the database, creates tables, and populates the Words table."""
+    success = False
     try:
         with sqlite3.connect(DB_FILE) as conn:
             cursor = conn.cursor()
 
             if create_tables(cursor):
                 logs_writer.write_log("Tables creation process started", level="INFO", module=__file__)
-                print("Tables created successfully!")
+                # print("Tables created successfully!")
                 if populate_words(cursor):
                     conn.commit()  # Commit only if words were inserted successfully
                     logs_writer.write_log("Words inserted successfully and commited.", level="INFO", module=__file__)
-                    print("Words inserted successfully!")
+                    # print("Words inserted successfully!")
+                    success = True
                 else:
                     logs_writer.write_log("Words insertion failed", level="ERROR", module=__file__)
-                    print("Word insertion failed.")
+                    # print("Word insertion failed.")
             else:
                 logs_writer.write_log("Table creation failed", level="ERROR", module=__file__)
-                print("Table creation failed.")
+                # print("Table creation failed.")
 
     except sqlite3.Error as e:
         logs_writer.write_log(f"Error connecting to the database: {e}", level="ERROR", module=__file__)
         print(f"Error connecting to the database: {e}")
+    finally:
+        return success
 
 if __name__ == "__main__":
     main()

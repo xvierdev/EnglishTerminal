@@ -1,19 +1,14 @@
-import getpass
+import getpass, sys
+import logs_writer, util, about
+import records, users
+import db.create_table as first
+
 from pathlib import Path
-import sqlite3
-import sys
 
-# Add the parent directory to the Python path for importing logs_writer
 sys.path.append(str(Path(__file__).parent.parent))
-import logs_writer
-
-import util
-import about, records, users
-
-# Adicione o diretório dos jogos ao path
 sys.path.append(str(Path(__file__).parent / 'modules'))
 
-import weekdays, numbers, date_complete, wordpicker
+import weekdays, game_numbers, date_complete, wordpicker
 
 DB_FILE = Path(__file__).parent / 'db' / "main.db"
 
@@ -47,6 +42,7 @@ def game_menu():
 
 def play_game(username):
     """Presents the game menu and starts the chosen game."""
+    points = 0
     while True:
         choice = game_menu()
 
@@ -57,31 +53,27 @@ def play_game(username):
               logs_writer.write_log(f"User '{username}' completed the game. Points: {points}", level="INFO", module=__file__)
               records.insert_record(username, points) # Add score to the database after the game finishes
               print("Records was added successfully!")
-
-            return  # Return after playing the game
         elif choice == '2':
             logs_writer.write_log(f"User '{username}' started the Weekday Translation Game.", level="INFO", module=__file__)
             points = weekdays.weekday_translation_game()
             logs_writer.write_log(f"User '{username}' completed the game. Points: {points}", level="INFO", module=__file__)
             records.insert_record(username, points)
-            return
         elif choice == '3':
             logs_writer.write_log(f"User '{username}' started the Number Translation Game.", level="INFO", module=__file__)
-            points = numbers.number_translation_game()
+            points = game_numbers.number_translation_game()
             logs_writer.write_log(f"User '{username}' completed the game. Points: {points}", level="INFO", module=__file__)
             records.insert_record(username, points)
-            return
         elif choice == '4':
             logs_writer.write_log(f"User '{username}' started the Date Translation Game.", level="INFO", module=__file__)
             points = date_complete.date_translation_game()
             logs_writer.write_log(f"User '{username}' completed the game. Points: {points}", level="INFO", module=__file__)
             records.insert_record(username, points)
-            return
         elif not choice:
             # User pressed Enter, return to main menu
             return
         else:
             print("Invalid choice. Please try again.")
+        return points
 
 def main():
     """Main application loop."""
@@ -150,7 +142,8 @@ def main():
 
         elif command.lower() == 'game':
             if current_username:
-                play_game(current_username)  # Call the game and capture the points
+                points = play_game(current_username)  # Call the game and capture the points
+                util.increment_user_points(current_username, points)
 
             else:
                 print("You must log in to play the game.")
@@ -161,6 +154,13 @@ def main():
             else:
                 records.show_records()
 
+        elif command.lower() in ['point', 'points', 'pontos']:
+            if not current_username:
+                print('Loging to view points.')
+            else:
+                points = util.read_user_points(current_username)
+                print(f'{current_username} have {points}')
+
         elif command.lower() in ['about', 'sobre']:
             about.about()
 
@@ -168,4 +168,7 @@ def main():
             print('Invalid command. Type help for help.')
 
 if __name__ == '__main__':
-    main()
+    if first.main():
+        main()
+    else:
+        print(f'See logs for details.')

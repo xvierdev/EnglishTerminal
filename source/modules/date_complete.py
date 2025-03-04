@@ -50,6 +50,7 @@ def date_translation_game():
     print(f"\nGame over! Your score: {score}.")
     if lives == 0:
         print("You lost all your lives!")
+    return score
 
 if __name__ == "__main__":
     date_translation_game()

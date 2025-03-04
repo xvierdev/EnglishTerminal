@@ -84,5 +84,7 @@ def number_translation_game():
     if lives == 0:
         print("You lost all your lives!")
 
+    return score
+
 if __name__ == "__main__":
     number_translation_game()
