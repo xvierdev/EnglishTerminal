@@ -35,11 +35,12 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
     * `clear` ou `cls`: limpar o terminal
     * `now` ou `agora`: mostrar a data e hora atual
     * `about`: Seção Sobre
+    * `update` or `atualizar`: update word list
 
 2.  **Usuários:**
     * `addusr` ou `add`: adicionar um novo usuário
     * `auth` ou `authenticate` ou `login` ou `enter`: autenticar um usuário
-    * `updusr` ou `update`: atualizar a senha de um usuário
+    * `updusr` ou `password`: atualizar a senha de um usuário
     * `logout` ou `leave`: deslogar o usuário atual
 
 3.  **Ferramentas:**

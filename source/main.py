@@ -6,9 +6,11 @@ import db.create_table as first
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent))
-sys.path.append(str(Path(__file__).parent / 'modules'))
 
-import weekdays, game_numbers, date_complete, wordpicker
+import modules.weekdays as weekdays
+import modules.game_numbers as game_numbers
+import modules.date_complete as date_complete
+import modules.wordpicker as wordpicker
 
 DB_FILE = Path(__file__).parent / 'db' / "main.db"
 
@@ -100,8 +102,9 @@ def main():
             print('now, agora: show the current date and time')
             print('addusr or add: add a new user')
             print('auth or authenticate or login or enter: authenticate a user')
-            print('updusr or update: update the password of a user')
+            print('updusr or password: update the password of a user')
             print('logout or leave: logout the current user')
+            print('update or atualizar: update word list')
             print('game: Start a translation game')
             print('records [clear]: Show or clear game records')
             print('about: About section')
@@ -117,15 +120,14 @@ def main():
                 print('Username cannot contain spaces.')
                 continue
             password = getpass.getpass('Password: ')
-            if users.create_user(username, util.hash(password)):
-                print('User created successfully!')
+            users.create_user(username, util.hash(password))
 
         elif command.lower() in ['auth', 'authenticate', 'login', 'enter']:
             current_username = login()
             if current_username:
                 print(f'Logged in as {current_username}.')
 
-        elif command.lower() in ['updusr', 'update']:
+        elif command.lower() in ['updusr', 'password']:
             if not current_username:
                 print('You must be logged in to update your password.')
             else:
@@ -160,6 +162,14 @@ def main():
             else:
                 points = util.read_user_points(current_username)
                 print(f'{current_username} have {points}')
+
+        elif command.lower() in ['update', 'atualizar']:
+            util.get_word_list('https://english-terminal.vercel.app/wordlist.txt')
+            if first.main():
+                print('Successfully updated.')
+            else:
+                print('Error.')
+            
 
         elif command.lower() in ['about', 'sobre']:
             about.about()

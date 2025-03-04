@@ -7,3 +7,6 @@ logs/
 .vscode/
 db/main.db
 db/wordlist.txt
+
+# Files
+*.spec
