@@ -168,6 +168,7 @@ def main():
             print('Invalid command. Type help for help.')
 
 if __name__ == '__main__':
+    util.get_word_list('https://english-terminal.vercel.app/wordlist.txt')
     if first.main():
         main()
     else:

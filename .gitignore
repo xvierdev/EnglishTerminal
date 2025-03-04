@@ -5,12 +5,5 @@ build/
 dist/
 logs/
 .vscode/
-
-# files to ignore
-log.txt
-logs.txt
-records.txt
-error_log.txt
-main.spec
-hash.txt
-users.db
+db/main.db
+db/wordlist.txt
