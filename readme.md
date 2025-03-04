@@ -4,14 +4,22 @@
 
 As primeiras fases do desenvolvimento envolvem problemas simples para conhecer os verbetes mais comuns da lingua inglesa.
 
+
 > [!TIP]
 > Recomendado usar [**fontes monoespaçadas com ligaturas**](https://www.jetbrains.com/lp/mono/) para melhor experiência
+
+### [Backlog](./docs/backlog.md) para mais informações sobre o projeto.
 
 ## Como utilizar o programa
 ### Linux
 1. Faça o downloads dos arquivos para um pasta local
 1. Defina o atributo do script InstalA.sh para +x: "cdmod +x instalA.sh"
 1. Execute o script InstalA.sh: source InstalA.sh
+
+### Windows
+1. Faça o download dos arquivos para uma pasta logal.
+1. Se o python estiver instalado, execute o arquivo main.py
+1. Enjoy
 
 
 ## Principais Contribuidores
@@ -20,22 +28,28 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
   <img src="https://contrib.rocks/image?repo=xvierdev/EnglishTerminal" />
 </a>
 
-## Comandos do Terminal
+## Lista de Comandos
 
-```logs```: serve para ver tudo que o usuário já fez;
+1.  **Geral:**
+    * `exit` ou `quit`: fechar o terminal
+    * `clear` ou `cls`: limpar o terminal
+    * `now` ou `agora`: mostrar a data e hora atual
+    * `about`: Seção Sobre
 
-```logs -f```: aviso: apaga todo o seu progresso(ele excluí tudo do arquivo log)
+2.  **Usuários:**
+    * `addusr` ou `add`: adicionar um novo usuário
+    * `auth` ou `authenticate` ou `login` ou `enter`: autenticar um usuário
+    * `updusr` ou `update`: atualizar a senha de um usuário
+    * `logout` ou `leave`: deslogar o usuário atual
 
-```logs -r```: mostra os records do arquivo records.txt
+3.  **Ferramentas:**
+    * `hash`: gerar um hash de um texto
 
-```game```: inicia o jogo;
-
-```exit```: sair do programa
-
-```neofetch```: parecido com o neofetch do Linux
-
-```help```: lista todos os comandos e suas funções
+4.  **Jogos e Registros:**
+    * `game`: iniciar um jogo de tradução
+    * `records [clear]`: mostrar ou limpar registros do jogo
 
 ## Requisitos
 
 - [**Python 3**](https://www.python.org/)
+- Acesso à internet para obter a lista de palavras.
