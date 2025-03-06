@@ -1,7 +1,7 @@
 import getpass, sys
 import logs_writer, util, about
 import records, users
-import source.create_table as first
+import create_table as first
 
 from pathlib import Path
 
