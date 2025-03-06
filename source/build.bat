@@ -3,7 +3,7 @@ REM Script de Build para EnglishTerminal
 
 echo Iniciando o build...
 
-pyinstaller --name "EnglishTerminal" --onefile --add-data "modules;modules" --add-data "db;db" --distpath="web-ui" main.py
+pyinstaller --name "EnglishTerminal" --onefile --add-data "modules;modules" --distpath="web-ui" main.py
 
 if %errorlevel% equ 0 (
     echo Build concluído com sucesso!

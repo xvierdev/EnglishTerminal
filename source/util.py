@@ -1,12 +1,23 @@
 import hashlib
 import datetime
-import os, pathlib
+import os, pathlib, sys
 import sqlite3
 import logs_writer
 import urllib
 
-DB_FILE = pathlib.Path(__file__).parent / 'db' / "main.db"
-WORD_LIST = pathlib.Path(__file__).parent / 'db' / 'wordlist.txt'
+def get_path():
+    """Obtém o caminho do arquivo main.db no mesmo diretório do executável."""
+    if getattr(sys, 'frozen', False):
+        # Estamos rodando dentro do executável empacotado
+        diretorio_executavel = os.path.dirname(sys.executable)
+    else:
+        # Estamos rodando como um script Python normal
+        diretorio_executavel = os.path.dirname(os.path.abspath(__file__))
+    caminho_db = os.path.join(diretorio_executavel, 'main.db')
+    return caminho_db
+
+DB_FILE = get_path()
+WORD_LIST = pathlib.Path(__file__).parent / 'wordlist.txt'
 
 def now():
     return datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
@@ -61,3 +72,4 @@ def get_word_list(url):
         print(f"Arquivo baixado com sucesso e salvo em: {WORD_LIST}")
     except Exception as e:
         print(f"Erro ao baixar o arquivo: {e}")
+
