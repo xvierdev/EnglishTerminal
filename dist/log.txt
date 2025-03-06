@@ -1,4 +1,0 @@
-Erro ao baixar o arquivo: [Errno 2] No such file or directory: '/tmp/_MEIcfF5Ds/db/wordlist.txt'
-Error connecting to the database: unable to open database file
-See logs for details.
-
