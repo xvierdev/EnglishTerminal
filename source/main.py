@@ -160,7 +160,7 @@ def main():
 
         elif command.lower() in ['update', 'atualizar']:
             util.get_word_list('https://english-terminal.vercel.app/wordlist.txt')
-            if first.main():
+            if create_table.main():
                 print('Successfully updated.')
             else:
                 print('Error.')
