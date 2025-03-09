@@ -24,17 +24,17 @@ animal dog cachorro
 animal dolphin golfinho
 animal duck pato
 animal eagle aguia
-animal echidna equidna
+# animal echidna equidna
 animal elephant elefante
 animal falcon falcao
 animal fish peixe
 animal flamingo flamingo
 animal fox raposa
-animal frog sapo
+animal frog rã
 animal giraffe girafa
 animal goat bode
 animal goose ganso
-animal gorilla gorilla
+animal gorilla gorila
 animal hamster hamster
 animal hawk gaviao
 animal hippopotamus hipopotamo
@@ -46,11 +46,11 @@ animal llama lhama
 animal lion leão
 animal lobster lagosta
 animal monkey macaco
-animal millipede piolho-de-cobra
+# animal millipede piolho-de-cobra
 animal orangutan orangotango
 animal ostrich avestruz
 animal owl coruja
-animal panda panda
+# animal panda panda
 animal parrot papagaio
 animal peacock pavão
 animal penguin pinguim
@@ -60,8 +60,8 @@ animal pigeon pombo
 animal rabbit coelho
 animal raccoon guaxinim
 animal rat rato
-animal rhinoceros rhinoceros
-animal scorpion scorpion
+animal rhinoceros rinoceronte
+animal scorpion escorpião
 animal seahorse cavalo-marinho
 animal seagull gaivota
 animal seal foca
@@ -86,7 +86,7 @@ animal vulture abutre
 animal walrus morsa
 animal whale baleia
 animal wolf lobo
-animal wombat wombat
+# animal wombat vombate
 animal zebra zebra
 
 # Business
@@ -131,19 +131,19 @@ color blue azul
 color bronze bronze
 color brown marrom
 color coral coral
-color fuchsia fúcsia
+# color fuchsia fúcsia
 color gold dourado
 color gray cinza
 color green verde
-color indigo indigo
-color jade jade
+# color indigo indigo
+# color jade jade
 color lavender lavanda
 color lilac lilás
 color magenta magenta
 color maroon bordo
 color mint menta
 color navy azul-marinho
-color neon neon
+# color neon neon
 color ochre ocre
 color olive oliva
 color orange laranja
@@ -152,22 +152,22 @@ color pink rosa
 color plum ameixa
 color red vermelho
 color rose-gold ouro-rosa
-color ruby rubi
-color rust ferrugem
-color salmon salmão
-color sapphire safira
+# color ruby rubi
+# color rust ferrugem
+# color salmon salmão
+# color sapphire safira
 color scarlet escarlate
 color sea-green verde-mar
 color silver prata
-color sky-blue azul-celeste
-color tan tan
-color taupe taupe
-color teal teal
+# color sky-blue azul-celeste
+# color tan tan
+# color taupe taupe
+# color teal teal
 color turquoise turquesa
-color ultramarine ultramarino
-color vanilla baunilha
+# color ultramarine ultramarino
+# color vanilla baunilha
 color violet violeta
-color wine vinho
+# color wine vinho
 color white branco
 color yellow amarelo
 
@@ -240,12 +240,12 @@ food chocolate chocolate
 food churrasco churrasco
 food coffee café
 food cookies biscoitos
-food coxinha coxinha
+# food coxinha coxinha
 food cranberry-sauce molho-de-cranberry
 food custard creme
 food dumplings bolinhos
 food eggs ovo
-food feijoada feijoada
+# food feijoada feijoada
 food flour farinha
 food french-fries batatas-fritas
 food fruits frutas
@@ -264,13 +264,13 @@ food nuts nozes
 food oil óleo
 food pancakes panquecas
 food pasta massa
-food pastel pastel
+# food pastel pastel
 food pepper pimenta
 food pie torta
 food popcorn pipoca
 food pudding pudim
-food pumpkin-pie torta-de-abóbora
-food ramen ramen
+# food pumpkin-pie torta-de-abóbora
+# food ramen ramen
 food refrigerante soda
 food rice arroz
 food rice-pudding arroz-doce
@@ -279,20 +279,20 @@ food salt sal
 food sandwich sanduíche
 food sauce molho
 food sausage salsicha
-food seeds sementes
+# food seeds sementes
 food soda refrigerante
 food soup sopa
 food spaghetti espaguete
 food steak bife
-food stuffing recheio
+# food stuffing recheio
 food sugar açúcar
 food sushi sushi
 food tacos tacos
-food tapioca tapioca
+# food tapioca tapioca
 food tea chá
 food turkey peru
 food vegetables vegetais
-food waffles waffles
+# food waffles waffles
 food water água
 food yogurt iogurte
 
@@ -312,13 +312,13 @@ fruit castanha chestnut
 fruit cherry cereja
 fruit cloudberry amora-ártica
 fruit coconut coco
-fruit cranberry cranberry
-fruit cupuacu cupuaçu
+# fruit cranberry cranberry
+# fruit cupuacu cupuaçu
 fruit date tamara
 fruit dragon-fruit fruta-do-dragão
 fruit elderberry sabugueiro
 fruit fig figo
-fruit goji goji
+# fruit goji goji
 fruit grape uva
 fruit grapefruit toranja
 fruit guava goiaba
@@ -343,9 +343,9 @@ fruit plum ameixa
 fruit pomegranate romã
 fruit quince marmelo
 fruit raspberry framboesa
-fruit salak salak
-fruit salal-berry salal-berry
-fruit sea-buckthorn espinheiro-marítimo
+# fruit salak salak
+# fruit salal-berry salal-berry
+# fruit sea-buckthorn espinheiro-marítimo
 fruit star-fruit carambola
 fruit strawberry morango
 fruit tangerine tangerina
@@ -389,9 +389,9 @@ profession plumber encanador
 profession police-officer policial
 profession producer produtor
 profession programmer programador
-profession real-estate-agent real-estate-agent
+# profession real-estate-agent real-estate-agent
 profession researcher pesquisador
-profession salesperson salesperson
+# profession salesperson salesperson
 profession scientist cientista
 profession secretary secretario
 profession security-guard guarda-de-segurança
@@ -410,7 +410,7 @@ profession writer escritor
 # Sentiment
 
 sentiment acceptance aceitação
-sentiment admiration awe
+sentiment admiration admiração
 sentiment anxiety ansiedade
 sentiment anticipation antecipação
 sentiment apathy apatia
@@ -434,7 +434,7 @@ sentiment gratitude gratidão
 sentiment guilt culpa
 sentiment happiness felicidade
 sentiment hate odio
-sentiment infatuation paixão-súbita
+# sentiment infatuation paixão-súbita
 sentiment jealousy ciume
 sentiment joy alegria
 sentiment longing saudade
@@ -460,8 +460,8 @@ sentiment stress estresse
 sentiment sympathy simpatia
 sentiment terror terror
 sentiment trust confiança
-sentiment vulnerability vulnerabilidade
-sentiment wonder maravilha
+# sentiment vulnerability vulnerabilidade
+# sentiment wonder maravilha
 
 # Shopping
 
@@ -477,7 +477,7 @@ shopping customer cliente
 shopping discount desconto
 shopping market mercado
 shopping money dinheiro
-shopping online-shopping compra-online
+# shopping online-shopping compra-online
 shopping open aberto
 shopping pay pagar
 shopping price preço
@@ -498,18 +498,18 @@ technology browser navegador
 technology connect conectar
 technology data dados
 technology document documento
-technology download download
-technology email email
+# technology download download
+# technology email email
 technology file arquivo
 technology folder pasta
 technology information informação
-technology internet internet
+# technology internet internet
 technology keyboard teclado
 technology microphone microfone
-technology mouse mouse
+# technology mouse mouse
 technology network rede
-technology offline offline
-technology online online
+# technology offline offline
+# technology online online
 technology password senha
 technology phone telefone
 technology printer impressora
@@ -519,7 +519,7 @@ technology search pesquisar
 technology server servidor
 technology social-media mídia-social
 technology speaker alto-falante
-technology website pagina-da-web
+# technology website pagina-da-web
 
 # Travel
 
@@ -567,45 +567,45 @@ vehicle airplane avião
 vehicle atv quadriciclo
 vehicle bicycle bicicleta
 vehicle boat barco
-vehicle bonde streetcar
+# vehicle bonde streetcar
 vehicle bus onibus
 vehicle cable-car teleférico
 vehicle campervan motorhome
 vehicle car carro
 vehicle convertible carro-conversivel
-vehicle delivery-truck delivery-truck
-vehicle double-decker-bus double-decker-bus
+# vehicle delivery-truck delivery-truck
+# vehicle double-decker-bus double-decker-bus
 vehicle electric-car carro-elétrico
 vehicle ferry balsa
-vehicle fire-truck fire-truck
-vehicle food-truck food-truck
+# vehicle fire-truck fire-truck
+# vehicle food-truck food-truck
 vehicle garbage-truck caminhão-de-lixo
-vehicle gondola gôndola
+# vehicle gondola gôndola
 vehicle helicopter helicóptero
-vehicle horse-drawn-carriage horse-drawn-carriage
+# vehicle horse-drawn-carriage horse-drawn-carriage
 vehicle hot-air-balloon balão-de-ar-quente
 vehicle hybrid-car carro-hibrido
 vehicle jeep jipe
 vehicle limousine limusine
-vehicle moped moped
-vehicle motorcycle motorcycle
-vehicle race-car race-car
-vehicle rickshaw riquixá
-vehicle school-bus school-bus
-vehicle scooter scooter
-vehicle segway segway
-vehicle ship navio
+# vehicle moped moped
+vehicle motorcycle motocicleta moto
+# vehicle race-car race-car
+# vehicle rickshaw riquixá
+vehicle school-bus ônibus-escolar
+# vehicle scooter scooter
+# vehicle segway segway
+# vehicle ship navio
 vehicle skateboard skate
 vehicle snowmobile moto-de-neve
 vehicle sports-car carro-esportivo
 vehicle streetcar bonde
 vehicle subway metro
-vehicle taxi taxi
+# vehicle taxi taxi
 vehicle tow-truck caminhão-de-reboque
 vehicle tractor trator
 vehicle train trem
 vehicle truck caminhão
-vehicle van van
+# vehicle van van
 vehicle vintage-car carro-antigo
 vehicle yacht iate
 
@@ -632,4 +632,6 @@ weather thunder trovão
 weather tempo weather
 weather warm morno
 weather wind vento
-weather windy ventando
+# weather windy ventando
+
+# Revised by XvierDev 09/03/2025 19h15
