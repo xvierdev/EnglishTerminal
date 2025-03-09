@@ -1,14 +1,7 @@
 import sqlite3
-from pathlib import Path
-import sys
+import util, logs_writer
 
-# Add the parent directory to the Python path for importing logs_writer
-sys.path.append(str(Path(__file__).parent.parent))
-import logs_writer
-
-import util
-
-DB_FILE = Path(__file__).parent / 'db' / "main.db"
+DB_FILE = util.get_path('main.db')
 
 def create_user(login, password):
     """Creates a new user in the database."""

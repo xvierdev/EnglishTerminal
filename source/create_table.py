@@ -1,10 +1,5 @@
-from pathlib import Path
 import sqlite3
-import sys, util
-
-# Add the parent directory to the Python path for importing logs_writer
-sys.path.append(str(Path(__file__).parent.parent))
-import logs_writer
+import util, logs_writer
 
 DB_FILE = util.get_path('main.db')
 WORDLIST_FILE = util.get_path('wordlist.txt')

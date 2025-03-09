@@ -1,8 +1,8 @@
 import sqlite3
-from pathlib import Path
 import unicodedata
+import util
 
-DB_FILE = Path(__file__).parent.parent / 'db' / "main.db"
+DB_FILE = util.get_path('main.db')
 
 def get_random_word(category=None):
     """Returns a random word from the database, filtered by category if provided."""
@@ -117,6 +117,3 @@ def game():
             print('Better luck next time!')
             break
     return points
-
-if __name__ == '__main__':
-    game()
