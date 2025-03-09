@@ -1,23 +1,25 @@
 import hashlib
 import datetime
-import os, pathlib, sys
+import os
 import sqlite3
 import logs_writer
 import urllib
 
-def get_path():
+def get_path(filename):
     """Obtém o caminho do arquivo main.db no mesmo diretório do executável."""
-    if getattr(sys, 'frozen', False):
-        # Estamos rodando dentro do executável empacotado
-        diretorio_executavel = os.path.dirname(sys.executable)
-    else:
-        # Estamos rodando como um script Python normal
-        diretorio_executavel = os.path.dirname(os.path.abspath(__file__))
-    caminho_db = os.path.join(diretorio_executavel, 'main.db')
-    return caminho_db
+    # Obtém o caminho do diretório %APPDATA%
+    appdata_dir = os.getenv('APPDATA')
 
-DB_FILE = get_path()
-WORD_LIST = pathlib.Path(__file__).parent / 'wordlist.txt'
+    # Cria o caminho completo para o arquivo do banco de dados
+    database_path = os.path.join(appdata_dir, 'EnglishTerminal', filename)
+
+    # Cria o diretório se ele não existir
+    os.makedirs(os.path.dirname(database_path), exist_ok=True)
+
+    return database_path
+
+DB_FILE = get_path('main.db')
+WORD_LIST = get_path('wordlist.txt')
 
 def now():
     return datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
@@ -69,7 +71,9 @@ def get_word_list(url):
     """Baixa um arquivo da URL fornecida usando urllib e o salva no caminho de destino."""
     try:
         urllib.request.urlretrieve(url, WORD_LIST)
-        print(f"Arquivo baixado com sucesso e salvo em: {WORD_LIST}")
+        msg = f"Arquivo baixado com sucesso e salvo em: {WORD_LIST}"
+        print(msg)
+        logs_writer.write_log(msg, "INFO", __name__)
     except Exception as e:
         print(f"Erro ao baixar o arquivo: {e}")
-
+        logs_writer.write_log(e, "ERROR", __name__)

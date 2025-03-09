@@ -6,8 +6,8 @@ import sys, util
 sys.path.append(str(Path(__file__).parent.parent))
 import logs_writer
 
-DB_FILE = util.get_path()
-WORDLIST_FILE = Path(__file__).parent / 'wordlist.txt'
+DB_FILE = util.get_path('main.db')
+WORDLIST_FILE = util.get_path('wordlist.txt')
 
 def create_tables(cursor):
     """Creates the necessary tables if they don't exist."""

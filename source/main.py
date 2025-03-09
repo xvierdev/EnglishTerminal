@@ -1,18 +1,13 @@
-import getpass, sys
+import getpass
 import logs_writer, util, about
-import records, users
-import source.create_table as first
-
-from pathlib import Path
-
-sys.path.append(str(Path(__file__).parent.parent))
+import records, users, create_table
 
 import modules.weekdays as weekdays
 import modules.game_numbers as game_numbers
 import modules.date_complete as date_complete
 import modules.wordpicker as wordpicker
 
-DB_FILE = Path(__file__).parent / 'db' / "main.db"
+DB_FILE = util.get_path('main.db')
 
 def login():
     """Authenticates a user."""
@@ -179,7 +174,7 @@ def main():
 
 if __name__ == '__main__':
     util.get_word_list('https://english-terminal.vercel.app/wordlist.txt')
-    if first.main():
+    if create_table.main():
         main()
     else:
         print(f'See logs for details.')
