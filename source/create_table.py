@@ -63,6 +63,7 @@ def populate_words(cursor):
                     logs_writer.write_log(f"Skipping line due to incorrect format: {line_clean}", level="WARNING", module=__file__)
                     print(f"Warning: Skipping line due to incorrect format: {line_clean}")
 
+            cursor.execute('DELETE FROM Words')
             cursor.executemany("INSERT OR IGNORE INTO Words (english, portuguese, category) VALUES (?, ?, ?)", data_to_insert)
             logs_writer.write_log(f"{cursor.rowcount} Words inserted/ignored.", level="INFO", module=__file__)
             return True

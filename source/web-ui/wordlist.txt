@@ -71,7 +71,7 @@ animal shrimp camarão
 animal sloth preguiça
 animal snail caracol
 animal snake cobra
-animal sparrow sparrow
+# animal sparrow sparrow
 animal spider aranha
 animal squirrel esquilo
 animal starfish estrela-do-mar
@@ -81,7 +81,7 @@ animal tiger tigre
 animal toad sapo
 animal toucan tucano
 animal turkey peru
-animal turtle turtle
+animal turtle tartaruga
 animal vulture abutre
 animal walrus morsa
 animal whale baleia

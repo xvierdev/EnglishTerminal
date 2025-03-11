@@ -62,8 +62,10 @@ def game():
     categories = get_available_categories()
     if categories:
         print("Available Categories:")
+        i = 1
         for category in categories:
-            print(f"- {category}")
+            print(f"{i} - {category}")
+            i += 1
         print()
 
     # Get category choice from the user, converted to lowercase
@@ -71,8 +73,11 @@ def game():
 
     # Check if the category exists
     if category_choice and category_choice not in categories:
-        print("Category not found. Playing with any category.\n")
-        category_choice = None  # If category doesn't exist, set to None
+        if category_choice.isnumeric() and int(category_choice) <= len(categories):
+            category_choice = categories[int(category_choice)-1]
+        else:
+            print("Category not found. Playing with any category.\n")
+            category_choice = None  # If category doesn't exist, set to None
 
     # Get the word count
     if category_choice:

@@ -74,7 +74,7 @@ def play_game(username):
 
 def main():
     """Main application loop."""
-    print('Welcome to English Terminal, input help to obtain help!')
+    print('Welcome to English Terminal!')
     current_username = None
     while(True):
         input_command = input('> ')
@@ -116,6 +116,7 @@ def main():
                 continue
             password = getpass.getpass('Password: ')
             users.create_user(username, util.hash(password))
+            current_username = username
 
         elif command.lower() in ['auth', 'authenticate', 'login', 'enter']:
             current_username = login()
