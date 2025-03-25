@@ -13,3 +13,6 @@ error_log.txt
 main.spec
 hash.txt
 colors.py
+
+# database temporary files
+*.db
