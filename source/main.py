@@ -1,68 +1,181 @@
-from wordpicker import strings # Import da função de consultar wordlist
-from logs import add_log_info, report_bug
-from util import RED, RESET, CYAN, YELLOW, GREEN # texto formatado com cores
+import getpass
+import logs_writer, util, about
+import records, users, create_table
 
-import util, records, os
+import modules.weekdays as weekdays
+import modules.game_numbers as game_numbers
+import modules.date_complete as date_complete
+import modules.wordpicker as wordpicker
 
-"""
-O script faz o seguinte:
+DB_FILE = util.get_path('main.db')
 
-Procura palavras no arquivo wordlist.txt
-Transformas todas as palavras em um array
-Aplica uma palavra do array aleatóriamente na var "word"
-Pede a resposta da palavra em português de forma literal
-Caso acerte, incrementa um ponto
-Caso errado, para o loop, mostra seus pontos e fecha
-""" 
-def game():
+def login():
+    """Authenticates a user."""
+    trytimes = 3
+    while trytimes > 0:
+        username = input('Username: ')
+        password = getpass.getpass('Password: ')
+        if users.read_user(username, util.hash(password)):
+            logs_writer.write_log(f"User '{username}' logged in successfully.", level="INFO", module=__file__)
+            return username
+        trytimes -= 1
+        print(f'Invalid username or password. {trytimes} attempts remaining.')
+    print('Too many failed attempts. Try again later.')
+    logs_writer.write_log("Login failed after multiple attempts.", level="WARNING", module=__file__)
+    return None
 
-    points = 0      # a pontuação inicial do jogador é zero
-    lifes = 5       # vidas do jogador
+def game_menu():
+    """Displays the available game options and returns the user's choice."""
+    print("\n--- Game Menu ---")
+    print("1. Word Translation Game")
+    print("2. Weekday Translation Game")
+    print("3. Number Translation Game")
+    print("4. Date Translation Game")
+    print("Enter the number of the game you want to play (or press Enter to return to the main menu):")
 
-    util.clear_console
-    player_name = input(f"{RESET}Enter your name user: ")
-    print(f"{RED}Welcome {RESET}{player_name}!")
-    print()
+    choice = input("> ")
 
-    # Mostrar records na tela no início do jogo.
-    record_list = records.load_records()
-    if record_list == '': 
-            print('No records found!')
-    else:
-        print('Records: ')
-        for i in range(len(record_list)):
-            print(f'{i+1}. {record_list[i]}', end='')
+    return choice
 
-    while(lifes > 0):
-        text = strings()
-        try:
-            words = text.split(' ')
-            word = words [0]
-            result = words[1:]
-            answer = input(f'Whats is the translate of {YELLOW}"{word}"{RESET}? ')
-            if answer.lower() in result:
-                points += 1
-                print(f'That\'s right! You have {CYAN}{points} point(s)!{RESET}')
-            else:
-                lifes -= 1
-                print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{', '.join(result)}"{RESET}.')
-                if lifes > 0 :
-                    print(f'{GREEN}{lifes} lives{RESET} remaining.')
-                else:
-                    util.clear_console()
-                    print(f'It\'s wrong. Translate of {RED}{word}{RESET} is {YELLOW}"{', '.join(result)}"{RESET}.')
-                    print(f'{RED}GAME OVER!{RESET}');
-                    if points > 1:
-                        print(f'Your earn {YELLOW}{points}{RESET} points!')
-                    elif points == 1:
-                        print(f'Your earn {YELLOW}{points}{RESET} point!')
-                    else:
-                        print('You didn\'t earn any points.')
-                    records.write_records(player_name, points)
-                add_log_info(f'Player {player_name} error! word:{word} | translate:{result} | player:{answer}')
+def play_game(username):
+    """Presents the game menu and starts the chosen game."""
+    points = 0
+    while True:
+        choice = game_menu()
 
-            add_log_info(f'Player {points} points.')
-        except ValueError as error:
-            report_bug(str(error))
-            input('Press "Enter" to quit.')
+        if choice == '1':
+            logs_writer.write_log(f"User '{username}' started the Word Translation Game.", level="INFO", module=__file__)
+            points = wordpicker.game() # Assuming the `game()` function is in wordpicker.py
+            if points is not None:
+              logs_writer.write_log(f"User '{username}' completed the game. Points: {points}", level="INFO", module=__file__)
+              records.insert_record(username, points) # Add score to the database after the game finishes
+              print("Records was added successfully!")
+        elif choice == '2':
+            logs_writer.write_log(f"User '{username}' started the Weekday Translation Game.", level="INFO", module=__file__)
+            points = weekdays.weekday_translation_game()
+            logs_writer.write_log(f"User '{username}' completed the game. Points: {points}", level="INFO", module=__file__)
+            records.insert_record(username, points)
+        elif choice == '3':
+            logs_writer.write_log(f"User '{username}' started the Number Translation Game.", level="INFO", module=__file__)
+            points = game_numbers.number_translation_game()
+            logs_writer.write_log(f"User '{username}' completed the game. Points: {points}", level="INFO", module=__file__)
+            records.insert_record(username, points)
+        elif choice == '4':
+            logs_writer.write_log(f"User '{username}' started the Date Translation Game.", level="INFO", module=__file__)
+            points = date_complete.date_translation_game()
+            logs_writer.write_log(f"User '{username}' completed the game. Points: {points}", level="INFO", module=__file__)
+            records.insert_record(username, points)
+        elif not choice:
+            # User pressed Enter, return to main menu
+            return
+        else:
+            print("Invalid choice. Please try again.")
+        return points
+
+def main():
+    """Main application loop."""
+    print('Welcome to English Terminal!')
+    current_username = None
+    while(True):
+        input_command = input('> ')
+        parts = input_command.split(' ')
+        command = parts[0]
+        args = parts[1:] if len(parts) > 1 else []
+
+        if command.lower() in ['exit', 'quit']:
+            print('Goodbye!')
             break
+
+        elif command.lower() in ['cls', 'clear']:
+            util.clear_console()
+
+        elif command.lower() == 'help':
+            print('Command list:')
+            print('exit or quit: close the terminal')
+            print('clear, cls: clear the terminal')
+            print('hash: generate a hash of a text')
+            print('now, agora: show the current date and time')
+            print('addusr or add: add a new user')
+            print('auth or authenticate or login or enter: authenticate a user')
+            print('updusr or password: update the password of a user')
+            print('logout or leave: logout the current user')
+            print('update or atualizar: update word list')
+            print('game: Start a translation game')
+            print('records [clear]: Show or clear game records')
+            print('about: About section')
+
+        elif command.lower() == 'hash':
+            text = ' '.join(args)
+            print(f'Hash of "{text}":')
+            print(util.hash(' '.join(args)))
+
+        elif command.lower() in ['addusr', 'add']:
+            username = input('Username: ')
+            if ' ' in username:
+                print('Username cannot contain spaces.')
+                continue
+            password = getpass.getpass('Password: ')
+            users.create_user(username, util.hash(password))
+            current_username = username
+
+        elif command.lower() in ['auth', 'authenticate', 'login', 'enter']:
+            current_username = login()
+            if current_username:
+                print(f'Logged in as {current_username}.')
+
+        elif command.lower() in ['updusr', 'password']:
+            if not current_username:
+                print('You must be logged in to update your password.')
+            else:
+                old_password = getpass.getpass('Old password: ')
+                new_password = getpass.getpass('New password: ')
+                users.update_user_password(current_username, util.hash(old_password), util.hash(new_password))
+
+        elif command.lower() in ['logout', 'leave']:
+            current_username = None
+            print('Logged out.')
+
+        elif command.lower() in ['now', 'agora']:
+            print(f'Current date and time: {util.now()}')
+
+        elif command.lower() == 'game':
+            if current_username:
+                points = play_game(current_username)  # Call the game and capture the points
+                util.increment_user_points(current_username, points)
+
+            else:
+                print("You must log in to play the game.")
+
+        elif command.lower() in ['records', 'record']:
+            if 'clear' in args:
+                records.clear_records()
+            else:
+                records.show_records()
+
+        elif command.lower() in ['point', 'points', 'pontos']:
+            if not current_username:
+                print('Loging to view points.')
+            else:
+                points = util.read_user_points(current_username)
+                print(f'{current_username} have {points}')
+
+        elif command.lower() in ['update', 'atualizar']:
+            util.get_word_list('https://english-terminal.vercel.app/wordlist.txt')
+            if create_table.main():
+                print('Successfully updated.')
+            else:
+                print('Error.')
+            
+
+        elif command.lower() in ['about', 'sobre']:
+            about.about()
+
+        else:
+            print('Invalid command. Type help for help.')
+
+if __name__ == '__main__':
+    util.get_word_list('https://english-terminal.vercel.app/wordlist.txt')
+    if create_table.main():
+        main()
+    else:
+        print(f'See logs for details.')

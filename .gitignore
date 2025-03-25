@@ -3,8 +3,10 @@ __pycache__/
 venv/
 build/
 dist/
+logs/
 .vscode/
 
+<<<<<<< HEAD
 # files to ignore
 log.txt
 logs.txt
@@ -16,3 +18,8 @@ colors.py
 
 # database temporary files
 *.db
+=======
+# Files
+*.spec
+wordlist.txt
+>>>>>>> 1b128aab27668c6913b59da3d81caf985aba9c25

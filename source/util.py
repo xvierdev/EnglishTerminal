@@ -1,80 +1,79 @@
-# Script de utilidades, obtenção do tempo a atual, criptografia e calculo de hash.
-
 import hashlib
-import base64
 import datetime
-import random
+import os
+import sqlite3
+import logs_writer
+import urllib
 
-#==============COLORS==============#
+def get_path(filename):
+    """Obtém o caminho do arquivo main.db no mesmo diretório do executável."""
+    # Obtém o caminho do diretório %APPDATA%
+    appdata_dir = os.getenv('APPDATA')
 
-BLACK = "\033[30m"
-BLUE = "\033[34m"
-CYAN = "\033[36m"
-GREEN = "\033[32m"
-MAGENTA = "\033[35m"
-RED = "\033[31m"
-YELLOW = "\033[33m"
-RESET = "\033[0m"
+    # Cria o caminho completo para o arquivo do banco de dados
+    database_path = os.path.join(appdata_dir, 'EnglishTerminal', filename)
 
-#===============UTIL===============#
+    # Cria o diretório se ele não existir
+    os.makedirs(os.path.dirname(database_path), exist_ok=True)
 
-# Retorna a data e hora formatadas.
+    return database_path
+
+DB_FILE = get_path('main.db')
+WORD_LIST = get_path('wordlist.txt')
+
 def now():
-  return datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    return datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
-# Limpa a tela do console.
+def hash(text):
+    return hashlib.sha256(text.encode()).hexdigest()
+
 def clear_console():
-  print('\033[2J', end='')
-  print('\033[H', end='')
+    """Limpa o console."""
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-def print_multicolor(text):
-  colors = ["\033[34m", "\033[36m", "\033[32m", "\033[35m", "\033[31m", "\033[33m"]
-  print(RESET, end='')
-  for i in range(len(text)):
-    print(f'{random.choice(colors)}{text[i]}', end='')
-  print(RESET)
-  
+def increment_user_points(user, points):
+    if user:
+        try:
+            with sqlite3.connect(DB_FILE) as conn:
+                cursor = conn.cursor()
+                cursor.execute('SELECT points FROM Users WHERE user = ?', (user,))
+                result = cursor.fetchone()
+                if result:
+                    total_points = int(result[0] if result[0] else 0) + points
+                    cursor.execute('UPDATE Users SET points = ? WHERE user = ?', (total_points, user))
+                else:
+                    print (f"Usuario {user} nao encontrado")
+                conn.commit() # importante para salvar a alteração no banco de dados.
+        except sqlite3.Error as e:
+            print(f'Error: {e}')
+            logs_writer.write_log(e, "ERROR", __file__)
 
-# Report de bugs
+def read_user_points(username):
+    if username:
+        points = 0
+        try:
+            with sqlite3.connect(DB_FILE) as conn:
+                cursor = conn.cursor()
+                corrent_points = cursor.execute('SELECT points FROM Users WHERE user = ?', (username,)).fetchone()[0]
+                points = int(corrent_points if corrent_points else 0)
+        except sqlite3.Error as e:
+            print(f'Error: {e}')
+            logs_writer.write_log(e, "ERROR", __file__)
+        except TypeError as e:
+            print(f'Error {e}')
+            logs_writer.write_log(e, "ERROR", __file__)
+        finally:
+            return points
 
-def report_bug(error_msg):
+import urllib.request
+
+def get_word_list(url):
+    """Baixa um arquivo da URL fornecida usando urllib e o salva no caminho de destino."""
     try:
-        with open('error_log.txt', 'a', encoding="utf-8") as file:
-            file.write(f'{now()} {error_msg}\n')
-            print(f'Error: {error_msg}')
+        urllib.request.urlretrieve(url, WORD_LIST)
+        msg = f"Arquivo baixado com sucesso e salvo em: {WORD_LIST}"
+        print(msg)
+        logs_writer.write_log(msg, "INFO", __name__)
     except Exception as e:
-        print(f"Erro ao reportar bug: {e}")
-
-
-#===========CRIPTOGRAFIA===========#
-
-# Calcula o hash do arquivo informado.
-def calcular_hash(arquivo):
-    try:
-      with open(arquivo, 'rb') as f:
-          hash = hashlib.sha256()
-          while chunk := f.read(4096):
-              hash.update(chunk)
-      return hash.hexdigest()
-    except Exception as e:
-       report_bug(e)
-
-# Salva o hash criptografado no arquivo hash.txt
-def criptografar_hash(hash, senha):
-    try:
-      senha_bytes = senha.encode()
-      hash_bytes = hash.encode()
-      criptografado = base64.b64encode(hash_bytes + senha_bytes)
-      return criptografado.decode()
-    except Exception as e:
-      report_bug(e)
-
-# Descriptografa o hash do arquivo de hash.
-def descriptografar_hash(criptografado, senha):
-    try:
-      criptografado_bytes = criptografado.encode()
-      senha_bytes = senha.encode()
-      hash_bytes = base64.b64decode(criptografado_bytes)[:-len(senha_bytes)]
-      return hash_bytes.decode()
-    except Exception as e:
-      report_bug(e)
+        print(f"Erro ao baixar o arquivo: {e}")
+        logs_writer.write_log(e, "ERROR", __name__)
