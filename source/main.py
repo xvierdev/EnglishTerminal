@@ -1,18 +1,13 @@
-import getpass, sys
+import getpass
 import logs_writer, util, about
-import records, users
-import source.create_table as first
-
-from pathlib import Path
-
-sys.path.append(str(Path(__file__).parent.parent))
+import records, users, create_table
 
 import modules.weekdays as weekdays
 import modules.game_numbers as game_numbers
 import modules.date_complete as date_complete
 import modules.wordpicker as wordpicker
 
-DB_FILE = Path(__file__).parent / 'db' / "main.db"
+DB_FILE = util.get_path('main.db')
 
 def login():
     """Authenticates a user."""
@@ -38,7 +33,7 @@ def game_menu():
     print("4. Date Translation Game")
     print("Enter the number of the game you want to play (or press Enter to return to the main menu):")
 
-    choice = input("> ")
+    choice = input("Game >> ")
 
     return choice
 
@@ -79,10 +74,10 @@ def play_game(username):
 
 def main():
     """Main application loop."""
-    print('Welcome to English Terminal, input help to obtain help!')
+    print('Welcome to English Terminal!')
     current_username = None
     while(True):
-        input_command = input('> ')
+        input_command = input('EnglishTerminal >> ')
         parts = input_command.split(' ')
         command = parts[0]
         args = parts[1:] if len(parts) > 1 else []
@@ -121,6 +116,7 @@ def main():
                 continue
             password = getpass.getpass('Password: ')
             users.create_user(username, util.hash(password))
+            current_username = username
 
         elif command.lower() in ['auth', 'authenticate', 'login', 'enter']:
             current_username = login()
@@ -165,7 +161,7 @@ def main():
 
         elif command.lower() in ['update', 'atualizar']:
             util.get_word_list('https://english-terminal.vercel.app/wordlist.txt')
-            if first.main():
+            if create_table.main():
                 print('Successfully updated.')
             else:
                 print('Error.')
@@ -179,7 +175,7 @@ def main():
 
 if __name__ == '__main__':
     util.get_word_list('https://english-terminal.vercel.app/wordlist.txt')
-    if first.main():
+    if create_table.main():
         main()
     else:
         print(f'See logs for details.')
