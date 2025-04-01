@@ -1,0 +1,15 @@
+02/03/2025 21:43:34 Player 1 points.
+02/03/2025 21:43:37 Player 2 points.
+02/03/2025 21:43:45 Player davi error! word:pain | translate:['dor'] | player:pintar
+02/03/2025 21:43:45 Player 2 points.
+02/03/2025 21:43:51 Player 3 points.
+02/03/2025 21:43:54 Player davi error! word:mercy | translate:['misericórdia'] | player:
+02/03/2025 21:43:54 Player 3 points.
+02/03/2025 21:44:00 Player davi error! word:influence | translate:['influência'] | player:influencia
+02/03/2025 21:44:00 Player 3 points.
+02/03/2025 21:44:04 Player 4 points.
+02/03/2025 21:44:06 Player davi error! word:constraint | translate:['restrição'] | player:
+02/03/2025 21:44:06 Player 4 points.
+02/03/2025 21:44:20 Player 5 points.
+02/03/2025 21:44:31 Player davi error! word:inspiration | translate:['inspiração'] | player:inspiraçsão
+02/03/2025 21:44:31 Player 5 points.

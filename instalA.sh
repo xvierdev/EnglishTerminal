@@ -90,10 +90,10 @@ echo "${YELLOW}Executando EnglishTerminal... | Running EnglishTerminal...${NC}"
 sleep 2
 
 # Verificar se o arquivo terminal.py existe antes de executar
-if [ -f "$TARGET_DIR/source/terminal.py" ]; then
-  "$PYTHON" "$TARGET_DIR/source/terminal.py"
+if [ -f "$TARGET_DIR/source/main.py" ]; then
+  "$PYTHON" "$TARGET_DIR/source/main.py"
 else
-  echo "${RED}Erro: Arquivo 'terminal.py' não encontrado em '$TARGET_DIR/source/'.  Verifique a instalação. | Error: 'terminal.py' file not found in '$TARGET_DIR/source/'. Check the installation.${NC}"
+  echo "${RED}Erro: Arquivo 'main.py' não encontrado em '$TARGET_DIR/source/'.  Verifique a instalação. | Error: 'terminal.py' file not found in '$TARGET_DIR/source/'. Check the installation.${NC}"
   exit 1
 fi
 
