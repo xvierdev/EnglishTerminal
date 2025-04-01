@@ -18,5 +18,10 @@ def game_menu():
     print('q - exit')
     return input('> ')
 
+def invalid_option(op):
+    print()
+    print(f'"{op}" is an invalid option.')
+    print()
+
 if __name__ == '__main__':
     main_menu()
