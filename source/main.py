@@ -1,14 +1,11 @@
 # main application file
 import modules.weekdays
-import create_table, util
 import menu, about, write_log as log
 import modules.vocabulary
 import sqlite3
 
 def main ():
     try:
-        create_table.create_tables()
-        create_table.populate_words()
         while(True):
             op = menu.main_menu()
             if op in ['q', 'Q'] : break
