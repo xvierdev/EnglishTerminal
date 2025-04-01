@@ -25,3 +25,6 @@ Este projeto está aberto à inclusão de colaboradores para o desenvolvimento d
 ## Fundação
 - Wesley Xavier
 - Davi Silva Peres
+
+## Referências de Desenvolvimento
+- [Logging facility for Python](https://docs.python.org/3/library/logging.html)
