@@ -1,6 +1,6 @@
 import create_table, util
 import menu, about, write_log as log
-import modules.wordpicker
+import modules.vocabulary
 def main ():
     try:
         while(True):
@@ -9,7 +9,7 @@ def main ():
             elif op == '1':
                 op = menu.game_menu()
                 if op == '1':
-                    modules.wordpicker.game()
+                    modules.vocabulary.game()
                 elif op == 'q': break
             elif op == '3': about.about()
     except KeyboardInterrupt:
