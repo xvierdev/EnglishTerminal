@@ -1,3 +1,4 @@
+# applications menu
 def main_menu():
     print('choose your option:')
     print('1 - game')
@@ -16,6 +17,11 @@ def game_menu():
     print('m - back to main menu')
     print('q - exit')
     return input('> ')
+
+def invalid_option(op):
+    print()
+    print(f'"{op}" is an invalid option.')
+    print()
 
 if __name__ == '__main__':
     main_menu()
