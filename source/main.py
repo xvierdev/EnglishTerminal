@@ -1,3 +1,4 @@
+# main application file
 import create_table, util
 import menu, about, write_log as log
 import modules.vocabulary

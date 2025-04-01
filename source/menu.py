@@ -1,3 +1,4 @@
+# applications menu
 def main_menu():
     print('choose your option:')
     print('1 - game')
