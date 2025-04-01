@@ -1,9 +1,23 @@
 body{
-    color: lime;
-    background-color: black;
+    color: mediumturquoise;
+    background-color: #000000;
     font-family: 'Courier New', Courier, monospace;
 }
 a{
     color: yellow;
     text-decoration: none;
+}
+
+h1{
+    text-align: center;
+}
+
+.main-image{
+    position: sticky;
+    display: block;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    align-content: center;
 }
