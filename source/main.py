@@ -1,3 +1,5 @@
+# main application file
+import modules.weekdays
 import create_table, util
 import menu, about, write_log as log
 import modules.vocabulary
@@ -6,12 +8,16 @@ def main ():
         while(True):
             op = menu.main_menu()
             if op in ['q', 'Q'] : break
-            elif op == '1':
-                op = menu.game_menu()
-                if op == '1':
-                    modules.vocabulary.game()
-                elif op == 'q': break
-            elif op == '3': about.about()
+            else:
+                match op:
+                    case '1':
+                        op = menu.game_menu()
+                        match op:
+                            case '1': modules.vocabulary.game()
+                            case '2': modules.weekdays.weekday_translation_game()
+                    case '3': about.about()
+                    case 'q': break
+                    case   _: menu.invalid_option(op)
     except KeyboardInterrupt:
         print('User interrupt. Bye!')
         log.write_log('User interrupt', 'INFO', module=__file__)

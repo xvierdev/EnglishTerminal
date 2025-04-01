@@ -16,7 +16,6 @@ def create_tables(cursor):
         return True
     except sqlite3.Error as e:
         log.write_log(f"Error creating tables: {e}", level="ERROR", module=__file__)
-        print(f"Error creating tables: {e}")
         return False
 
 def populate_words(cursor):

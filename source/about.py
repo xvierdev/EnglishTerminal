@@ -1,3 +1,4 @@
+# about team
 import time
 
 string = '''\tEnglish Terminal is a simple terminal that can be used to play games, do translations, and more.
