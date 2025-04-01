@@ -1,26 +1,17 @@
 <h1 align="center">English Terminal</h1>
 
-**English Terminal** é um projeto inicial de desenvolvimento para aprendizagem de inglês.
+**English Terminal** é um projeto para auxiliar na aprendizagem do Inglês ao mesmo tempo que potencializa as skills dos integrantes.
 
-As primeiras fases do desenvolvimento envolvem problemas simples para conhecer os verbetes mais comuns da lingua inglesa.
+As primeiras fases do desenvolvimento aconteceme no modo command line interface, com pequenos jogos os jogadores desenvolvem seu conhecimento de inglês ao passo que os desenvolvedores melhoram as habilidades de programação desenvolvendo esses jogos e aprimorando o funcionamentos dos mesmos.
+As próximas fases envolvem a implementação de novas técnologias para novos modos de jogo, prática de Listening, sistema de ranking compatilhado e interface gráfica são exemplos de planos para o futuro deste projeto.
 
-
-> [!TIP]
-> Recomendado usar [**fontes monoespaçadas com ligaturas**](https://www.jetbrains.com/lp/mono/) para melhor experiência
-
-### [Backlog](./docs/backlog.md) para mais informações sobre o projeto.
+### [Backlog](./docs/backlog.md) para mais informações sobre o a andamento projeto.
 
 ## Como utilizar o programa
-### Linux
+
 1. Faça o downloads dos arquivos para um pasta local
-1. Defina o atributo do script InstalA.sh para +x: "cdmod +x instalA.sh"
-1. Execute o script InstalA.sh: source InstalA.sh
-
-### Windows
-1. Faça o download dos arquivos para uma pasta logal.
-1. Se o python estiver instalado, execute o arquivo main.py
-1. Enjoy
-
+1. Instale o Python na máquina para poder executar o programa.
+1. [**Python 3**](https://www.python.org/)
 
 ## Principais Contribuidores
 
@@ -28,29 +19,9 @@ As primeiras fases do desenvolvimento envolvem problemas simples para conhecer o
   <img src="https://contrib.rocks/image?repo=xvierdev/EnglishTerminal" />
 </a>
 
-## Lista de Comandos
+## Recrutamento de colaboradores
+Este projeto está aberto à inclusão de colaboradores para o desenvolvimento do mesmo.
 
-1.  **Geral:**
-    * `exit` ou `quit`: fechar o terminal
-    * `clear` ou `cls`: limpar o terminal
-    * `now` ou `agora`: mostrar a data e hora atual
-    * `about`: Seção Sobre
-    * `update` or `atualizar`: update word list
-
-2.  **Usuários:**
-    * `addusr` ou `add`: adicionar um novo usuário
-    * `auth` ou `authenticate` ou `login` ou `enter`: autenticar um usuário
-    * `updusr` ou `password`: atualizar a senha de um usuário
-    * `logout` ou `leave`: deslogar o usuário atual
-
-3.  **Ferramentas:**
-    * `hash`: gerar um hash de um texto
-
-4.  **Jogos e Registros:**
-    * `game`: iniciar um jogo de tradução
-    * `records [clear]`: mostrar ou limpar registros do jogo
-
-## Requisitos
-
-- [**Python 3**](https://www.python.org/)
-- Acesso à internet para obter a lista de palavras.
+## Fundação
+- Wesley Xavier
+- Davi Silva Peres
