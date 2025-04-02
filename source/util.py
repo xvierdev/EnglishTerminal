@@ -1,9 +1,11 @@
-import os, urllib.request as request
-import write_log as log
+import logging, os, urllib.request as request
+import db.create_table as dbmanager
 
 def get_path(filename):
-    '''Gets the path of the filename file in the same directory as the executable.'''
+    '''Gets the path of the filename file in the APPDATA directory or same directory as the executable.'''
     appdata_dir = os.getenv('APPDATA')
+    if not appdata_dir:
+        appdata_dir = os.path.dirname(os.path.abspath(__file__))
     database_path = os.path.join(appdata_dir, 'EnglishTerminal', filename)
     os.makedirs(os.path.dirname(database_path), exist_ok=True)
     return database_path
@@ -18,9 +20,14 @@ def get_word_list(url):
     '''Baixa um arquivo da URL fornecida usando urllib e o salva no caminho de destino.'''
     try:
         request.urlretrieve(url, WORD_LIST)
-        log.write_log('Word list downloaded successfully.', 'INFO', module=__name__)
+        logging.info('Word list downloaded successfully.')
     except Exception as e:
-        log.write_log(e, 'ERROR', module=__name__)
+        logging.error(str(e))
+
+def make_database():
+    dbmanager.create_tables(DB_FILE)
+    dbmanager.populate_words(DB_FILE, WORD_LIST)
 
 if __name__ == '__main__':
     get_word_list('https://english-terminal.vercel.app/wordlist.txt')
+    make_database()
