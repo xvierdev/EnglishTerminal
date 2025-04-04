@@ -3,7 +3,12 @@ import write_log as log
 
 def get_path(filename):
     '''Gets the path of the filename file in the same directory as the executable.'''
-    appdata_dir = os.getenv('APPDATA')
+    if os.name == 'nt':
+        appdata_dir = os.getenv('APPDATA')
+    else:
+        main_folder = os.path.expanduser("~")
+        os.chdir(main_folder)
+        appdata_dir = ".local/share"
     database_path = os.path.join(appdata_dir, 'EnglishTerminal', filename)
     os.makedirs(os.path.dirname(database_path), exist_ok=True)
     return database_path

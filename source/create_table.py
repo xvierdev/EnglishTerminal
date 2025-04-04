@@ -7,7 +7,7 @@ WORDLIST_FILE = util.get_path('wordlist.txt')
 def create_tables():
     '''Creates the necessary tables if they don't exist.'''
     with sqlite3.connect(DB_FILE) as conn:
-        cursor = conn.cursor
+        cursor = conn.cursor()
         cursor.execute(sql.create_table)
         cursor.execute(sql.user_index)
         log.write_log("Table Users has been created successfully.", level="INFO", module=__file__)
@@ -31,7 +31,7 @@ def populate_words():
             else:
                 log.write_log(f"Skipping line due to incorrect format: {line_clean}", level="WARNING", module=__file__)
         with sqlite3.connect(DB_FILE) as conn:
-            cursor = conn.cursor
+            cursor = conn.cursor()
             cursor.execute('DELETE FROM Words')
             cursor.executemany("INSERT OR IGNORE INTO Words (english, portuguese, category) VALUES (?, ?, ?)", data_to_insert)
             log.write_log(f"{cursor.rowcount} Words inserted/ignored.", level="INFO", module=__file__)
