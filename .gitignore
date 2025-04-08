@@ -5,6 +5,7 @@ build/
 dist/
 logs/
 .vscode/
+EnglishTerminal/
 
 # files to ignore
 log.txt
