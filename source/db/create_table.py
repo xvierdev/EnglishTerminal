@@ -1,16 +1,34 @@
-import sqlite3
-import db.sql as sql, logging
+import sqlite3, logging
+
+# SQL queries to create database and tables.
+create_table = '''
+CREATE TABLE IF NOT EXISTS Users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user TEXT UNIQUE NOT NULL,
+        record INTEGER
+);'''
+
+create_words = '''
+CREATE TABLE IF NOT EXISTS Words (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    english TEXT UNIQUE NOT NULL,
+    portuguese TEXT NOT NULL,
+    category TEXT NOT NULL
+);'''
+
+user_index = "CREATE INDEX IF NOT EXISTS idx_users_user ON Users (user);"
+words_index = "CREATE INDEX IF NOT EXISTS idx_words_english ON Words (english);"
 
 def create_tables(db_file):
     '''Creates the necessary tables if they don't exist.'''
     try:
         with sqlite3.connect(db_file) as conn:
             cursor = conn.cursor()
-            cursor.execute(sql.create_table)
-            cursor.execute(sql.user_index)            
+            cursor.execute(create_table)
+            cursor.execute(user_index)            
             logging.info(f"Table Users has been created successfully.")
-            cursor.execute(sql.create_words)
-            cursor.execute(sql.words_index)
+            cursor.execute(create_words)
+            cursor.execute(words_index)
             logging.info(f"Table Words has been created successfully.")
     except sqlite3.Error:
         raise
@@ -37,6 +55,6 @@ def populate_words(db_file, word_list):
                 cursor.executemany("INSERT OR IGNORE INTO Words (english, portuguese, category) VALUES (?, ?, ?)", data_to_insert)
                 logging.info(f"{cursor.rowcount} Words inserted/ignored.")
     except FileNotFoundError:
-        raise FileNotFoundError(f'{WORDLIST_FILE} not found.')
+        raise FileNotFoundError(f'{word_list} not found.')
     except sqlite3.Error:
         raise
