@@ -9,6 +9,7 @@ def main_menu():
     print('q - exit')
     op = input('> ')
     util.clear_console()
+    print(f'Selected: {op}')
     return op
 
 def game_menu():
@@ -22,14 +23,22 @@ def game_menu():
     print('q - exit')
     op = input('> ')
     util.clear_console()
+    print(f'Selected: {op}')
     return op
+
+def records():
+    print('Records features is not implemented!')
+    print()
 
 def invalid_option(op):
     print()
     print(f'"{op}" is an invalid option.')
     print()
 
+def quit():
+    print('Bye! See you later ... :D')
+    print()
+    exit()
+
 if __name__ == '__main__':
-    print('Self execution mode.')
-    choose = main_menu()
-    print(f'selected option is {choose}')
+    quit()

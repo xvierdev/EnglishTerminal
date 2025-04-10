@@ -16,7 +16,7 @@ WORD_LIST = get_path('wordlist.txt')
 def clear_console():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def get_word_list(url):
+def get_word_list(url='https://english-terminal.vercel.app/wordlist.txt'):
     '''Baixa um arquivo da URL fornecida usando urllib e o salva no caminho de destino.'''
     try:
         request.urlretrieve(url, WORD_LIST)
@@ -29,5 +29,5 @@ def make_database():
     dbmanager.populate_words(DB_FILE, WORD_LIST)
 
 if __name__ == '__main__':
-    get_word_list('https://english-terminal.vercel.app/wordlist.txt')
+    get_word_list()
     make_database()

@@ -108,17 +108,6 @@ def game():
             lifes = 0
 
         # Check if enough rounds have been played
-        if category_word_count and rounds >= min(category_word_count, 20) or lifes <= 0:
-            #Congratulate if 20 words from a category got asked
-            if points >= 2:
-                print("Congratulations! You have been asked at least two words from this Category")
-                print(f'You earned {points} points!')
-            elif points == 1:
-                print(f'You earned {points} point!')
-            else:
-                print('You didn\'t earn any points.')
-
-            print("GAME OVER!")
-            print('Better luck next time!')
-            break
+        if lifes == 0:
+            print('Game Over!')
     return points
