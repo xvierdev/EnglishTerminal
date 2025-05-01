@@ -1,6 +1,7 @@
 import sqlite3
-import unicodedata
+import unicodedata, time
 import util
+from views import funcs
 
 DB_FILE = util.get_path('main.db')
 
@@ -21,10 +22,6 @@ def get_random_word(category=None):
     except sqlite3.Error as e:
         print(f'Database Error: {e}')
         return None
-
-def normalize_text(text):
-    """Normalizes text by removing accents, converts to lowercase, and replaces hyphens with spaces."""
-    return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn').lower().replace('-', ' ')
 
 def get_available_categories():
     """Retrieves the list of available categories from the database."""
@@ -52,9 +49,9 @@ def get_category_word_count(category):
 
 def game():
     """Main game loop."""
-    points = 0
-    lifes = 5
-    rounds = 0  # Track the number of rounds played.
+    score = 0
+    lives = 5
+    round = 0  # Track the number of rounds played.
 
     print("Welcome to the Translation Game!\n")
 
@@ -85,29 +82,18 @@ def game():
     else:
         category_word_count = get_category_word_count("") # Get the total word count across ALL categories (if no specific category was selected)
 
-    while lifes > 0:
+    while lives > 0:
         word_data = get_random_word(category_choice)
         if word_data:
             english_word, portuguese_phrase = word_data
-            expected_answers = [normalize_text(portuguese_phrase)]  # Normalize
+            correct_translation = portuguese_phrase  # Normalize
 
             answer = input(f'Translate "{english_word}": ')
-            normalized_answer = normalize_text(answer)
 
-            if normalized_answer in expected_answers:
-                points += 1
-                rounds += 1  # Increment the number of rounds played
-                print(f'Correct! You have {points} points!\n')
-            else:
-                lifes -= 1
-                rounds += 1 # Increment the number of rounds played even after incorrect answers
-                print(f'Incorrect. The translation of "{english_word}" is "{portuguese_phrase.replace('-',  ' ')}".\n')
-                print(f'{lifes} lives remaining.\n')
+            score, lives = funcs.total_score(score, lives, answer, correct_translation)
+
         else:
             print("Could not retrieve a word from the database.")
-            lifes = 0
+            lives = 0
 
-        # Check if enough rounds have been played
-        if lifes == 0:
-            print('Game Over!')
-    return points
+        if lives == 0: break

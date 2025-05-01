@@ -1,5 +1,5 @@
 import random
-import unicodedata
+from views import funcs
 
 def date_translation_game():
     """
@@ -35,22 +35,6 @@ def date_translation_game():
 
         answer = input(f"\nTranslate the date '{date_pt}' to full English: ")
 
-        # Remove accents and convert to lowercase for comparison
-        answer_normalized = ''.join(c for c in unicodedata.normalize('NFD', answer) if unicodedata.category(c) != 'Mn').lower()
-        correct_normalized = ''.join(c for c in unicodedata.normalize('NFD', correct_translation) if unicodedata.category(c) != 'Mn').lower()
-
-        if answer_normalized == correct_normalized.lower():
-            print(f"Correct! The correct translation is '{correct_translation}'.")
-            score += 1
-        else:
-            print(f"Incorrect. The correct translation is '{correct_translation}'.")
-            lives -= 1
-            print(f"Lives remaining: {lives}")
-
-    print(f"\nGame over! Your score: {score}.")
-    if lives == 0:
-        print("You lost all your lives!")
-    return score
-
-if __name__ == "__main__":
-    date_translation_game()
+        score, lives = funcs.total_score(score, lives, answer, correct_translation)
+        
+        if lives == 0: break

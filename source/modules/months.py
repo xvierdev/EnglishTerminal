@@ -1,5 +1,5 @@
-import random
-import unicodedata
+import random, time
+from views import funcs
 
 def month_translation_game():
     """
@@ -40,6 +40,7 @@ def month_translation_game():
     all_months_en = list(months_en_to_pt.keys())
     score = 0
     lives = 5
+    round = 0 
 
     print("Bem-vindo ao Jogo de Tradução de Meses!")
     print("Você tem 5 vidas. Boa sorte!")
@@ -54,22 +55,6 @@ def month_translation_game():
             correct_translation = months_en_to_pt[month_en]
             answer = input(f"\nTraduza '{month_en}' para português: ")
 
-        # Remove acentos e converte para minúsculas para comparação
-        answer_normalized = ''.join(c for c in unicodedata.normalize('NFD', answer) if unicodedata.category(c) != 'Mn').lower()
-        correct_normalized = ''.join(c for c in unicodedata.normalize('NFD', correct_translation) if unicodedata.category(c) != 'Mn').lower()
-
-        if answer_normalized == correct_normalized:
-            print(f"Correto! A tradução correta é '{correct_translation}'.")
-            score += 1
-        else:
-            print(f"Incorreto. A tradução correta é '{correct_translation}'.")
-            lives -= 1
-            print(f"Vidas restantes: {lives}")
-
-    print(f"\nFim do jogo! Sua pontuação: {score}.")
-    if lives == 0:
-        print("Você perdeu todas as suas vidas!")
-    return score
-
-if __name__ == "__main__":
-    month_translation_game()
+        score, lives = funcs.total_score(score, lives, answer, correct_translation)
+        
+        if lives == 0: break

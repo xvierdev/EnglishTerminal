@@ -1,4 +1,5 @@
-import random
+import random, time
+from views import funcs
 
 def number_translation_game():
     """
@@ -72,19 +73,6 @@ def number_translation_game():
 
         answer = input(f"\nTranslate the number '{number}' to English: ")
 
-        if answer.lower() == correct_translation.lower():
-            print("Correct!")
-            score += 1
-        else:
-            print(f"Incorrect. The correct translation is '{correct_translation}'.")
-            lives -= 1
-            print(f"Lives remaining: {lives}")
-
-    print(f"\nGame over! Your score: {score}.")
-    if lives == 0:
-        print("You lost all your lives!")
-
-    return score
-
-if __name__ == "__main__":
-    number_translation_game()
+        score, lives = funcs.total_score(score, lives, answer, correct_translation)
+        
+        if lives == 0: break

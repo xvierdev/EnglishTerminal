@@ -16,7 +16,7 @@ def game_menu():
     print('choose your option:')
     print('1 - vocabulary')
     print('2 - weekdays')
-    print('3 - mounts')
+    print('3 - months')
     print('4 - pronouns')
     print('5 - numbers')
     print('m - back to main menu')

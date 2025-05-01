@@ -1,5 +1,5 @@
 
-def translate_pronouns(pronome_ingles):
+def translate_pronouns():
     """
     Traduz pronomes pessoais do inglês para o português.
     Args:
@@ -17,8 +17,18 @@ def translate_pronouns(pronome_ingles):
         "we": "Nós",
         "they": "Eles/Elas",
     }
-
-    return pronomes.get(pronome_ingles)
-
-if __name__ == '__main__':
-    print(translate_pronouns('she'))
+    print("Welcome to the Pronouns Translator!")
+    pronome = ""
+    print(pronomes.keys)
+    
+    while pronome != "q" and pronome != "Q":
+        if pronome in pronomes:
+            print(f"\n{pronome} é traduzido para {pronomes[pronome]}")
+            pronome = input(f"\nType the pronoun: ")
+        elif pronome in list(pronomes.values()):
+            res = [key for key in pronomes if pronomes[key] == pronome]
+            print(f"\n{pronome} é traduzido para {res[0]}")
+            pronome = input(f"\nType the pronoun: ")
+        else: 
+            print("Esse pronome não existe")
+            pronome = input(f"\nType the pronoun: ")

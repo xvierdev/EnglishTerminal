@@ -1,6 +1,5 @@
 # main application file
-import modules.weekdays
-import modules.vocabulary
+from modules import vocabulary, weekdays, months, pronoun, numbers
 import menu, about, util
 import sqlite3, logging
 
@@ -16,12 +15,15 @@ def main ():
                     case '1':
                         op = menu.game_menu()
                         match op:
-                            case '1': modules.vocabulary.game()
-                            case '2': modules.weekdays.weekday_translation_game()
+                            case '1': vocabulary.game()
+                            case '2': weekdays.weekday_translation_game()
+                            case '3': months.month_translation_game()
+                            case '4': pronoun.translate_pronouns()
+                            case '5': numbers.number_translation_game()
                             case 'q': menu.quit()
                             case   _: menu.invalid_option(op)
                     case '2': menu.records()
-                    case '3': about.about()
+                    case '4': about.about()
                     case   _: menu.invalid_option(op)
     except KeyboardInterrupt:
         print('User interrupt. Bye!')
