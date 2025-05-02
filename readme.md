@@ -15,8 +15,8 @@ As próximas fases envolvem a implementação de novas técnologias para novos m
 
 ## Principais Contribuidores
 
-<a href="https://github.com/github.com/xvierdev/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github.com/xvierdev" />
+<a href="https://github.com/xvierdev/EnglishTerminal/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=xvierdev/EnglishTerminal" />
 </a>
 
 ## Recrutamento de colaboradores
