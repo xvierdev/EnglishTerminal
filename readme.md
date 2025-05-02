@@ -13,12 +13,6 @@ As próximas fases envolvem a implementação de novas técnologias para novos m
 1. Instale o Python na máquina para poder executar o programa.
 1. [**Python 3**](https://www.python.org/)
 
-## Principais Contribuidores
-
-<a href="https://github.com/xvierdev/EnglishTerminal/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=xvierdev/EnglishTerminal" />
-</a>
-
 ## Recrutamento de colaboradores
 Este projeto está aberto à inclusão de colaboradores para o desenvolvimento do mesmo.
 
