@@ -23,7 +23,7 @@ def main ():
                             case 'q': menu.quit()
                             case   _: menu.invalid_option(op)
                     case '2': menu.records()
-                    case '4': about.about()
+                    case '3': about.about()
                     case   _: menu.invalid_option(op)
     except KeyboardInterrupt:
         print('User interrupt. Bye!')

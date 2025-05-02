@@ -2,8 +2,8 @@ import unicodedata, time
 
 def total_score(score, lives, answer, correct_translation):
     # Remove acentos e converte para minúsculas para comparação
-    answer_normalized = ''.join(c for c in unicodedata.normalize('NFD', answer) if unicodedata.category(c) != 'Mn').lower()
-    correct_normalized = ''.join(c for c in unicodedata.normalize('NFD', correct_translation) if unicodedata.category(c) != 'Mn').lower()
+    answer_normalized = _nomalize_text(answer)
+    correct_normalized = _nomalize_text(correct_translation)
 
     if answer_normalized == correct_normalized:
         score += 1
@@ -21,3 +21,6 @@ def total_score(score, lives, answer, correct_translation):
             return score, lives
     
     return score, lives
+
+def _nomalize_text(text):
+     return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn').lower()

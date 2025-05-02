@@ -1,5 +1,4 @@
 import sqlite3
-import unicodedata, time
 import util
 from views import funcs
 

@@ -16,9 +16,10 @@ As próximas fases envolvem a implementação de novas técnologias para novos m
 ## Recrutamento de colaboradores
 Este projeto está aberto à inclusão de colaboradores para o desenvolvimento do mesmo.
 
-## Fundação
-- Wesley Xavier
-- Davi Silva Peres
+## Contributors
+- Davi S
+- Bruna H
+- Wesley X
 
 ## Referências de Desenvolvimento
 - [Logging facility for Python](https://docs.python.org/3/library/logging.html)
