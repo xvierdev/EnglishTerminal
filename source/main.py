@@ -3,6 +3,7 @@ from modules import vocabulary, weekdays, months, pronoun, numbers
 import menu, about, util
 import sqlite3, logging
 
+# Initial config for log events
 logging.basicConfig(level=logging.INFO, filename=util.get_path('logs.log'), format='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
 
 def main ():

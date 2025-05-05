@@ -1,44 +1,54 @@
-# applications menu
+import msvcrt
 import util
 
+def getch():
+    """Lê um único caractere do teclado sem precisar pressionar Enter (apenas Windows)."""
+    return msvcrt.getch().decode('utf-8')
+
 def main_menu():
-    print('choose your option:')
-    print('1 - game')
-    print('2 - records')
-    print('3 - about')
-    print('q - exit')
-    op = input('> ')
-    util.clear_console()
-    print(f'Selected: {op}')
+    print('╔════════════════════════════════════════════════════════════════╗')
+    print('║                       English Terminal                         ║')
+    print('╚════════════════════════════════════════════════════════════════╝')
+    print('Selecione uma opção: [1] Jogar  [2] Recordes  [3] Sobre  [q] Sair')
+    op = getch().lower()  # Lê um único caractere e converte para minúsculo
+    print(f'\nVocê selecionou: {op}') # Adiciona uma nova linha para separar a seleção do menu
+    util.clear_console() # Pode ser problemático com getch, talvez precise ajustar
     return op
 
 def game_menu():
-    print('choose your option:')
-    print('1 - vocabulary')
-    print('2 - weekdays')
-    print('3 - months')
-    print('4 - pronouns')
-    print('5 - numbers')
-    print('m - back to main menu')
-    print('q - exit')
-    op = input('> ')
-    util.clear_console()
-    print(f'Selected: {op}')
+    print('╔═════════════════════╗')
+    print('║    Menu de Jogos    ║')
+    print('╚═════════════════════╝')
+    print('Escolha um jogo: [1] Vocabulário  [2] Dias da Semana  [3] Meses  [4] Pronomes  [5] Números  [m] Voltar  [q] Sair')
+    op = getch().lower()
+    print(f'\nVocê selecionou: {op}')
+    util.clear_console() # Pode ser problemático com getch, talvez precise ajustar
     return op
 
 def records():
-    print('Records features is not implemented!')
+    print('Recurso de Recordes não implementado!')
     print()
 
 def invalid_option(op):
     print()
-    print(f'"{op}" is an invalid option.')
+    print(f'"{op}" é uma opção inválida.')
     print()
 
 def quit():
-    print('Bye! See you later ... :D')
+    print('Tchau! Até a próxima ... :D')
     print()
     exit()
 
 if __name__ == '__main__':
-    quit()
+    op_main = main_menu()
+    if op_main == '1':
+        game_menu()
+    elif op_main == '2':
+        records()
+    elif op_main == '3':
+        # Lógica para 'Sobre'
+        pass
+    elif op_main == 'q':
+        quit()
+    else:
+        invalid_option(op_main)
