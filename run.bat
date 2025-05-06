@@ -11,7 +11,14 @@ if exist "venv" (
     echo Upgrading pip ...
     python -m pip install --upgrade pip
     echo Updating dependencies
-    pip install -r requirements.txt
+    if exist "requirements.txt" (
+        echo Installing dependencies from requirements.txt ...
+        pip install -r requirements.txt
+    ) else (
+        echo Installing dependencies from pyproject.toml ...
+        pip install keyboard
+        pip freeze > requirements.txt
+    )
     goto run
 )
 

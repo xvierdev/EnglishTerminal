@@ -30,7 +30,10 @@ if (Test-Path -Path $VenvName -PathType Container) {
     if (Test-Path -Path $RequirementsFile -PathType Leaf) {
         pip install -r $RequirementsFile
     } else {
-        Write-Host "Warning: '$RequirementsFile' not found. Skipping dependency installation."
+        Write-Host "Warning: '$RequirementsFile' not found. Install default dependencies..."
+        pip install keyboard
+        pip freeze > $RequirementsFile
+        Write-Host "Dependencies installed and saved to '$RequirementsFile'."
     }
 }
 
