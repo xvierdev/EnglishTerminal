@@ -1,0 +1,11 @@
+Static#cpu_info {
+    background: blue;
+    color: white;
+    padding: 1;
+}
+
+Static#mem_info {
+    background: green;
+    color: black;
+    padding: 1;
+}
