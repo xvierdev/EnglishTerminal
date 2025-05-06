@@ -9,7 +9,7 @@ run_application(){
 }
 
 activate_venv(){
-    if [ -d "bin" ]; then
+    if [ -d "venv/bin" ]; then
         source venv/bin/activate
     else
         source venv/Scripts/activate

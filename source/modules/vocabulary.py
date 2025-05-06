@@ -1,5 +1,5 @@
 import sqlite3
-import util
+import util, time
 from views import funcs
 
 DB_FILE = util.get_path('main.db')
@@ -50,6 +50,7 @@ def game():
     """Main game loop."""
     score = 0
     lives = 5
+    answer = ""
     round = 0  # Track the number of rounds played.
 
     print("Welcome to the Translation Game!\n")
@@ -71,28 +72,32 @@ def game():
     if category_choice and category_choice not in categories:
         if category_choice.isnumeric() and int(category_choice) <= len(categories):
             category_choice = categories[int(category_choice)-1]
+            print(f"\nCategoria selecionada: {category_choice}")
+            
+            while answer != "q" or answer != "Q":
+                word_data = get_random_word(category_choice)
+                if word_data:
+                    english_word, portuguese_phrase = word_data
+                    correct_translation = portuguese_phrase  # Normalize
+
+                    time.sleep(0.5)
+                    answer = input(f'\nTranslate "{english_word}": ')
+
+                    score, lives = funcs.total_score(score, lives, answer, correct_translation)
+
+                else:
+                    print("Could not retrieve a word from the database.")
+                    lives = 0
+
+                if lives == 0: break
+        
         else:
-            print("Category not found. Playing with any category.\n")
-            category_choice = None  # If category doesn't exist, set to None
+            print("Category not found.\n")
+            category_choice = input("Enter a category to play (or press Enter for any): ").strip().lower()
 
     # Get the word count
     if category_choice:
         category_word_count = get_category_word_count(category_choice)
+        
     else:
         category_word_count = get_category_word_count("") # Get the total word count across ALL categories (if no specific category was selected)
-
-    while lives > 0:
-        word_data = get_random_word(category_choice)
-        if word_data:
-            english_word, portuguese_phrase = word_data
-            correct_translation = portuguese_phrase  # Normalize
-
-            answer = input(f'Translate "{english_word}": ')
-
-            score, lives = funcs.total_score(score, lives, answer, correct_translation)
-
-        else:
-            print("Could not retrieve a word from the database.")
-            lives = 0
-
-        if lives == 0: break

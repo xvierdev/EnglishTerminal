@@ -26,6 +26,7 @@ def weekday_translation_game():
         english_day = random.choice(english_weekdays)
         correct_translation = weekdays[english_day]
         
+        time.sleep(0.5)
         answer = input(f'\nTranslate \'{english_day}\' to Portuguese: ')
 
         score, lives = funcs.total_score(score, lives, answer, correct_translation)

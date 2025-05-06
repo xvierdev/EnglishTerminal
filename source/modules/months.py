@@ -45,14 +45,16 @@ def month_translation_game():
     print("Bem-vindo ao Jogo de Tradução de Meses!")
     print("Você tem 5 vidas. Boa sorte!")
 
-    while lives > 0:
+    while answer != "q" or answer != "Q":
         if random.choice([True, False]):  # Escolhe aleatoriamente a direção da tradução
             month_pt = random.choice(all_months_pt)
             correct_translation = months_pt_to_en[month_pt]
+            time.sleep(0.5)
             answer = input(f"\nTraduza '{month_pt}' para inglês: ")
         else:
             month_en = random.choice(all_months_en)
             correct_translation = months_en_to_pt[month_en]
+            time.sleep(0.5)
             answer = input(f"\nTraduza '{month_en}' para português: ")
 
         score, lives = funcs.total_score(score, lives, answer, correct_translation)

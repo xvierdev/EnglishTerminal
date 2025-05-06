@@ -57,12 +57,13 @@ def number_translation_game():
 
     score = 0
     lives = 5
+    answer = ""
     difficulty_level = 1
 
     print("Welcome to the Number Translation Game!")
     print("You have 5 lives. Good luck!")
 
-    while lives > 0:
+    while answer != "q" or answer != "Q":
         if score >= difficulty_level * 20:
             difficulty_level += 1
 
@@ -71,6 +72,7 @@ def number_translation_game():
 
         correct_translation = number_to_english(number).strip()
 
+        time.sleep(0.5)
         answer = input(f"\nTranslate the number '{number}' to English: ")
 
         score, lives = funcs.total_score(score, lives, answer, correct_translation)

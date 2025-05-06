@@ -19,7 +19,6 @@ def translate_pronouns():
     }
     print("Welcome to the Pronouns Translator!")
     pronome = ""
-    print(pronomes.keys)
     
     while pronome != "q" and pronome != "Q":
         if pronome in pronomes:
@@ -30,5 +29,4 @@ def translate_pronouns():
             print(f"\n{pronome} é traduzido para {res[0]}")
             pronome = input(f"\nType the pronoun: ")
         else: 
-            print("Esse pronome não existe")
             pronome = input(f"\nType the pronoun: ")
