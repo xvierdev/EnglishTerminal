@@ -5,6 +5,7 @@ build/
 dist/
 logs/
 .vscode/
+teste/
 EnglishTerminal/
 
 # files to ignore
