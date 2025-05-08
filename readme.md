@@ -1,25 +1,43 @@
-<h1 align="center">English Terminal</h1>
+# EnglishTerminal
 
-**English Terminal** é um projeto para auxiliar na aprendizagem do Inglês ao mesmo tempo que potencializa as skills dos integrantes.
+:scroll: **English Terminal:** Projeto open source que visa o desenvolvimento simultâneo de habilidades de programação dos colaboradores e aprendizado de inglês dos jogadores.
 
-As primeiras fases do desenvolvimento aconteceme no modo command line interface, com pequenos jogos os jogadores desenvolvem seu conhecimento de inglês ao passo que os desenvolvedores melhoram as habilidades de programação desenvolvendo esses jogos e aprimorando o funcionamentos dos mesmos.
-As próximas fases envolvem a implementação de novas técnologias para novos modos de jogo, prática de Listening, sistema de ranking compatilhado e interface gráfica são exemplos de planos para o futuro deste projeto.
+Inicialmente em interface de linha de comando com jogos interativos, o projeto permite que desenvolvedores aprimorem suas skills de programação ao criar e otimizar os jogos, enquanto os jogadores falantes do português expandem seu vocabulário e compreensão do inglês.
+
+Contribuições são bem-vindas para enriquecer o projeto!
+
+***
+
+:scroll: **English Terminal:** An open-source project that aims for the simultaneous development of contributors' programming skills and Portuguese-speaking players' English language learning.
+
+Initially in a command-line interface with interactive games, the project allows developers to enhance their programming skills by creating and optimizing the games, while Portuguese-speaking players expand their vocabulary and English comprehension.
+
+Contributions are welcome to enrich the project!
+
+***
 
 ### [Backlog](./docs/backlog.md) para mais informações sobre o a andamento projeto.
 
 ## Como utilizar o programa
 
-1. Faça o downloads dos arquivos para um pasta local
-1. Instale o Python na máquina para poder executar o programa.
-1. [**Python 3**](https://www.python.org/)
+1. Faça o downloads dos arquivos para um pasta local ou clone o repositório.
+1. Instale o Python na máquina para poder executar o programa: [**Download Python.**](https://www.python.org/)
+1. Execute o script run.bat ou run.ps1 ou run.sh dependendo do seu sistema operacional.  
 
-## Recrutamento de colaboradores
-Este projeto está aberto à inclusão de colaboradores para o desenvolvimento do mesmo.
+    ```bash
+    # bash
+    source run.sh
+    ```
+    ```powershell
+    # powershell
+    .\run.ps1
+    ```
+1. Enjoy.  
 
 ## Contributors
-- Davi S
-- Bruna H
-- Wesley X
+- [Bruna H.M.](https://github.com/bruna-hm)
+- [Davi S.](https://github.com/Cubo3D)
+- [Wesley X.](https://github.com/xvierdev)
 
 ## Referências de Desenvolvimento
 - [Logging facility for Python](https://docs.python.org/3/library/logging.html)
