@@ -1,3 +1,4 @@
+<!-- animals
 animal alligator jacare
 animal anteater tamandua
 animal ant formiga
@@ -68,7 +69,8 @@ animal vulture abutre
 animal walrus morsa
 animal whale baleia
 animal wolf lobo
-
+-->
+<!-- business
 business budget orçamento
 business client cliente
 business communication comunicação
@@ -84,7 +86,6 @@ business finance finanças
 business goal meta
 business loss prejuízo
 business manager gerente
-business marketing marketing
 business meeting reunião
 business negotiation negociação
 business office escritório
@@ -101,28 +102,15 @@ business strategy estratégia
 business success sucesso
 business task tarefa
 business teamwork trabalho-em-equipe
-
-color Vermelho Red
-color Laranja Orange
-color Amarelo Yellow
-color Verde Green
-color Azul Blue
-color Anil Indigo
-color Violeta Violet
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
-color black preto
+-->
+<!-- color
+color vermelho red
+color laranja orange
+color amarelo yellow
+color verde green
+color azul blue
+color anil indigo
+color violeta violet
 color black preto
 color blue azul
 color brown marrom
@@ -138,7 +126,8 @@ color turquoise turquesa
 color violet violeta
 color white branco
 color yellow amarelo
-
+-->
+<!-- education
 education book livro
 education class aula
 education college faculdade
@@ -163,7 +152,8 @@ education teach ensinar
 education test teste
 education teacher professor
 education university universidade
-
+-->
+<!-- environment
 environment air ar
 environment climate clima
 environment conservation conservação
@@ -186,23 +176,18 @@ environment sustainable sustentavel
 environment tree arvore
 environment water agua
 environment weather tempo
-
+-->
+<!-- food
 food beef carne
 food bread pão
-# food brigadeiro brigadeiro
-# food brownies brownies
-# food burritos burritos
 food butter manteiga
 food cake bolo
 food candy doce
 food candy-cane bengala-doce
 food cheese queijo
-# food chicken-nuggets nuggets-de-frango
-# food chocolate chocolate
 food churrasco barbecue
 food coffee café
 food cookies biscoitos
-# food cranberry-sauce molho-de-cranberry
 food custard creme
 food dumplings bolinhos
 food eggs ovo
@@ -215,13 +200,9 @@ food ham presunto
 food hamburger hambúrguer
 food hot-dog cachorro-quente
 food ice-cream sorvete
-# food lasagna lasanha
 food milk leite
-# food mashed-potatoes purê-de-batata
 food meat carne
-# food muffins muffins
 food nuts nozes
-# food oil óleo
 food pancakes panquecas
 food pasta massa
 food pepper pimenta
@@ -241,19 +222,15 @@ food soup sopa
 food spaghetti espaguete
 food steak bife
 food sugar açúcar
-# food sushi sushi
-# food tacos tacos
 food tea chá
 food turkey peru
 food vegetables vegetais
 food water água
-# food yogurt iogurte
-
-# fruit acerola acerola
+-->
+<!-- fruit
 fruit apple maça
 fruit apricot damasco
 fruit avocado abacate
-# fruit banana banana
 fruit blackberry amora
 fruit blueberry mirtilo
 fruit breadfruit fruta-pão
@@ -261,18 +238,13 @@ fruit persimmon caqui
 fruit cashew caju
 fruit castanha chestnut
 fruit cherry cereja
-# fruit cloudberry amora-ártica
 fruit coconut coco
-# fruit date tamara
 fruit dragon-fruit pitaya
-# fruit elderberry sabugueiro
 fruit fig figo
 fruit grape uva
-# fruit grapefruit toranja
 fruit guava goiaba
 fruit jackfruit jaca
 fruit lemon limão
-# fruit lingonberry arando-vermelho
 fruit lychee lichia
 fruit mango manga
 fruit melon melão
@@ -283,10 +255,7 @@ fruit papaya mamão
 fruit passion-fruit maracujá
 fruit peach pessego
 fruit pear pera
-fruit persimmon caqui
 fruit pineapple abacaxi
-fruit pitanga pitanga
-# fruit pitaya pitaya
 fruit plum ameixa
 fruit pomegranate romã
 fruit quince marmelo
@@ -296,6 +265,8 @@ fruit strawberry morango
 fruit tangerine tangerina
 fruit tomato tomate
 fruit watermelon melancia
+-->
+<!--profession
 profession accountant contador
 profession actor ator
 profession actress atriz
@@ -306,7 +277,6 @@ profession barber barbeiro
 profession chef cozinheiro
 profession cosmetologist esteticista
 profession counselor conselheiro
-profession designer designer
 profession detective detetive
 profession director diretor
 profession doctor medico
@@ -340,13 +310,13 @@ profession surveyor agrimensor
 profession teacher professor
 profession technician tecnico
 profession therapist terapeuta
-profession truck-driver truck-driver
 profession university-professor professor-universitário
 profession veterinarian veterinário
 profession waiter garçom
 profession waitress garçonete
 profession writer escritor
-
+-->
+<!--sentiment
 sentiment acceptance aceitação
 sentiment admiration admiração
 sentiment anxiety ansiedade
@@ -378,9 +348,7 @@ sentiment longing saudade
 sentiment loneliness solidao
 sentiment melancholy melancolia
 sentiment nervousness nervosismo
-sentiment nostalgia nostalgia
 sentiment optimism otimismo
-sentiment paranoia paranoia
 sentiment passion paixão
 sentiment peace paz
 sentiment pessimism pessimismo
@@ -395,10 +363,9 @@ sentiment shame vergonha
 sentiment shyness timidez
 sentiment stress estresse
 sentiment sympathy simpatia
-sentiment terror terror
 sentiment trust confiança
-
-
+-->
+<!-- shopping
 shopping accessories acessórios
 shopping bag sacola
 shopping book livro
@@ -423,8 +390,8 @@ shopping shopping-bag sacola-de-compras
 shopping shoes sapatos
 shopping sizes tamanhos
 shopping store loja
-
-
+-->
+<!-- technology
 technology app aplicativo
 technology browser navegador
 technology connect conectar
@@ -445,8 +412,8 @@ technology search pesquisar
 technology server servidor
 technology social-media mídia-social
 technology speaker alto-falante
-
-
+-->
+<!-- travel
 travel airport aeroporto
 travel ajuda help
 travel customs alfandega
@@ -458,13 +425,11 @@ travel city cidade
 travel country pais
 travel cruise cruzeiro
 travel currency moeda
-travel customs alfandega
 travel direction direção
 travel emergency emergencia
 travel exchange cambio
 travel flight voo
 travel guide guia
-travel hotel hotel
 travel language idioma
 travel luggage bagagem
 travel map mapa
@@ -474,17 +439,15 @@ travel restaurant restaurante
 travel reservation reserva
 travel sightseeing turismo
 travel souvenir lembrancinha
-travel taxi taxi
 travel ticket passagem
 travel tour passeio
 travel tourist turista
 travel train trem
 travel travel-agency agencia-de-viagens
-travel turista turista
 travel vacation ferias
 travel visa visto
-
-
+-->
+<!-- vehicle
 vehicle ambulance ambulancia
 vehicle airplane avião
 vehicle atv quadriciclo
@@ -494,7 +457,6 @@ vehicle bus onibus
 vehicle cable-car teleférico
 vehicle campervan motorhome
 vehicle car carro
-# vehicle convertible carro-conversivel
 vehicle electric-car carro-elétrico
 vehicle ferry balsa
 vehicle garbage-truck caminhão-de-lixo
@@ -516,8 +478,8 @@ vehicle train trem
 vehicle truck caminhão
 vehicle vintage-car carro-antigo
 vehicle yacht iate
-
-
+-->
+<!-- weather
 weather cloud nuvem
 weather cloudy nublado
 weather cold frio
@@ -539,107 +501,106 @@ weather thunder trovão
 weather tempo weather
 weather warm morno
 weather wind vento
-
-
-objeto table mesa
-objeto chair cadeira
-objeto book livro
-objeto pen caneta
-objeto pencil lápis
-objeto eraser borracha
-objeto notebook caderno
-objeto ruler régua
-objeto scissors tesoura
-objeto backpack mochila
-objeto phone telefone
-objeto computer computador
-objeto keyboard teclado
-objeto mouse mouse
-objeto monitor monitor
-objeto printer impressora
-objeto camera câmera
-objeto television televisão
-objeto radio rádio
-objeto clock relógio
-objeto glasses óculos
-objeto hat chapéu
-objeto shirt camisa
-objeto pants calça
-objeto shoe sapato
-objeto sock meia
-objeto coat casaco
-objeto umbrella guarda-chuva
-objeto key chave
-objeto door porta
-objeto window janela
-objeto wall parede
-objeto ceiling teto
-objeto floor chão
-objeto lamp lâmpada
-objeto sofa sofá
-objeto bed cama
-objeto pillow travesseiro
-objeto blanket cobertor
-objeto plate prato
-objeto glass copo
-objeto fork garfo
-objeto knife faca
-objeto spoon colher
-objeto pot panela
-objeto frying pan frigideira
-objeto refrigerator geladeira
-objeto stove fogão
-objeto sink pia
-objeto towel toalha
-
-
-ferramenta pliers alicate
-ferramenta screwdriver chave de fenda
-ferramenta hammer martelo
-ferramenta handsaw serrote
-ferramenta file lima
-ferramenta drill bit broca
-ferramenta screw parafuso
-ferramenta nut porca
-ferramenta washer arruela
-ferramenta nails pregos
-ferramenta measuring tape trena
-ferramenta level nível
-ferramenta square esquadro
-ferramenta stapler grampeador
-ferramenta rivets rebites
-ferramenta torque wrench torquímetro
-ferramenta planes plainas
-ferramenta chisel formão
-ferramenta rasp grosa
-ferramenta punch punção
-ferramenta vise morsa
-ferramenta drill furadeira
-ferramenta sander lixadeira
-ferramenta grinder esmerilhadeira
-ferramenta blower soprador
-ferramenta paint gun pistola de pintura
-ferramenta adjustable wrench chave inglesa
-ferramenta allen wrench chave allen
-ferramenta cutting pliers alicate de corte
-ferramenta needle-nose pliers alicate de bico
-ferramenta bench shears tesoura de bancada
-ferramenta utility knife estilete
-ferramenta cold chisel talhadeira
-ferramenta hydraulic jack macaco hidráulico
-ferramenta sawhorse cavalete
-ferramenta concrete mixer betoneira
-ferramenta wheelbarrow carrinho de mão
-ferramenta shovel pá
-ferramenta pickaxe picareta
-ferramenta hoe enxada
-ferramenta hose mangueira
-ferramenta watering can regador
-ferramenta pruning shears tesoura de poda
-ferramenta loppers podão
-ferramenta chainsaw motosserra
-ferramenta brush cutter roçadeira
-ferramenta shop vac aspirador de pó industrial
-ferramenta multimeter multímetro
-ferramenta oscilloscope osciloscópio
-ferramenta solder solda
+-->
+<!-- object
+object table mesa
+object chair cadeira
+object book livro
+object pen caneta
+object pencil lápis
+object eraser borracha
+object notebook caderno
+object ruler régua
+object scissors tesoura
+object backpack mochila
+object phone telefone
+object computer computador
+object keyboard teclado
+object printer impressora
+object camera câmera
+object television televisão
+object radio rádio
+object clock relógio
+object glasses óculos
+object hat chapéu
+object shirt camisa
+object pants calça
+object shoe sapato
+object sock meia
+object coat casaco
+object umbrella guarda-chuva
+object key chave
+object door porta
+object window janela
+object wall parede
+object ceiling teto
+object floor chão
+object lamp lâmpada
+object sofa sofá
+object bed cama
+object pillow travesseiro
+object blanket cobertor
+object plate prato
+object glass copo
+object fork garfo
+object knife faca
+object spoon colher
+object pot panela
+object frying pan frigideira
+object refrigerator geladeira
+object stove fogão
+object sink pia
+object towel toalha
+-->
+<!-- tools
+tools pliers alicate
+tools screwdriver chave de fenda
+tools hammer martelo
+tools handsaw serrote
+tools file lima
+tools drill bit broca
+tools screw parafuso
+tools nut porca
+tools washer arruela
+tools nails pregos
+tools measuring tape trena
+tools level nível
+tools square esquadro
+tools stapler grampeador
+tools rivets rebites
+tools torque wrench torquímetro
+tools planes plainas
+tools chisel formão
+tools rasp grosa
+tools punch punção
+tools vise morsa
+tools drill furadeira
+tools sander lixadeira
+tools grinder esmerilhadeira
+tools blower soprador
+tools paint gun pistola de pintura
+tools adjustable wrench chave inglesa
+tools allen wrench chave allen
+tools cutting pliers alicate de corte
+tools needle-nose pliers alicate de bico
+tools bench shears tesoura de bancada
+tools utility knife estilete
+tools cold chisel talhadeira
+tools hydraulic jack macaco hidráulico
+tools sawhorse cavalete
+tools concrete mixer betoneira
+tools wheelbarrow carrinho de mão
+tools shovel pá
+tools pickaxe picareta
+tools hoe enxada
+tools hose mangueira
+tools watering can regador
+tools pruning shears tesoura de poda
+tools loppers podão
+tools chainsaw motosserra
+tools brush cutter roçadeira
+tools shop vac aspirador de pó industrial
+tools multimeter multímetro
+tools oscilloscope osciloscópio
+tools solder solda
+-->
