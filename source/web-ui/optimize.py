@@ -3,8 +3,8 @@ try:
     itens = set()
     category = set()
     file_path = os.path.dirname(os.path.abspath(__file__))
-    with open(file_path + '\\wordlist.md', 'w', encoding='utf-8') as refined_file:
-        with open(file_path +'\\brute_wordlist.txt', 'r', encoding='utf-8') as file:
+    with open(file_path + '\\wordlist.txt', 'w', encoding='utf-8') as refined_file:
+        with open(file_path +'\\brute_wordlist.md', 'r', encoding='utf-8') as file:
             for line in file.readlines():
                 if not line.startswith('#'):
                     stripped_lower_line = line.lower().strip()

@@ -68,6 +68,7 @@ animal vulture abutre
 animal walrus morsa
 animal whale baleia
 animal wolf lobo
+
 business budget orçamento
 business client cliente
 business communication comunicação
@@ -100,6 +101,7 @@ business strategy estratégia
 business success sucesso
 business task tarefa
 business teamwork trabalho-em-equipe
+
 color Vermelho Red
 color Laranja Orange
 color Amarelo Yellow
@@ -136,6 +138,7 @@ color turquoise turquesa
 color violet violeta
 color white branco
 color yellow amarelo
+
 education book livro
 education class aula
 education college faculdade
@@ -160,6 +163,7 @@ education teach ensinar
 education test teste
 education teacher professor
 education university universidade
+
 environment air ar
 environment climate clima
 environment conservation conservação
@@ -182,27 +186,28 @@ environment sustainable sustentavel
 environment tree arvore
 environment water agua
 environment weather tempo
+
 food beef carne
 food bread pão
-food brigadeiro brigadeiro
-food brownies brownies
-food burritos burritos
+# food brigadeiro brigadeiro
+# food brownies brownies
+# food burritos burritos
 food butter manteiga
 food cake bolo
 food candy doce
 food candy-cane bengala-doce
 food cheese queijo
-food chicken-nuggets nuggets-de-frango
-food chocolate chocolate
-food churrasco churrasco
+# food chicken-nuggets nuggets-de-frango
+# food chocolate chocolate
+food churrasco barbecue
 food coffee café
 food cookies biscoitos
-food cranberry-sauce molho-de-cranberry
+# food cranberry-sauce molho-de-cranberry
 food custard creme
 food dumplings bolinhos
 food eggs ovo
 food flour farinha
-food french-fries batatas-fritas
+food fries batatas-fritas
 food fruits frutas
 food gelatin gelatina
 food gravy molho
@@ -210,13 +215,13 @@ food ham presunto
 food hamburger hambúrguer
 food hot-dog cachorro-quente
 food ice-cream sorvete
-food lasagna lasanha
+# food lasagna lasanha
 food milk leite
-food mashed-potatoes purê-de-batata
+# food mashed-potatoes purê-de-batata
 food meat carne
-food muffins muffins
+# food muffins muffins
 food nuts nozes
-food oil óleo
+# food oil óleo
 food pancakes panquecas
 food pasta massa
 food pepper pimenta
@@ -236,37 +241,38 @@ food soup sopa
 food spaghetti espaguete
 food steak bife
 food sugar açúcar
-food sushi sushi
-food tacos tacos
+# food sushi sushi
+# food tacos tacos
 food tea chá
 food turkey peru
 food vegetables vegetais
 food water água
-food yogurt iogurte
-fruit acerola acerola
+# food yogurt iogurte
+
+# fruit acerola acerola
 fruit apple maça
 fruit apricot damasco
 fruit avocado abacate
-fruit banana banana
+# fruit banana banana
 fruit blackberry amora
 fruit blueberry mirtilo
 fruit breadfruit fruta-pão
-fruit caqui persimmon
+fruit persimmon caqui
 fruit cashew caju
 fruit castanha chestnut
 fruit cherry cereja
-fruit cloudberry amora-ártica
+# fruit cloudberry amora-ártica
 fruit coconut coco
-fruit date tamara
-fruit dragon-fruit fruta-do-dragão
-fruit elderberry sabugueiro
+# fruit date tamara
+fruit dragon-fruit pitaya
+# fruit elderberry sabugueiro
 fruit fig figo
 fruit grape uva
-fruit grapefruit toranja
+# fruit grapefruit toranja
 fruit guava goiaba
 fruit jackfruit jaca
 fruit lemon limão
-fruit lingonberry arando-vermelho
+# fruit lingonberry arando-vermelho
 fruit lychee lichia
 fruit mango manga
 fruit melon melão
@@ -280,7 +286,7 @@ fruit pear pera
 fruit persimmon caqui
 fruit pineapple abacaxi
 fruit pitanga pitanga
-fruit pitaya pitaya
+# fruit pitaya pitaya
 fruit plum ameixa
 fruit pomegranate romã
 fruit quince marmelo
@@ -340,6 +346,7 @@ profession veterinarian veterinário
 profession waiter garçom
 profession waitress garçonete
 profession writer escritor
+
 sentiment acceptance aceitação
 sentiment admiration admiração
 sentiment anxiety ansiedade
@@ -390,6 +397,8 @@ sentiment stress estresse
 sentiment sympathy simpatia
 sentiment terror terror
 sentiment trust confiança
+
+
 shopping accessories acessórios
 shopping bag sacola
 shopping book livro
@@ -414,6 +423,8 @@ shopping shopping-bag sacola-de-compras
 shopping shoes sapatos
 shopping sizes tamanhos
 shopping store loja
+
+
 technology app aplicativo
 technology browser navegador
 technology connect conectar
@@ -434,6 +445,8 @@ technology search pesquisar
 technology server servidor
 technology social-media mídia-social
 technology speaker alto-falante
+
+
 travel airport aeroporto
 travel ajuda help
 travel customs alfandega
@@ -470,6 +483,8 @@ travel travel-agency agencia-de-viagens
 travel turista turista
 travel vacation ferias
 travel visa visto
+
+
 vehicle ambulance ambulancia
 vehicle airplane avião
 vehicle atv quadriciclo
@@ -479,7 +494,7 @@ vehicle bus onibus
 vehicle cable-car teleférico
 vehicle campervan motorhome
 vehicle car carro
-vehicle convertible carro-conversivel
+# vehicle convertible carro-conversivel
 vehicle electric-car carro-elétrico
 vehicle ferry balsa
 vehicle garbage-truck caminhão-de-lixo
@@ -501,6 +516,8 @@ vehicle train trem
 vehicle truck caminhão
 vehicle vintage-car carro-antigo
 vehicle yacht iate
+
+
 weather cloud nuvem
 weather cloudy nublado
 weather cold frio
@@ -522,56 +539,60 @@ weather thunder trovão
 weather tempo weather
 weather warm morno
 weather wind vento
-objeto mesa table
-objeto cadeira chair
-objeto livro book
-objeto caneta pen
-objeto lápis pencil
-objeto borracha eraser
-objeto caderno notebook
-objeto régua ruler
-objeto tesoura scissors
-objeto mochila backpack
-objeto telefone phone
-objeto computador computer
-objeto teclado keyboard
+
+
+objeto table mesa
+objeto chair cadeira
+objeto book livro
+objeto pen caneta
+objeto pencil lápis
+objeto eraser borracha
+objeto notebook caderno
+objeto ruler régua
+objeto scissors tesoura
+objeto backpack mochila
+objeto phone telefone
+objeto computer computador
+objeto keyboard teclado
 objeto mouse mouse
 objeto monitor monitor
-objeto impressora printer
-objeto câmera camera
-objeto televisão television
-objeto rádio radio
-objeto relógio clock
-objeto óculos glasses
-objeto chapéu hat
-objeto camisa shirt
-objeto calça pants
-objeto sapato shoe
-objeto meia sock
-objeto casaco coat
-objeto guarda-chuva umbrella
-objeto chave key
-objeto porta door
-objeto janela window
-objeto parede wall
-objeto teto ceiling
-objeto chão floor
-objeto lâmpada lamp
-objeto sofá sofa
-objeto cama bed
-objeto travesseiro pillow
-objeto cobertor blanket
-objeto prato plate
-objeto copo glass
-objeto garfo fork
-objeto faca knife
-objeto colher spoon
-objeto panela pot
-objeto frigideira frying pan
-objeto geladeira refrigerator
-objeto fogão stove
-objeto pia sink
-objeto toalha towel
+objeto printer impressora
+objeto camera câmera
+objeto television televisão
+objeto radio rádio
+objeto clock relógio
+objeto glasses óculos
+objeto hat chapéu
+objeto shirt camisa
+objeto pants calça
+objeto shoe sapato
+objeto sock meia
+objeto coat casaco
+objeto umbrella guarda-chuva
+objeto key chave
+objeto door porta
+objeto window janela
+objeto wall parede
+objeto ceiling teto
+objeto floor chão
+objeto lamp lâmpada
+objeto sofa sofá
+objeto bed cama
+objeto pillow travesseiro
+objeto blanket cobertor
+objeto plate prato
+objeto glass copo
+objeto fork garfo
+objeto knife faca
+objeto spoon colher
+objeto pot panela
+objeto frying pan frigideira
+objeto refrigerator geladeira
+objeto stove fogão
+objeto sink pia
+objeto towel toalha
+
+
 ferramenta pliers alicate
 ferramenta screwdriver chave de fenda
 ferramenta hammer martelo
