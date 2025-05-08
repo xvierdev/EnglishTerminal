@@ -6,8 +6,8 @@ filelist = ['teste.py', 'outroteste.py']
 
 def get_files():
     try:
-        for file in baseurl:
-            request.urlretrieve(baseurl, os.path.dirname(os.path.abspath(__name__))+'\\teste\\'+file)
+        for filename in filelist:
+            request.urlretrieve(baseurl, os.path.dirname(os.path.abspath(__name__))+'\\teste\\'+filename)
     except Exception as e:
         print(str(e))
 
