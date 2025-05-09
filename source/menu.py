@@ -1,6 +1,7 @@
 # applications menu
 import keyboard
 import os
+from user import User
 
 def clear_screen():
     if os.name == 'nt':
@@ -65,8 +66,8 @@ def invalid_option(op):
     input("Pressione Enter para continuar...") # Usar input aqui para pausar
     clear_screen()
 
-def quit():
-    print('Tchau! Até a próxima ... :D')
+def quit(user = User('generic', 'noName', 0)):
+    print(f'Tchau {user.get_name()}! Até a próxima ... :D')
     print()
     exit()
 

@@ -3,11 +3,16 @@ from modules import vocabulary, weekdays, months, pronoun, numbers
 import menu, about, util
 import sqlite3, logging
 
+# Classes
+
+from user import User
+
 # Initial config for log events
 logging.basicConfig(level=logging.INFO, filename=util.get_path('logs.log'), format='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
 
 def main ():
     try:
+        user = User('generic', 'noname', 0)
         while(True):
             op = menu.main_menu()
             if op in ['q', 'Q'] : menu.quit()
@@ -21,7 +26,7 @@ def main ():
                             case '3': months.month_translation_game()
                             case '4': pronoun.translate_pronouns()
                             case '5': numbers.number_translation_game()
-                            case 'q': menu.quit()
+                            case 'q': menu.quit(user)
                             case   _: menu.invalid_option(op)
                     case '2': menu.records()
                     case '3': about.about()
