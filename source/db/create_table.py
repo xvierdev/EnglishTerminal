@@ -20,7 +20,22 @@ user_index = "CREATE INDEX IF NOT EXISTS idx_users_user ON Users (user);"
 words_index = "CREATE INDEX IF NOT EXISTS idx_words_english ON Words (english);"
 
 def create_tables(db_file):
-    '''Creates the necessary tables if they don't exist.'''
+    '''
+    Cria as tabelas necessárias no banco de dados SQLite se elas não existirem.
+
+    Este método estabelece uma conexão com o arquivo de banco de dados especificado
+    e executa comandos SQL para criar as tabelas 'users' e 'words', juntamente
+    com seus respectivos índices.
+
+    Args:
+        db_file (str): O caminho para o arquivo do banco de dados SQLite.
+
+    Raises:
+        sqlite3.Error: Se ocorrer algum erro durante a operação do banco de dados.
+
+    Returns:
+        None
+    '''
     try:
         with sqlite3.connect(db_file) as conn:
             cursor = conn.cursor()
@@ -34,7 +49,27 @@ def create_tables(db_file):
         raise
 
 def populate_words(db_file, word_list):
-    '''Populates the Words table from wordlist.txt.'''
+    '''
+    Popula a tabela 'Words' no banco de dados SQLite com dados de um arquivo de texto.
+
+    Este método lê um arquivo de texto linha por linha, esperando que cada linha contenha
+    palavras em inglês e português, possivelmente com uma categoria, separadas por espaços.
+    As linhas que começam com '#' ou estão vazias são ignoradas. Os dados processados
+    são então inseridos na tabela 'Words', substituindo qualquer conteúdo existente.
+
+    Args:
+        db_file (str): O caminho para o arquivo do banco de dados SQLite.
+        word_list (str): O caminho para o arquivo de texto contendo a lista de palavras.
+                         Espera-se que cada linha contenha 'categoria english portuguese',
+                         'english portuguese' ou apenas 'english portuguese'.
+
+    Raises:
+        FileNotFoundError: Se o arquivo especificado em `word_list` não for encontrado.
+        sqlite3.Error: Se ocorrer algum erro durante a operação do banco de dados.
+
+    Returns:
+        None
+    '''
     try:
         with open(word_list, 'r', encoding='utf-8') as wordlist:
             data_to_insert = []
