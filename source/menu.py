@@ -1,6 +1,14 @@
 # applications menu
 import keyboard
 import os
+from user import User
+
+def clear_screen():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+
 
 def getch():
     """Lê um único evento de tecla e retorna o caractere (usando a biblioteca keyboard)."""
@@ -14,57 +22,61 @@ def getch():
             return event.name
         
 def main_menu():
-    print('╔════════════════════════════════════════════════════════════════╗')
-    print('║                       English Terminal                         ║')
-    print('╚════════════════════════════════════════════════════════════════╝')
+    """
+    Menu Principal da aplicação.
+
+    Returns:
+        chr: A opção escolhida pelo usuário
+    """
+    print('╔═══════════════════════════════════════════════════════════════╗')
+    print('║                       English Terminal                        ║')
+    print('╚═══════════════════════════════════════════════════════════════╝')
     print('Selecione uma opção: [1] Jogar  [2] Recordes  [3] Sobre  [q] Sair')
     op = getch()
     print(f'\nVocê selecionou: {op}')
-    # util.clear_console() # Pode causar problemas com a leitura direta, remova ou ajuste
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
+    clear_screen()
     return op
 
 def game_menu():
-    print('╔═════════════════════╗')
-    print('║    Menu de Jogos    ║')
-    print('╚═════════════════════╝')
+    """
+    Menu dos jogos.
+
+    Returns:
+        chr: A opção escolhida pelo usuário
+    """
+    print('╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗')
+    print('║                                              Menu de Jogos                                                   ║')
+    print('╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝')
     print('Escolha um jogo: [1] Vocabulário  [2] Dias da Semana  [3] Meses  [4] Pronomes  [5] Números  [m] Voltar  [q] Sair')
     op = getch()
     print(f'\nVocê selecionou: {op}')
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
+    clear_screen()
     return op
 
 def records():
     print('Recurso de Recordes não implementado!')
     print()
     input("Pressione Enter para continuar...") # Usar input aqui para pausar
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
+    clear_screen()
 
 def invalid_option(op):
     print()
     print(f'"{op}" é uma opção inválida.')
     print()
     input("Pressione Enter para continuar...") # Usar input aqui para pausar
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
+    clear_screen()
 
-def quit():
-    print('Tchau! Até a próxima ... :D')
+def quit(user = User('generic', 'noName', 0)):
+    print(f'Tchau {user.get_name()}! Até a próxima ... :D')
     print()
     exit()
 
+
+
+# FIM DO MENU
+
 if __name__ == '__main__':
+    """TESTE DOS MENUS"""
     while True:
         op_main = main_menu()
         if op_main == '1':
