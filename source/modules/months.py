@@ -41,6 +41,7 @@ def month_translation_game():
     score = 0
     lives = 5
     round = 0 
+    answer = ''
 
     print("Bem-vindo ao Jogo de Tradução de Meses!")
     print("Você tem 5 vidas. Boa sorte!")
