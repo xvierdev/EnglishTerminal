@@ -26,6 +26,7 @@ def main ():
                             case '3': months.month_translation_game()
                             case '4': pronoun.translate_pronouns()
                             case '5': numbers.number_translation_game()
+                            case 'm': menu.main_menu()
                             case 'q': menu.quit(user)
                             case   _: menu.invalid_option(op)
                     case '2': menu.records()
