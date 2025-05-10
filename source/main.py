@@ -1,6 +1,6 @@
 # main application file
 from modules import vocabulary, weekdays, months, pronoun, numbers
-import menu, about, util
+import menu, about, util, db.create_table as db
 import sqlite3, logging
 
 # Classes
@@ -32,7 +32,9 @@ def main ():
                             case 'q': menu.quit(user)
                             case   _: menu.invalid_option(op)
                     case '2': menu.records(user)
-                    case '3': user = menu.login()
+                    case '3':
+                        user = menu.login()
+                        db.create_user(user, util.get_path(util.DB_FILE))
                     case '4': about.about()
                     case   _: menu.invalid_option(op)
     except KeyboardInterrupt:

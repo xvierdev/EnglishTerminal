@@ -4,7 +4,7 @@ import sqlite3, logging
 create_table = '''
 CREATE TABLE IF NOT EXISTS Users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        user TEXT UNIQUE NOT NULL,
+        nick TEXT UNIQUE NOT NULL,
         record INTEGER
 );'''
 
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS Words (
     category TEXT NOT NULL
 );'''
 
-user_index = "CREATE INDEX IF NOT EXISTS idx_users_user ON Users (user);"
+user_index = "CREATE INDEX IF NOT EXISTS idx_users_nick ON Users (nick);"
 words_index = "CREATE INDEX IF NOT EXISTS idx_words_english ON Words (english);"
 
 def create_tables(db_file):
@@ -91,5 +91,14 @@ def populate_words(db_file, word_list):
                 logging.info(f"{cursor.rowcount} Words inserted/ignored.")
     except FileNotFoundError:
         raise FileNotFoundError(f'{word_list} not found.')
+    except sqlite3.Error:
+        raise
+
+def create_user(user, db_file):
+    try:
+        with sqlite3.connect(db_file) as conn:
+                cursor = conn.cursor()
+                cursor.execute("INSERT INTO Users (nick, record) VALUES (?, ?)", (user.get_nick(), user.get_points()))
+                logging.info(f"User {user.get_nick()} created successful.")
     except sqlite3.Error:
         raise
