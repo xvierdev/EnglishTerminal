@@ -46,7 +46,7 @@ def get_category_word_count(category):
         print(f'Database Error: {e}')
         return 0
 
-def game():
+def game(user=None):
     """Main game loop."""
     score = 0
     lives = 5
@@ -74,7 +74,7 @@ def game():
             category_choice = categories[int(category_choice)-1]
             print(f"\nCategoria selecionada: {category_choice}")
             
-            while answer != "q" or answer != "Q":
+            while answer not in ['q', 'Q']:
                 word_data = get_random_word(category_choice)
                 if word_data:
                     english_word, portuguese_phrase = word_data
@@ -89,7 +89,10 @@ def game():
                     print("Could not retrieve a word from the database.")
                     lives = 0
 
-                if lives == 0: break
+                if lives == 0:
+                    if user != None:
+                       user.add_points(score) 
+                    break
         
         else:
             print("Category not found.\n")
