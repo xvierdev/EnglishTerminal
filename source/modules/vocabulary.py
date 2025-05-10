@@ -53,7 +53,8 @@ def game(user=None):
     answer = ""
     round = 0  # Track the number of rounds played.
 
-    print("Welcome to the Translation Game!\n")
+    print("Welcome to the Translation Game!")
+    print("Exit Q/q\n")
 
     # Show available categories
     categories = get_available_categories()

@@ -1,3 +1,4 @@
+#animal
 animal alligator jacare
 animal anteater tamandua
 animal ant formiga
@@ -68,6 +69,7 @@ animal vulture abutre
 animal walrus morsa
 animal whale baleia
 animal wolf lobo
+#business
 business budget orçamento
 business client cliente
 business communication comunicação
@@ -99,6 +101,7 @@ business strategy estratégia
 business success sucesso
 business task tarefa
 business teamwork trabalho-em-equipe
+#color
 color vermelho red
 color laranja orange
 color amarelo yellow
@@ -121,6 +124,7 @@ color turquoise turquesa
 color violet violeta
 color white branco
 color yellow amarelo
+#education
 education book livro
 education class aula
 education college faculdade
@@ -145,6 +149,7 @@ education teach ensinar
 education test teste
 education teacher professor
 education university universidade
+#environment
 environment air ar
 environment climate clima
 environment conservation conservação
@@ -167,6 +172,7 @@ environment sustainable sustentavel
 environment tree arvore
 environment water agua
 environment weather tempo
+#food
 food beef carne
 food bread pão
 food butter manteiga
@@ -215,6 +221,7 @@ food tea chá
 food turkey peru
 food vegetables vegetais
 food water água
+#fruit
 fruit apple maça
 fruit apricot damasco
 fruit avocado abacate
@@ -252,6 +259,7 @@ fruit strawberry morango
 fruit tangerine tangerina
 fruit tomato tomate
 fruit watermelon melancia
+#profession
 profession accountant contador
 profession actor ator
 profession actress atriz
@@ -300,6 +308,7 @@ profession veterinarian veterinário
 profession waiter garçom
 profession waitress garçonete
 profession writer escritor
+#sentiment
 sentiment acceptance aceitação
 sentiment admiration admiração
 sentiment anxiety ansiedade
@@ -347,6 +356,7 @@ sentiment shyness timidez
 sentiment stress estresse
 sentiment sympathy simpatia
 sentiment trust confiança
+#shopping
 shopping accessories acessórios
 shopping bag sacola
 shopping book livro
@@ -371,6 +381,7 @@ shopping shopping-bag sacola-de-compras
 shopping shoes sapatos
 shopping sizes tamanhos
 shopping store loja
+#technology
 technology app aplicativo
 technology browser navegador
 technology connect conectar
@@ -391,6 +402,7 @@ technology search pesquisar
 technology server servidor
 technology social-media mídia-social
 technology speaker alto-falante
+#trevel
 travel airport aeroporto
 travel ajuda help
 travel customs alfandega
@@ -423,6 +435,7 @@ travel train trem
 travel travel-agency agencia-de-viagens
 travel vacation ferias
 travel visa visto
+#vehicle
 vehicle ambulance ambulancia
 vehicle airplane avião
 vehicle atv quadriciclo
@@ -453,6 +466,7 @@ vehicle train trem
 vehicle truck caminhão
 vehicle vintage-car carro-antigo
 vehicle yacht iate
+#weather
 weather cloud nuvem
 weather cloudy nublado
 weather cold frio
@@ -474,6 +488,7 @@ weather thunder trovão
 weather tempo weather
 weather warm morno
 weather wind vento
+#objeto
 objeto table mesa
 objeto chair cadeira
 objeto book livro
@@ -522,6 +537,7 @@ objeto refrigerator geladeira
 objeto stove fogão
 objeto sink pia
 objeto towel toalha
+#ferramenta
 ferramenta pliers alicate
 ferramenta screwdriver chave de fenda
 ferramenta hammer martelo
@@ -572,3 +588,5 @@ ferramenta shop vac aspirador de pó industrial
 ferramenta multimeter multímetro
 ferramenta oscilloscope osciloscópio
 ferramenta solder solda
+
+#ultima revisão 10/05/2025 por Cubo3D

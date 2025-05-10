@@ -62,6 +62,7 @@ def number_translation_game():
 
     print("Welcome to the Number Translation Game!")
     print("You have 5 lives. Good luck!")
+    print("Exit Q/q"
 
     while answer != "q" or answer != "Q":
         if score >= difficulty_level * 20:
