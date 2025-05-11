@@ -12,7 +12,8 @@ if (Test-Path -Path $VenvName -PathType Container) {
     # Activate the virtual environment
     Write-Host "Activating virtual environment '$VenvName'..."
     .$ActivateScript
-} else {
+}
+else {
     # Create the virtual environment
     Write-Host "Creating virtual environment '$VenvName'..."
     python -m venv $VenvName
@@ -29,7 +30,8 @@ if (Test-Path -Path $VenvName -PathType Container) {
     Write-Host "Updating dependencies..."
     if (Test-Path -Path $RequirementsFile -PathType Leaf) {
         pip install -r $RequirementsFile
-    } else {
+    }
+    else {
         Write-Host "Warning: '$RequirementsFile' not found. Install default dependencies..."
         pip install keyboard
         pip freeze > $RequirementsFile
