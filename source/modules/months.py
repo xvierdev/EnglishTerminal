@@ -1,4 +1,5 @@
-import random, time
+import random
+import time
 from views import funcs
 
 def month_translation_game():

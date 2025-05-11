@@ -1,4 +1,5 @@
-import random, time
+import random
+import time
 from views import funcs
 
 def number_translation_game():
@@ -10,16 +11,10 @@ def number_translation_game():
         """
         Helper function to convert an integer to English.
         """
-        units = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-        teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
-        tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
         thousands = ["", "thousand", "million"]
 
         if n == 0:
             return "zero"
-
-        if n < 0:
-            return "negative " + number_to_english(abs(n))
 
         parts = []
         for i in range(3):
@@ -45,7 +40,7 @@ def number_translation_game():
             return teens[n - 10]
         elif n < 100:
             ten = tens[n // 10]
-            unit = units[n % 10]
+            unit = units[n % 10] if n % 10 != 0 else ""
             return ten + (("-" + unit) if unit else "")
         else:
             hundred = units[n // 100]
@@ -62,14 +57,14 @@ def number_translation_game():
 
     print("Welcome to the Number Translation Game!")
     print("You have 5 lives. Good luck!")
-    print("Exit Q/q"
+    print("Exit Q/q")
 
-    while answer != "q" or answer != "Q":
-        if score >= difficulty_level * 20:
+    while answer not in ["q", "Q"]:
+        if score >= difficulty_level * 5:
             difficulty_level += 1
 
         max_range = 10 ** difficulty_level
-        number = random.randint(-max_range, max_range)
+        number = random.randint(0, max_range)
 
         correct_translation = number_to_english(number).strip()
 
@@ -78,4 +73,5 @@ def number_translation_game():
 
         score, lives = funcs.total_score(score, lives, answer, correct_translation)
         
-        if lives == 0: break
+        if (lives == 0):
+            break

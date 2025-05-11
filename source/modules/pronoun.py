@@ -1,4 +1,3 @@
-
 def translate_pronouns():
     """
     Traduz pronomes pessoais do inglês para o português.
@@ -19,7 +18,7 @@ def translate_pronouns():
     }
     print("Welcome to the Pronouns Translator!")
     pronome = ""
-    
+
     while pronome != "q" and pronome != "Q":
         if pronome in pronomes:
             print(f"\n{pronome} é traduzido para {pronomes[pronome]}")
@@ -28,5 +27,5 @@ def translate_pronouns():
             res = [key for key in pronomes if pronomes[key] == pronome]
             print(f"\n{pronome} é traduzido para {res[0]}")
             pronome = input(f"\nType the pronoun: ")
-        else: 
+        else:
             pronome = input(f"\nType the pronoun: ")
