@@ -1,5 +1,6 @@
 import sqlite3
 import logging
+import db.connect as connect
 
 # SQL queries to create database and tables.
 create_table = """
@@ -39,7 +40,8 @@ def create_tables(db_file):
         None
     """
     try:
-        with sqlite3.connect(db_file) as conn:
+        conn = connect.connect()
+        with conn:
             cursor = conn.cursor()
             cursor.execute(create_table)
             cursor.execute(user_index)

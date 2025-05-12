@@ -61,7 +61,6 @@ def game(user=None):
     score = 0
     lives = 5
     answer = ""
-    round = 0  # Track the number of rounds played.
 
     print("Welcome to the Translation Game!")
     print("Exit Q/q\n")
@@ -105,7 +104,7 @@ def game(user=None):
                     lives = 0
 
                 if lives == 0:
-                    if user != None:
+                    if user is not None:
                         user.add_points(score)
                     break
 
@@ -119,9 +118,6 @@ def game(user=None):
 
     # Get the word count
     if category_choice:
-        category_word_count = get_category_word_count(category_choice)
-
+        get_category_word_count(category_choice)
     else:
-        category_word_count = get_category_word_count(
-            ""
-        )  # Get the total word count across ALL categories (if no specific category was selected)
+        get_category_word_count("")

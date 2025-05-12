@@ -5,9 +5,9 @@ import db.create_table as dbmanager
 
 
 def get_path(filename):
-    """Gets the path of the filename file in same directory as the executable."""
-    # appdata_dir = os.getenv('APPDATA')
-    # if not appdata_dir:
+    """Retorna o caminho absoluto para o arquivo especificado, criando o diretório se necessário.
+    Args:
+        filename (str): O nome do arquivo para o qual o caminho deve ser obtido."""
     appdata_dir = os.path.dirname(os.path.abspath(__file__))
     database_path = os.path.join(appdata_dir, "EnglishTerminal", filename)
     os.makedirs(os.path.dirname(database_path), exist_ok=True)

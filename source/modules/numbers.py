@@ -2,7 +2,8 @@ import random
 import time
 from views import funcs
 
-def number_translation_game():
+
+def number_translation_game(user=None):
     """
     Game to practice translating numbers to English with increasing difficulty.
     """
@@ -19,7 +20,9 @@ def number_translation_game():
         parts = []
         for i in range(3):
             if n % 1000 != 0:
-                parts.insert(0, number_to_english_under_1000(n % 1000) + " " + thousands[i])
+                parts.insert(
+                    0, number_to_english_under_1000(n % 1000) + " " + thousands[i]
+                )
             n //= 1000
 
         return " ".join(parts).strip()
@@ -28,9 +31,42 @@ def number_translation_game():
         """
         Helper function to convert an integer from 0 to 999 to English.
         """
-        units = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-        teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
-        tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+        units = [
+            "zero",
+            "one",
+            "two",
+            "three",
+            "four",
+            "five",
+            "six",
+            "seven",
+            "eight",
+            "nine",
+        ]
+        teens = [
+            "ten",
+            "eleven",
+            "twelve",
+            "thirteen",
+            "fourteen",
+            "fifteen",
+            "sixteen",
+            "seventeen",
+            "eighteen",
+            "nineteen",
+        ]
+        tens = [
+            "",
+            "",
+            "twenty",
+            "thirty",
+            "forty",
+            "fifty",
+            "sixty",
+            "seventy",
+            "eighty",
+            "ninety",
+        ]
 
         if n == 0:
             return ""
@@ -48,7 +84,9 @@ def number_translation_game():
             if remainder == 0:
                 return hundred + " hundred"
             else:
-                return hundred + " hundred and " + number_to_english_under_1000(remainder)
+                return (
+                    hundred + " hundred and " + number_to_english_under_1000(remainder)
+                )
 
     score = 0
     lives = 5
@@ -63,7 +101,7 @@ def number_translation_game():
         if score >= difficulty_level * 5:
             difficulty_level += 1
 
-        max_range = 10 ** difficulty_level
+        max_range = 10**difficulty_level
         number = random.randint(0, max_range)
 
         correct_translation = number_to_english(number).strip()
@@ -72,6 +110,8 @@ def number_translation_game():
         answer = input(f"\nTranslate the number '{number}' to English: ")
 
         score, lives = funcs.total_score(score, lives, answer, correct_translation)
-        
-        if (lives == 0):
+
+        if lives == 0:
+            if user is not None:
+                user.add_points(score)
             break

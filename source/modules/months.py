@@ -2,6 +2,7 @@ import random
 import time
 from views import funcs
 
+
 def month_translation_game():
     """
     Um jogo simples onde o jogador traduz os meses do ano do inglês para o português e vice-versa.
@@ -19,7 +20,7 @@ def month_translation_game():
         "Setembro": "September",
         "Outubro": "October",
         "Novembro": "November",
-        "Dezembro": "December"
+        "Dezembro": "December",
     }
 
     months_en_to_pt = {
@@ -34,20 +35,19 @@ def month_translation_game():
         "September": "Setembro",
         "October": "Outubro",
         "November": "Novembro",
-        "December": "Dezembro"
+        "December": "Dezembro",
     }
 
     all_months_pt = list(months_pt_to_en.keys())
     all_months_en = list(months_en_to_pt.keys())
     score = 0
     lives = 5
-    round = 0 
-    answer = ''
+    answer = ""
 
     print("Bem-vindo ao Jogo de Tradução de Meses!")
     print("Você tem 5 vidas. Boa sorte!")
 
-    while answer != "q" or answer != "Q":
+    while answer not in ['q', 'Q']:
         if random.choice([True, False]):  # Escolhe aleatoriamente a direção da tradução
             month_pt = random.choice(all_months_pt)
             correct_translation = months_pt_to_en[month_pt]
@@ -60,5 +60,6 @@ def month_translation_game():
             answer = input(f"\nTraduza '{month_en}' para português: ")
 
         score, lives = funcs.total_score(score, lives, answer, correct_translation)
-        
-        if lives == 0: break
+
+        if lives == 0:
+            break

@@ -22,10 +22,10 @@ def translate_pronouns():
     while pronome != "q" and pronome != "Q":
         if pronome in pronomes:
             print(f"\n{pronome} é traduzido para {pronomes[pronome]}")
-            pronome = input(f"\nType the pronoun: ")
+            pronome = input("\nType the pronoun: ")
         elif pronome in list(pronomes.values()):
             res = [key for key in pronomes if pronomes[key] == pronome]
             print(f"\n{pronome} é traduzido para {res[0]}")
-            pronome = input(f"\nType the pronoun: ")
+            pronome = input("\nType the pronoun: ")
         else:
-            pronome = input(f"\nType the pronoun: ")
+            pronome = input("\nType the pronoun: ")

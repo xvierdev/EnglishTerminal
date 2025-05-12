@@ -3,7 +3,7 @@ import time
 from views import funcs
 
 
-def weekday_translation_game():
+def weekday_translation_game(user):
     """A simple game where the player translates the days of the week from English to Portuguese."""
 
     weekdays = {
@@ -24,7 +24,7 @@ def weekday_translation_game():
     print("Welcome to the Weekday Translation Game!")
     print("You have 5 lives. Good luck!")
 
-    while answer != "q" or answer != "Q":
+    while answer not in ["q", "Q"]:
         english_day = random.choice(english_weekdays)
         correct_translation = weekdays[english_day]
 
@@ -34,4 +34,6 @@ def weekday_translation_game():
         score, lives = funcs.total_score(score, lives, answer, correct_translation)
 
         if lives == 0:
+            if user is not None:
+                user.add_points(score)
             break
